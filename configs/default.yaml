@@ -1,0 +1,59 @@
+# CVD Gene-Disease GNN Configuration
+
+# Data
+data:
+  cvd_atlas_file: "data/raw/Disease-gene_association.txt"
+  string_score_threshold: 700
+  snp_min_diseases: 2
+  debug_top_diseases: 20
+
+# Graph
+graph:
+  embed_dim: 64
+  edge_dropout_rates:
+    gene_interacts_with_gene: 0.15
+    gene_has_function: 0.10
+    gene_associated_with_disease: 0.05
+    snp_associated_with_disease: 0.05
+  feature_mask_rate: 0.20
+
+# Contrastive pretraining
+contrastive:
+  epochs: 100
+  lr: 0.001
+  tau: 0.5
+  batch_size_per_type: 1024
+  projection_dim: 64
+
+# Model
+model:
+  hidden_dim: 128
+  num_layers: 2
+  dropout: 0.2
+  # R-GCN specific
+  rgcn_num_bases: 30
+  # HGT specific
+  hgt_num_heads: 8
+
+# Supervised training
+training:
+  epochs: 200
+  lr: 0.0005
+  weight_decay: 0.00001
+  early_stopping_patience: 20
+  lr_scheduler_factor: 0.5
+  lr_scheduler_patience: 10
+  negative_ratio: 1.0
+  hard_negative_ratio: 0.5
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  neighbor_fanout: [15, 10]
+
+# Decoder
+decoder:
+  embedding_reg_lambda: 0.00001
+
+# Evaluation
+evaluation:
+  hits_k: [10, 50]

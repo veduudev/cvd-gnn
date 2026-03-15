@@ -1,0 +1,501 @@
+rank	gene	disease	score
+1	XIST	High density lipoprotein cholesterol measurement	0.518990
+2	C8orf34	High density lipoprotein cholesterol measurement	0.518964
+3	CEROX1	Systolic blood pressure	0.518783
+4	hsa-mir-155	Total cholesterol measurement	0.518766
+5	C19orf38	Systolic blood pressure	0.518748
+6	BORCS8-MEF2B	Mitral valve prolapse	0.518724
+7	ENSG00000254340	Mitral valve prolapse	0.518722
+8	MIR21	Systolic blood pressure	0.518691
+9	CDKN2B-AS1	Mitral valve prolapse	0.518689
+10	XIST	Total cholesterol measurement	0.518668
+11	FNDC1	High density lipoprotein cholesterol measurement	0.518635
+12	ENSG00000270210	High density lipoprotein cholesterol measurement	0.518630
+13	TRIM8-DT	Total cholesterol measurement	0.518623
+14	SHISAL1	Systolic blood pressure	0.518585
+15	KIAA0040	High density lipoprotein cholesterol measurement	0.518584
+16	CASC15	Mitral valve prolapse	0.518579
+17	SNHG15	Dilated cardiomyopathy	0.518566
+18	HCG27	Mitral valve prolapse	0.518563
+19	HLA-DQB1-AS1	Mitral valve prolapse	0.518562
+20	C1orf21	Mitral valve prolapse	0.518557
+21	OAF	High density lipoprotein cholesterol measurement	0.518557
+22	SNHG12	Total cholesterol measurement	0.518532
+23	C11orf96	Mitral valve prolapse	0.518495
+24	TMEM132B	Mitral valve prolapse	0.518493
+25	MRPL23-AS1	Mitral valve prolapse	0.518463
+26	SERF1B	Mitral valve prolapse	0.518443
+27	FAM131A	Dilated cardiomyopathy	0.518427
+28	POLR2J4	Systolic blood pressure	0.518423
+29	ENSG00000260196	High density lipoprotein cholesterol measurement	0.518402
+30	FBXO41	High density lipoprotein cholesterol measurement	0.518369
+31	NRIP3	High density lipoprotein cholesterol measurement	0.518309
+32	SEC14L5	Mitral valve prolapse	0.518305
+33	ENSG00000248538	Dilated cardiomyopathy	0.518298
+34	PHLDB1	Systolic blood pressure	0.518277
+35	KRTAP5-AS1	Total cholesterol measurement	0.518272
+36	hsa-mir-150	Triglyceride measurement	0.518258
+37	SNHG12	Triglyceride measurement	0.518250
+38	SLC16A1-AS1	High density lipoprotein cholesterol measurement	0.518202
+39	NRM	Mitral valve prolapse	0.518199
+40	ENSG00000271959	Mitral valve prolapse	0.518196
+41	GSN-AS1	Total cholesterol measurement	0.518180
+42	PSORS1C2	Mitral valve prolapse	0.518160
+43	ENSG00000259834	High density lipoprotein cholesterol measurement	0.518149
+44	TMEM150B	High density lipoprotein cholesterol measurement	0.518148
+45	HYI	Total cholesterol measurement	0.518145
+46	ITPRIP	High density lipoprotein cholesterol measurement	0.518117
+47	LGALSL	Mitral valve prolapse	0.518111
+48	LKAAEAR1	Dilated cardiomyopathy	0.518110
+49	ENSG00000230149	Total cholesterol measurement	0.518094
+50	ENSG00000255495	Dilated cardiomyopathy	0.518068
+51	LINC00240	Mitral valve prolapse	0.518059
+52	LINC00881	Mitral valve prolapse	0.518058
+53	ENSG00000272462	Dilated cardiomyopathy	0.518055
+54	ENSG00000214650	Triglyceride measurement	0.518054
+55	RUNDC1	Mitral valve prolapse	0.518043
+56	NALF1	High density lipoprotein cholesterol measurement	0.518039
+57	TMEM178B	Triglyceride measurement	0.518021
+58	ADAMTSL1	Systolic blood pressure	0.518011
+59	PCED1A	High density lipoprotein cholesterol measurement	0.518006
+60	MEG8	Dilated cardiomyopathy	0.518005
+61	ZFYVE21	High density lipoprotein cholesterol measurement	0.518001
+62	CYP1B1-AS1	Dilated cardiomyopathy	0.517995
+63	SNHG14	Mitral valve prolapse	0.517974
+64	C1QTNF7	Mitral valve prolapse	0.517967
+65	hsa-mir-214	Mitral valve prolapse	0.517952
+66	CCDC7	Dilated cardiomyopathy	0.517952
+67	CCDC24	Total cholesterol measurement	0.517949
+68	ENSG00000283064	Mitral valve prolapse	0.517941
+69	ENSG00000272078	Mitral valve prolapse	0.517924
+70	MFSD6	Dilated cardiomyopathy	0.517899
+71	PERM1	Triglyceride measurement	0.517898
+72	TMEM71	High density lipoprotein cholesterol measurement	0.517851
+73	PI16	Systolic blood pressure	0.517846
+74	RASL11B	High density lipoprotein cholesterol measurement	0.517841
+75	TMEM156	High density lipoprotein cholesterol measurement	0.517827
+76	CCDC71L	High density lipoprotein cholesterol measurement	0.517827
+77	SAMD12	High density lipoprotein cholesterol measurement	0.517812
+78	KLHL32	Total cholesterol measurement	0.517807
+79	SNORD3A	Triglyceride measurement	0.517805
+80	MIR497HG	Systolic blood pressure	0.517803
+81	MIR4435-2HG	Systolic blood pressure	0.517797
+82	ENSG00000263257	Total cholesterol measurement	0.517793
+83	C11orf21	High density lipoprotein cholesterol measurement	0.517781
+84	ZCCHC24	Dilated cardiomyopathy	0.517776
+85	GARNL3	Mitral valve prolapse	0.517776
+86	LINC02908	Ataxia telangiectasia	0.517761
+87	LINC00472	High density lipoprotein cholesterol measurement	0.517758
+88	EHBP1L1	Mitral valve prolapse	0.517757
+89	IFITM10	Total cholesterol measurement	0.517753
+90	SHISA2	Mitral valve prolapse	0.517715
+91	KANK4	Systolic blood pressure	0.517702
+92	C1QTNF6	High density lipoprotein cholesterol measurement	0.517696
+93	DNAJC22	Triglyceride measurement	0.517696
+94	ZNF608	Mitral valve prolapse	0.517673
+95	ITPRIP	Dilated cardiomyopathy	0.517639
+96	MIIP	High density lipoprotein cholesterol measurement	0.517639
+97	SNHG15	Hypertension	0.517637
+98	NBEAL1	Dilated cardiomyopathy	0.517617
+99	PI16	Total cholesterol measurement	0.517608
+100	SAMD12	Systolic blood pressure	0.517575
+101	FAM110B	Systolic blood pressure	0.517554
+102	POC1B-AS1	High density lipoprotein cholesterol measurement	0.517542
+103	LINC00900	Mitral valve prolapse	0.517541
+104	FNDC4	Mitral valve prolapse	0.517533
+105	LINC01184	Mitral valve prolapse	0.517532
+106	IGSF6	Total cholesterol measurement	0.517502
+107	TMCC3	Mitral valve prolapse	0.517501
+108	VEPH1	Total cholesterol measurement	0.517497
+109	ENSG00000259347	Systolic blood pressure	0.517489
+110	hsa-mir-22	High density lipoprotein cholesterol measurement	0.517486
+111	INSYN1	Mitral valve prolapse	0.517474
+112	hsa-mir-22	Mitral valve prolapse	0.517471
+113	WDFY4	Total cholesterol measurement	0.517432
+114	IRAG1	Dilated cardiomyopathy	0.517427
+115	FAM167B	Total cholesterol measurement	0.517414
+116	EMX2OS	Triglyceride measurement	0.517396
+117	RARRES1	Mitral valve prolapse	0.517391
+118	C1QTNF6	Systolic blood pressure	0.517390
+119	VLDLR-AS1	Mitral valve prolapse	0.517389
+120	ENSG00000224063	Mitral valve prolapse	0.517381
+121	IGSF6	Dilated cardiomyopathy	0.517380
+122	GPR160	Total cholesterol measurement	0.517380
+123	TMEM158	Systolic blood pressure	0.517374
+124	TRIM8-DT	Intracranial aneurysm	0.517373
+125	ENSG00000269918	Mitral valve prolapse	0.517372
+126	LGALSL	Dilated cardiomyopathy	0.517360
+127	HRAT92	Total cholesterol measurement	0.517351
+128	CADM2	Mitral valve prolapse	0.517346
+129	C14orf132	Triglyceride measurement	0.517343
+130	LY6G6F	Dilated cardiomyopathy	0.517340
+131	ENSG00000267288	Mitral valve prolapse	0.517339
+132	THEMIS2	Dilated cardiomyopathy	0.517334
+133	PI16	Triglyceride measurement	0.517333
+134	LINC01184	Dilated cardiomyopathy	0.517328
+135	VIT	Systolic blood pressure	0.517326
+136	TMEM71	Total cholesterol measurement	0.517325
+137	ENSG00000261490	High density lipoprotein cholesterol measurement	0.517312
+138	hsa-mir-143	Total cholesterol measurement	0.517311
+139	TMEM91	Mitral valve prolapse	0.517311
+140	FAM222A	Total cholesterol measurement	0.517309
+141	LINC00324	Mitral valve prolapse	0.517307
+142	ENSG00000255491	Dilated cardiomyopathy	0.517295
+143	SUSD6	Systolic blood pressure	0.517293
+144	SAMD10	Intracranial aneurysm	0.517285
+145	LINC00240	Dilated cardiomyopathy	0.517282
+146	LINC01091	Mitral valve prolapse	0.517280
+147	C11orf96	Diastolic blood pressure	0.517271
+148	LCN10	Total cholesterol measurement	0.517255
+149	CCDC107	Total cholesterol measurement	0.517251
+150	PRRG3	Total cholesterol measurement	0.517248
+151	SERPINB8	High density lipoprotein cholesterol measurement	0.517248
+152	TMEM50A	Mitral valve prolapse	0.517246
+153	OLFML2A	High density lipoprotein cholesterol measurement	0.517245
+154	UCKL1-AS1	Total cholesterol measurement	0.517239
+155	MIR4487	Mitral valve prolapse	0.517235
+156	ADAMTS9-AS2	Hypertension	0.517231
+157	AIRN	Ataxia telangiectasia	0.517215
+158	MCTP2	Mitral valve prolapse	0.517208
+159	CCDC136	Total cholesterol measurement	0.517207
+160	THADA	Mitral valve prolapse	0.517185
+161	USP34-DT	Mitral valve prolapse	0.517184
+162	SLC49A3	Systolic blood pressure	0.517167
+163	SERINC2	Mitral valve prolapse	0.517152
+164	INSYN1	Systolic blood pressure	0.517147
+165	FMC1	Dilated cardiomyopathy	0.517139
+166	SNORC	Dilated cardiomyopathy	0.517132
+167	TRNP1	Mitral valve prolapse	0.517125
+168	DIO3OS	Mitral valve prolapse	0.517119
+169	DEPP1	High density lipoprotein cholesterol measurement	0.517118
+170	ZNF84	High density lipoprotein cholesterol measurement	0.517112
+171	TRAC	Total cholesterol measurement	0.517111
+172	FLYWCH2	High density lipoprotein cholesterol measurement	0.517104
+173	AMIGO2	High density lipoprotein cholesterol measurement	0.517101
+174	PLAC8	Systolic blood pressure	0.517092
+175	SPOCD1	Mitral valve prolapse	0.517083
+176	FAM117B	Dilated cardiomyopathy	0.517080
+177	CEACAM19	Dilated cardiomyopathy	0.517076
+178	PPT2-EGFL8	High density lipoprotein cholesterol measurement	0.517075
+179	OSER1	Ataxia telangiectasia	0.517071
+180	PHACTR2	Total cholesterol measurement	0.517059
+181	TIAF1	Systolic blood pressure	0.517058
+182	TMEM72-AS1	Total cholesterol measurement	0.517054
+183	COL28A1	Mitral valve prolapse	0.517035
+184	SPATS2	Ataxia telangiectasia	0.517028
+185	C9orf24	Intracranial aneurysm	0.517026
+186	R3HDM2	Ataxia telangiectasia	0.517024
+187	RSKR	High density lipoprotein cholesterol measurement	0.517020
+188	ZNF285	Mitral valve prolapse	0.517019
+189	PRR11	Triglyceride measurement	0.517008
+190	MEGF9	Diastolic blood pressure	0.517007
+191	SLC38A10	Ataxia telangiectasia	0.516997
+192	RASSF1-AS1	Triglyceride measurement	0.516989
+193	CCDC102B	Systolic blood pressure	0.516987
+194	ZNF571-AS1	Ataxia telangiectasia	0.516986
+195	WDFY4	Triglyceride measurement	0.516974
+196	TIAF1	Ataxia telangiectasia	0.516974
+197	JAZF1-AS1	Dilated cardiomyopathy	0.516972
+198	ENSG00000259933	Dilated cardiomyopathy	0.516971
+199	ARHGEF26-AS1	Hypertension	0.516968
+200	HLA-DQB1-AS1	Ataxia telangiectasia	0.516962
+201	AHNAK2	Mitral valve prolapse	0.516958
+202	ENSG00000256443	Dilated cardiomyopathy	0.516952
+203	PCDH18	Mitral valve prolapse	0.516950
+204	ENSG00000262877	Total cholesterol measurement	0.516947
+205	CD164L2	Ataxia telangiectasia	0.516938
+206	BBLN	Mitral valve prolapse	0.516933
+207	CYRIA	Mitral valve prolapse	0.516916
+208	TVP23B	Ataxia telangiectasia	0.516906
+209	ENSG00000269997	Ataxia telangiectasia	0.516896
+210	hsa-mir-223	High density lipoprotein cholesterol measurement	0.516893
+211	hsa-mir-24-1	Total cholesterol measurement	0.516893
+212	PHACTR3	High density lipoprotein cholesterol measurement	0.516891
+213	C3orf36	High density lipoprotein cholesterol measurement	0.516891
+214	HERPUD2	Ataxia telangiectasia	0.516891
+215	ALPK3	High density lipoprotein cholesterol measurement	0.516887
+216	hsa-mir-106b	Systolic blood pressure	0.516876
+217	MIR9-3HG	Mitral valve prolapse	0.516872
+218	TCEAL2	Systolic blood pressure	0.516872
+219	USP54	Total cholesterol measurement	0.516869
+220	CCSER1	Ataxia telangiectasia	0.516864
+221	CALHM6	Mitral valve prolapse	0.516857
+222	ZNF696	Total cholesterol measurement	0.516854
+223	ENSG00000270210	Ataxia telangiectasia	0.516850
+224	HOXA-AS2	High density lipoprotein cholesterol measurement	0.516849
+225	MIRLET7B	Ataxia telangiectasia	0.516849
+226	FAM177B	Mitral valve prolapse	0.516846
+227	JCAD	High density lipoprotein cholesterol measurement	0.516835
+228	CCDC102B	Total cholesterol measurement	0.516829
+229	SOCS2-AS1	Intracranial aneurysm	0.516822
+230	IGF2-AS	Ataxia telangiectasia	0.516821
+231	PCED1A	Triglyceride measurement	0.516819
+232	CRTAC1	Total cholesterol measurement	0.516815
+233	FIGN	Mitral valve prolapse	0.516804
+234	KIAA2013	Total cholesterol measurement	0.516803
+235	LGALS12	Total cholesterol measurement	0.516794
+236	FAM86B1	Ataxia telangiectasia	0.516794
+237	ZNF267	Ataxia telangiectasia	0.516794
+238	ENSG00000249790	High density lipoprotein cholesterol measurement	0.516790
+239	DANCR	Ataxia telangiectasia	0.516789
+240	NR2C2AP	Ataxia telangiectasia	0.516785
+241	ITIH5	Total cholesterol measurement	0.516782
+242	TMEM209	Total cholesterol measurement	0.516780
+243	ZSCAN31	Dilated cardiomyopathy	0.516777
+244	MIR193BHG	Ataxia telangiectasia	0.516775
+245	PPM1M	Dilated cardiomyopathy	0.516754
+246	LINC00324	Dilated cardiomyopathy	0.516747
+247	KIAA0513	Diastolic blood pressure	0.516747
+248	GREB1L	Dilated cardiomyopathy	0.516723
+249	ARHGAP42	Total cholesterol measurement	0.516723
+250	GSN-AS1	Hypertension	0.516705
+251	TPBG	High density lipoprotein cholesterol measurement	0.516703
+252	C11orf68	Mitral valve prolapse	0.516697
+253	RELT	Triglyceride measurement	0.516696
+254	LINC02709	Kawasaki disease	0.516695
+255	OLFML2B	High density lipoprotein cholesterol measurement	0.516695
+256	B3GNT8	Mitral valve prolapse	0.516690
+257	LRRC17	Systolic blood pressure	0.516687
+258	CRYBG1	High density lipoprotein cholesterol measurement	0.516687
+259	RNF208	Ataxia telangiectasia	0.516684
+260	PHLDB1	Intracranial aneurysm	0.516683
+261	C1orf122	Ataxia telangiectasia	0.516682
+262	TOGARAM2	Mitral valve prolapse	0.516672
+263	ZNF235	Ataxia telangiectasia	0.516661
+264	LONRF2	Total cholesterol measurement	0.516659
+265	PARM1	Triglyceride measurement	0.516635
+266	MIRLET7G	Ataxia telangiectasia	0.516630
+267	MIRLET7B	High density lipoprotein cholesterol measurement	0.516629
+268	SPATA6L	High density lipoprotein cholesterol measurement	0.516625
+269	FAM167A-AS1	Ataxia telangiectasia	0.516621
+270	PLBD2	Dilated cardiomyopathy	0.516615
+271	NPIPA1	Systolic blood pressure	0.516615
+272	MKRN2OS	Diastolic blood pressure	0.516614
+273	GLIPR1	Mitral valve prolapse	0.516613
+274	KIAA1671	Ataxia telangiectasia	0.516610
+275	HECA	High density lipoprotein cholesterol measurement	0.516609
+276	FBXO41	Hypertension	0.516608
+277	NHLRC4	Total cholesterol measurement	0.516604
+278	ENSG00000250644	Total cholesterol measurement	0.516598
+279	DNAJC22	Hypertension	0.516598
+280	ENSG00000270108	Ataxia telangiectasia	0.516597
+281	SLX9	Ataxia telangiectasia	0.516596
+282	SBNO1-AS1	Dilated cardiomyopathy	0.516595
+283	PHACTR2	Triglyceride measurement	0.516595
+284	ADAMTSL4	Dilated cardiomyopathy	0.516591
+285	hsa-mir-23a	High density lipoprotein cholesterol measurement	0.516590
+286	SFTA1P	Mitral valve prolapse	0.516588
+287	BTBD11	Total cholesterol measurement	0.516587
+288	ZFAS1	Ataxia telangiectasia	0.516587
+289	LRRC36	Ataxia telangiectasia	0.516583
+290	ENSG00000225905	Dilated cardiomyopathy	0.516583
+291	HNRNPUL2	Ataxia telangiectasia	0.516570
+292	MOB3A	Total cholesterol measurement	0.516564
+293	hsa-mir-143	Ataxia telangiectasia	0.516557
+294	KBTBD4	Mitral valve prolapse	0.516546
+295	LINC01550	Ataxia telangiectasia	0.516544
+296	ENSG00000277007	Ataxia telangiectasia	0.516541
+297	MEF2C-AS1	Ataxia telangiectasia	0.516539
+298	RNF157	Systolic blood pressure	0.516534
+299	FAM78A	Diastolic blood pressure	0.516520
+300	GPATCH3	Mitral valve prolapse	0.516518
+301	hsa-mir-9-1	High density lipoprotein cholesterol measurement	0.516518
+302	ENSG00000289273	Systolic blood pressure	0.516516
+303	CYRIA	High density lipoprotein cholesterol measurement	0.516511
+304	PPP1R37	Dilated cardiomyopathy	0.516508
+305	ZNF84	Total cholesterol measurement	0.516505
+306	MKRN2OS	Intracranial aneurysm	0.516503
+307	ZNF581	Ataxia telangiectasia	0.516501
+308	PVT1	Hypertension	0.516500
+309	SNX29	Ataxia telangiectasia	0.516490
+310	ENSG00000257337	Eosinophilic granulomatosis with polyangiitis	0.516487
+311	NUDT16L1	Mitral valve prolapse	0.516482
+312	CDV3	Triglyceride measurement	0.516481
+313	MIR193BHG	Systolic blood pressure	0.516480
+314	BCAP29	Mitral valve prolapse	0.516476
+315	FSTL4	Total cholesterol measurement	0.516474
+316	ENSG00000289273	Total cholesterol measurement	0.516467
+317	CDKN2B-AS1	Ataxia telangiectasia	0.516463
+318	ENSG00000225399	Ataxia telangiectasia	0.516455
+319	NUDT22	Total cholesterol measurement	0.516452
+320	LCN12	Intracranial aneurysm	0.516450
+321	LINC02884	High density lipoprotein cholesterol measurement	0.516432
+322	NPIPA1	Dilated cardiomyopathy	0.516422
+323	MAILR	Intracranial aneurysm	0.516420
+324	ZNF678	Ataxia telangiectasia	0.516412
+325	LINC01138	Cerebral cavernous malformation	0.516405
+326	ZMYND15	Systolic blood pressure	0.516404
+327	EMID1	Mitral valve prolapse	0.516398
+328	ITM2A	High density lipoprotein cholesterol measurement	0.516395
+329	TMEM256	Ataxia telangiectasia	0.516390
+330	ENSG00000225339	Systolic blood pressure	0.516389
+331	CDK2AP2	Dilated cardiomyopathy	0.516381
+332	C2CD6	Dilated cardiomyopathy	0.516368
+333	C6orf47	Intracranial aneurysm	0.516368
+334	ZCCHC10	Ataxia telangiectasia	0.516367
+335	C9orf64	Dilated cardiomyopathy	0.516359
+336	VMO1	Hypertension	0.516357
+337	IFNG-AS1	Ataxia telangiectasia	0.516356
+338	FAM180B	Ataxia telangiectasia	0.516349
+339	PCNX3	Ataxia telangiectasia	0.516348
+340	SNORD3B-1	Kawasaki disease	0.516344
+341	MTFP1	Intracranial aneurysm	0.516342
+342	ENSG00000280434	Kawasaki disease	0.516341
+343	SLC12A9	Dilated cardiomyopathy	0.516336
+344	CTNNAL1	High density lipoprotein cholesterol measurement	0.516332
+345	IGKV1-5	High density lipoprotein cholesterol measurement	0.516332
+346	GFOD1	High density lipoprotein cholesterol measurement	0.516328
+347	PLEKHG3	High density lipoprotein cholesterol measurement	0.516327
+348	C11orf80	Ataxia telangiectasia	0.516320
+349	hsa-mir-208a	Systolic blood pressure	0.516313
+350	RSKR	Ataxia telangiectasia	0.516310
+351	TMC4	Mitral valve prolapse	0.516309
+352	RMRP	Triglyceride measurement	0.516309
+353	ANKRD36	Intracranial aneurysm	0.516309
+354	ZNF391	Dilated cardiomyopathy	0.516308
+355	TEX9	Triglyceride measurement	0.516307
+356	ENSG00000245156	Ataxia telangiectasia	0.516304
+357	GPR84	Total cholesterol measurement	0.516304
+358	GPANK1	Ataxia telangiectasia	0.516301
+359	GPR20	High density lipoprotein cholesterol measurement	0.516300
+360	CDKN2B-AS1	Eosinophilic granulomatosis with polyangiitis	0.516298
+361	COL28A1	Dilated cardiomyopathy	0.516289
+362	ZFAS1	Triglyceride measurement	0.516288
+363	FBXL18	Ataxia telangiectasia	0.516286
+364	PCAT19	Kawasaki disease	0.516283
+365	SERINC2	Ataxia telangiectasia	0.516279
+366	SNORA48	Ataxia telangiectasia	0.516276
+367	SPRY4-AS1	Mitral valve prolapse	0.516273
+368	SLAIN1	Triglyceride measurement	0.516269
+369	NDRG3	High density lipoprotein cholesterol measurement	0.516264
+370	ZCCHC24	Diastolic blood pressure	0.516261
+371	ENSG00000261476	Ataxia telangiectasia	0.516261
+372	TP53I11	Dilated cardiomyopathy	0.516259
+373	MPC1	Ataxia telangiectasia	0.516258
+374	GIMAP2	Dilated cardiomyopathy	0.516258
+375	MPV17L	Mitral valve prolapse	0.516255
+376	LINC02908	Triglyceride measurement	0.516254
+377	CCDC138	Systolic blood pressure	0.516246
+378	APOL3	Dilated cardiomyopathy	0.516245
+379	LOC105379243	Mitral valve prolapse	0.516244
+380	GPR162	Mitral valve prolapse	0.516241
+381	TAGLN3	Systolic blood pressure	0.516240
+382	LINC00702	Total cholesterol measurement	0.516239
+383	SMIM5	Ataxia telangiectasia	0.516239
+384	RASGEF1B	High density lipoprotein cholesterol measurement	0.516238
+385	PPP1R18	Intracranial aneurysm	0.516230
+386	ENSG00000225378	High density lipoprotein cholesterol measurement	0.516226
+387	C4orf3	Dilated cardiomyopathy	0.516226
+388	hsa-mir-150	Eosinophilic granulomatosis with polyangiitis	0.516223
+389	C2orf16	Mitral valve prolapse	0.516220
+390	LCN6	Mitral valve prolapse	0.516218
+391	TRIM8-DT	Ataxia telangiectasia	0.516217
+392	PLCG1-AS1	Intracranial aneurysm	0.516216
+393	ENSG00000224307	Ataxia telangiectasia	0.516215
+394	LINC00310	High density lipoprotein cholesterol measurement	0.516215
+395	LINC00920	Ataxia telangiectasia	0.516215
+396	ENSG00000263257	Intracranial aneurysm	0.516213
+397	LINC00649	Myocardial infarction	0.516212
+398	HYMAI	High density lipoprotein cholesterol measurement	0.516212
+399	LDOC1	Mitral valve prolapse	0.516211
+400	C17orf100	High density lipoprotein cholesterol measurement	0.516209
+401	SLFN12L	Systolic blood pressure	0.516208
+402	TNFAIP8L2	Mitral valve prolapse	0.516206
+403	ADM-DT	Ataxia telangiectasia	0.516190
+404	ENSG00000269918	Total cholesterol measurement	0.516190
+405	DIRAS1	Systolic blood pressure	0.516189
+406	ECT2L	Diastolic blood pressure	0.516185
+407	SNX20	Systolic blood pressure	0.516185
+408	C19orf38	Eosinophilic granulomatosis with polyangiitis	0.516181
+409	ATP2B1-AS1	Ataxia telangiectasia	0.516174
+410	MIR124-1HG	Eosinophilic granulomatosis with polyangiitis	0.516174
+411	ENSG00000254461	Intracranial aneurysm	0.516170
+412	ENSG00000280441	Ataxia telangiectasia	0.516167
+413	KLHL32	Hypertension	0.516166
+414	RHOA-IT1	Dilated cardiomyopathy	0.516164
+415	TMEM233	Hypertension	0.516162
+416	TP53I11	Ataxia telangiectasia	0.516162
+417	NBEAL2	Total cholesterol measurement	0.516159
+418	ENSG00000279949	Total cholesterol measurement	0.516144
+419	CMIP	Ataxia telangiectasia	0.516143
+420	CYB561A3	Ataxia telangiectasia	0.516135
+421	NCKAP5L	Triglyceride measurement	0.516135
+422	GPR137	Ataxia telangiectasia	0.516133
+423	ENSG00000254556	Eosinophilic granulomatosis with polyangiitis	0.516128
+424	VWA2	Mitral valve prolapse	0.516126
+425	C17orf107	Diastolic blood pressure	0.516126
+426	ARHGEF26	Triglyceride measurement	0.516118
+427	TMEM131	Ataxia telangiectasia	0.516115
+428	LINC02571	Mitral valve prolapse	0.516106
+429	hsa-mir-223	Dilated cardiomyopathy	0.516104
+430	ENSG00000270130	Ataxia telangiectasia	0.516100
+431	EVI5L	Hypertension	0.516100
+432	TMEM59L	Intracranial aneurysm	0.516098
+433	NPDC1	Systolic blood pressure	0.516098
+434	ENSG00000285774	High density lipoprotein cholesterol measurement	0.516094
+435	IGSF10	Diastolic blood pressure	0.516092
+436	CCDC3	Systolic blood pressure	0.516085
+437	CGREF1	Ataxia telangiectasia	0.516082
+438	ENSG00000280273	Intracranial aneurysm	0.516081
+439	SMIM22	Mitral valve prolapse	0.516079
+440	ENSG00000249790	Total cholesterol measurement	0.516077
+441	SAPCD1	Ataxia telangiectasia	0.516074
+442	RERE-AS1	Ataxia telangiectasia	0.516070
+443	GPR61	Mitral valve prolapse	0.516065
+444	TBC1D2	High density lipoprotein cholesterol measurement	0.516063
+445	ENSG00000261578	Total cholesterol measurement	0.516062
+446	TMEM150A	Dilated cardiomyopathy	0.516056
+447	PHF21B	High density lipoprotein cholesterol measurement	0.516054
+448	ENSG00000258168	Dilated cardiomyopathy	0.516053
+449	CD164L2	Intracranial aneurysm	0.516052
+450	LINC02904	Ataxia telangiectasia	0.516049
+451	EHBP1L1	Hypertension	0.516040
+452	VGLL3	Mitral valve prolapse	0.516039
+453	JMJD1C-AS1	Ataxia telangiectasia	0.516038
+454	PPIL6	Total cholesterol measurement	0.516034
+455	LOC105377621	Mitral valve prolapse	0.516032
+456	CCDC189	Ataxia telangiectasia	0.516031
+457	LMAN1L	Mitral valve prolapse	0.516028
+458	NYAP1	Diastolic blood pressure	0.516026
+459	GLIPR1	Systolic blood pressure	0.516024
+460	ENSG00000272468	Ataxia telangiectasia	0.516020
+461	IER5	Triglyceride measurement	0.516015
+462	LCN10	Diastolic blood pressure	0.516014
+463	DENND2A	Total cholesterol measurement	0.516012
+464	BMS1P4	Ataxia telangiectasia	0.516009
+465	TBC1D19	Ataxia telangiectasia	0.516002
+466	SLC16A5	Dilated cardiomyopathy	0.516002
+467	TSPAN5	Total cholesterol measurement	0.515999
+468	ENSG00000232748	Mitral valve prolapse	0.515994
+469	TMEM121B	Total cholesterol measurement	0.515992
+470	SENP3-EIF4A1	Dilated cardiomyopathy	0.515992
+471	EVI5L	Ataxia telangiectasia	0.515989
+472	STUM	High density lipoprotein cholesterol measurement	0.515984
+473	SLC22A18AS	Ataxia telangiectasia	0.515981
+474	PRAG1	Mitral valve prolapse	0.515978
+475	CHST2	Total cholesterol measurement	0.515977
+476	R3HDM2	Intracranial aneurysm	0.515975
+477	SLC2A12	High density lipoprotein cholesterol measurement	0.515971
+478	OLFML2A	Triglyceride measurement	0.515971
+479	RBPMS-AS1	Dilated cardiomyopathy	0.515964
+480	PHYHIPL	Systolic blood pressure	0.515962
+481	MN1	Ataxia telangiectasia	0.515960
+482	STARD4-AS1	Hypertension	0.515959
+483	LINC00987	Mitral valve prolapse	0.515958
+484	IDI2-AS1	Total cholesterol measurement	0.515955
+485	METTL7B	Hypertension	0.515951
+486	TARID	Kawasaki disease	0.515948
+487	ACAP1	Systolic blood pressure	0.515947
+488	PPP1R14B-AS1	Mitral valve prolapse	0.515946
+489	ENSG00000223522	Intracranial aneurysm	0.515937
+490	VWCE	Ataxia telangiectasia	0.515935
+491	IGLV2-23	Ataxia telangiectasia	0.515934
+492	MIRLET7B	Total cholesterol measurement	0.515929
+493	CCDC17	Systolic blood pressure	0.515921
+494	ALG9	Mitral valve prolapse	0.515917
+495	CALHM2	High density lipoprotein cholesterol measurement	0.515915
+496	RNFT1	Mitral valve prolapse	0.515912
+497	DRAM1	High density lipoprotein cholesterol measurement	0.515910
+498	ENSG00000231050	Kawasaki disease	0.515909
+499	LINC02288	Triglyceride measurement	0.515908
+500	PPIL6	Dilated cardiomyopathy	0.515907
