@@ -1,501 +1,501 @@
 rank	gene	disease	score
-1	FOXJ3	Cerebral cavernous malformation	0.509079
-2	MYPOP	Cerebral cavernous malformation	0.509027
-3	SPATA33	Cerebral cavernous malformation	0.509021
-4	ZNF132	Cerebral cavernous malformation	0.508958
-5	SLC24A3	Myocardial infarction	0.508832
-6	GLI4	Cerebral cavernous malformation	0.508715
-7	SLC16A6	Ischemic stroke	0.508711
-8	SLC16A10	Myocardial infarction	0.508697
-9	AHDC1	Cerebral cavernous malformation	0.508682
-10	ZNF331	Cerebral cavernous malformation	0.508648
-11	RBM6	Cerebral cavernous malformation	0.508642
-12	SLC16A12	Ischemic stroke	0.508627
-13	BTBD8	Myocardial infarction	0.508625
-14	JTB	Myocardial infarction	0.508621
-15	TM7SF3	Cerebral cavernous malformation	0.508547
-16	GPM6B	Myocardial infarction	0.508544
-17	ENPP5	Myocardial infarction	0.508531
-18	MTARC1	Ischemic stroke	0.508531
-19	TRBC2	Ischemic stroke	0.508494
-20	FNDC3A	Cerebral cavernous malformation	0.508488
-21	ABHD3	Myocardial infarction	0.508464
-22	ADGRF3	Cerebral cavernous malformation	0.508451
-23	NBEAL1	Cerebral cavernous malformation	0.508448
-24	OXER1	Myocardial infarction	0.508434
-25	MOSPD3	Cerebral cavernous malformation	0.508423
-26	TBC1D8	Ischemic stroke	0.508423
-27	FAM111B	Ischemic stroke	0.508417
-28	PPL	Cerebral cavernous malformation	0.508408
-29	PCNX1	Cerebral cavernous malformation	0.508399
-30	PLSCR3	Myocardial infarction	0.508378
-31	KANK3	Myocardial infarction	0.508375
-32	CCDC159	Cerebral cavernous malformation	0.508346
-33	SUSD4	Myocardial infarction	0.508328
-34	CPNE4	Myocardial infarction	0.508307
-35	TMEM167B	Cerebral cavernous malformation	0.508284
-36	SLC46A3	Ischemic stroke	0.508277
-37	ZDHHC7	Ischemic stroke	0.508263
-38	ZNF572	Ischemic stroke	0.508259
-39	MDH1	Cerebral cavernous malformation	0.508257
-40	DNASE1	Cerebral cavernous malformation	0.508250
-41	ADGRF3	Ischemic stroke	0.508248
-42	PRRT3	Myocardial infarction	0.508235
-43	B3GNT9	Myocardial infarction	0.508234
-44	IGHV1-69D	Myocardial infarction	0.508224
-45	FNDC1	Ischemic stroke	0.508221
-46	SSBP4	Ischemic stroke	0.508220
-47	ASPRV1	Myocardial infarction	0.508216
-48	PCED1A	Cerebral cavernous malformation	0.508213
-49	ACP2	Ischemic stroke	0.508199
-50	KRT23	Myocardial infarction	0.508179
-51	LACTB	Ischemic stroke	0.508178
-52	JAKMIP2	Ischemic stroke	0.508162
-53	RNF112	Myocardial infarction	0.508140
-54	EPB41L4A	Myocardial infarction	0.508136
-55	MTRFR	Cerebral cavernous malformation	0.508107
-56	COL28A1	Myocardial infarction	0.508091
-57	FLVCR2	Myocardial infarction	0.508082
-58	TOX2	Myocardial infarction	0.508036
-59	UNKL	Cerebral cavernous malformation	0.508035
-60	DUSP28	Cerebral cavernous malformation	0.508022
-61	MBLAC2	Myocardial infarction	0.508016
-62	HEATR5B	Cerebral cavernous malformation	0.508016
-63	PGBD1	Cerebral cavernous malformation	0.508013
-64	LGR6	Cerebral cavernous malformation	0.507981
-65	ZNF793	Myocardial infarction	0.507980
-66	SYT15	Ischemic stroke	0.507977
-67	LGR6	Myocardial infarction	0.507944
-68	HRCT1	Ischemic stroke	0.507942
-69	ZNF831	Ischemic stroke	0.507924
-70	ZNF614	Cerebral cavernous malformation	0.507919
-71	ART4	Cerebral cavernous malformation	0.507912
-72	ZNF853	Myocardial infarction	0.507910
-73	PLEKHN1	Myocardial infarction	0.507905
-74	CCDC7	Myocardial infarction	0.507852
-75	LRRC8E	Myocardial infarction	0.507850
-76	ZNF211	Cerebral cavernous malformation	0.507847
-77	RNFT2	Ischemic stroke	0.507846
-78	MAMDC2	Myocardial infarction	0.507842
-79	ZNF337	Cerebral cavernous malformation	0.507836
-80	AGAP2	Ischemic stroke	0.507834
-81	IGHV4-39	Myocardial infarction	0.507823
-82	SLC35F2	Cerebral cavernous malformation	0.507821
-83	TMEM184B	Myocardial infarction	0.507805
-84	PAM	Myocardial infarction	0.507804
-85	RANBP3L	Myocardial infarction	0.507800
-86	IGKV4-1	Myocardial infarction	0.507798
-87	OSBPL7	Cerebral cavernous malformation	0.507789
-88	C12orf75	Cerebral cavernous malformation	0.507767
-89	TMEM205	Cerebral cavernous malformation	0.507757
-90	SHE	Myocardial infarction	0.507755
-91	RMST	Cerebral cavernous malformation	0.507753
-92	RADIL	Ischemic stroke	0.507744
-93	TMEM107	Cerebral cavernous malformation	0.507723
-94	ZDHHC18	Ataxia telangiectasia	0.507718
-95	ANGPTL7	Kawasaki disease	0.507709
-96	CCDC184	Cerebral cavernous malformation	0.507699
-97	PBXIP1	Cerebral cavernous malformation	0.507697
-98	CEP68	Cerebral cavernous malformation	0.507696
-99	IHO1	Kawasaki disease	0.507695
-100	DDHD2	Cerebral cavernous malformation	0.507689
-101	TRNP1	Ischemic stroke	0.507674
-102	SLC35F6	Ischemic stroke	0.507670
-103	CGREF1	Myocardial infarction	0.507670
-104	AIF1L	Myocardial infarction	0.507663
-105	TMEM9B	Ischemic stroke	0.507663
-106	GLTP	Cerebral cavernous malformation	0.507652
-107	C20orf204	Cerebral cavernous malformation	0.507651
-108	CCDC85B	Kawasaki disease	0.507648
-109	MTARC1	Ataxia telangiectasia	0.507647
-110	TLCD1	Cerebral cavernous malformation	0.507637
-111	PRSS35	Cerebral cavernous malformation	0.507608
-112	TP53TG1	Cerebral cavernous malformation	0.507597
-113	OAF	Cerebral cavernous malformation	0.507595
-114	CYB561D2	Ataxia telangiectasia	0.507594
-115	SSC5D	Ischemic stroke	0.507585
-116	VSIG1	Cerebral cavernous malformation	0.507583
-117	TRIM48	Cerebral cavernous malformation	0.507574
-118	SPATS2	Myocardial infarction	0.507569
-119	ABHD11	Myocardial infarction	0.507569
-120	SLC25A12	Myocardial infarction	0.507568
-121	TMTC3	Cerebral cavernous malformation	0.507553
-122	TMEM151A	Myocardial infarction	0.507545
-123	ZBTB10	Ischemic stroke	0.507526
-124	MAPKAPK5-AS1	Cerebral cavernous malformation	0.507523
-125	B3GNT7	Ischemic stroke	0.507511
-126	NRIP3	Ischemic stroke	0.507506
-127	BBOF1	Ischemic stroke	0.507500
-128	PHF24	Kawasaki disease	0.507498
-129	SMYD4	Cerebral cavernous malformation	0.507498
-130	ZBTB42	Ataxia telangiectasia	0.507482
-131	DEF8	Ataxia telangiectasia	0.507479
-132	AQP7	Ischemic stroke	0.507476
-133	RAB15	Myocardial infarction	0.507474
-134	PATJ	Cerebral cavernous malformation	0.507467
-135	APOLD1	High density lipoprotein cholesterol measurement	0.507462
-136	CLIC5	Cerebral cavernous malformation	0.507456
-137	MAPK10	Kawasaki disease	0.507444
-138	PODN	Ischemic stroke	0.507431
-139	SAMD11	Myocardial infarction	0.507431
-140	CCDC183	Myocardial infarction	0.507428
-141	DNAJC5G	Myocardial infarction	0.507427
-142	HMOX2	Cerebral cavernous malformation	0.507419
-143	OR5V1	Ischemic stroke	0.507413
-144	ENSG00000203644	Myocardial infarction	0.507410
-145	CPAMD8	Kawasaki disease	0.507406
-146	ZNF480	Cerebral cavernous malformation	0.507404
-147	HYDIN	Myocardial infarction	0.507394
-148	FOXO3B	Cerebral cavernous malformation	0.507364
-149	MACF1	Cerebral cavernous malformation	0.507360
-150	MAP3K13	Cerebral cavernous malformation	0.507355
-151	LIMD2	Ataxia telangiectasia	0.507354
-152	LRP4-AS1	Ischemic stroke	0.507341
-153	ENSG00000262877	Myocardial infarction	0.507338
-154	SNX29	Myocardial infarction	0.507337
-155	RUSF1	Cerebral cavernous malformation	0.507332
-156	SS18L2	Cerebral cavernous malformation	0.507325
-157	IGHV3-33	Myocardial infarction	0.507323
-158	TTC28	Ataxia telangiectasia	0.507316
-159	MROH7	Myocardial infarction	0.507311
-160	ENSG00000269954	Myocardial infarction	0.507300
-161	FGD2	Dilated cardiomyopathy	0.507296
-162	CCDC57	Ataxia telangiectasia	0.507296
-163	M6PR	Myocardial infarction	0.507294
-164	MFSD1	High density lipoprotein cholesterol measurement	0.507277
-165	C14orf132	Kawasaki disease	0.507272
-166	ENSG00000258232	Myocardial infarction	0.507251
-167	OXER1	High density lipoprotein cholesterol measurement	0.507248
-168	TRIM52	Cerebral cavernous malformation	0.507239
-169	ZNF572	Kawasaki disease	0.507234
-170	CLK3	Cerebral cavernous malformation	0.507231
-171	TESK2	Ischemic stroke	0.507229
-172	PLSCR3	Ataxia telangiectasia	0.507228
-173	SCAP	Cerebral cavernous malformation	0.507225
-174	SHISAL1	Ischemic stroke	0.507222
-175	HAAO	Myocardial infarction	0.507210
-176	HOMER3	Myocardial infarction	0.507209
-177	CCDC66	Cerebral cavernous malformation	0.507209
-178	SLC48A1	Kawasaki disease	0.507206
-179	MCTP2	High density lipoprotein cholesterol measurement	0.507203
-180	ENSG00000267801	Cerebral cavernous malformation	0.507201
-181	SPPL3	Myocardial infarction	0.507199
-182	PEX16	Cerebral cavernous malformation	0.507194
-183	PEG10	Ischemic stroke	0.507188
-184	THSD7B	Cerebral cavernous malformation	0.507183
-185	OSER1	Ataxia telangiectasia	0.507183
-186	DYNLT5	Myocardial infarction	0.507181
-187	CACFD1	Ataxia telangiectasia	0.507178
-188	SUSD1	Ischemic stroke	0.507167
-189	CYP27A1	Myocardial infarction	0.507166
-190	TMCO4	Ischemic stroke	0.507164
-191	SLF2	Ischemic stroke	0.507162
-192	RBPMS2	Cerebral cavernous malformation	0.507158
-193	KCNT2	Myocardial infarction	0.507157
-194	FAM66D	Ischemic stroke	0.507156
-195	RBM47	High density lipoprotein cholesterol measurement	0.507152
-196	ARID5A	Total cholesterol measurement	0.507149
-197	DSE	Ischemic stroke	0.507145
-198	VWA2	Myocardial infarction	0.507142
-199	EPB41L2	Cerebral cavernous malformation	0.507139
-200	PBX2	Cerebral cavernous malformation	0.507139
-201	ENSG00000273302	Cerebral cavernous malformation	0.507138
-202	WNK2	Myocardial infarction	0.507137
-203	ATOH8	Myocardial infarction	0.507135
-204	INKA2	Kawasaki disease	0.507134
-205	TBC1D12	Kawasaki disease	0.507133
-206	KCNT2	Ischemic stroke	0.507132
-207	C3orf62	Kawasaki disease	0.507132
-208	IP6K2	Ischemic stroke	0.507131
-209	PIGH	Cerebral cavernous malformation	0.507118
-210	GAL3ST3	Ischemic stroke	0.507117
-211	ENSG00000205037	Myocardial infarction	0.507114
-212	TOB2	Cerebral cavernous malformation	0.507111
-213	ZDHHC11B	Kawasaki disease	0.507110
-214	HTRA3	Ischemic stroke	0.507103
-215	ENSG00000272374	Myocardial infarction	0.507097
-216	FSD2	Kawasaki disease	0.507083
-217	NSG2	Kawasaki disease	0.507080
-218	EPS8L2	Myocardial infarction	0.507077
-219	TRAPPC14	Ataxia telangiectasia	0.507074
-220	PTRHD1	Kawasaki disease	0.507066
-221	LINC01679	Myocardial infarction	0.507060
-222	LZTFL1	Ischemic stroke	0.507058
-223	FOXD4L1	Ischemic stroke	0.507057
-224	NACC2	Dilated cardiomyopathy	0.507056
-225	KIAA2013	Ataxia telangiectasia	0.507055
-226	SCGN	Ischemic stroke	0.507052
-227	ABCC10	Kawasaki disease	0.507051
-228	ZNF785	Cerebral cavernous malformation	0.507051
-229	DENND2A	Cerebral cavernous malformation	0.507046
-230	TAFA5	Kawasaki disease	0.507043
-231	NEU1	Ischemic stroke	0.507043
-232	RCN3	Systolic blood pressure	0.507043
-233	MACF1	Myocardial infarction	0.507041
-234	NTNG2	High density lipoprotein cholesterol measurement	0.507040
-235	KCNN4	Ischemic stroke	0.507039
-236	KCNAB1	Myocardial infarction	0.507037
-237	ASPRV1	Ataxia telangiectasia	0.507024
-238	NXPE3	Cerebral cavernous malformation	0.507019
-239	MKRN2	Cerebral cavernous malformation	0.507018
-240	TSHZ2	Dilated cardiomyopathy	0.507018
-241	VNN1	Ischemic stroke	0.507017
-242	CRIP3	Myocardial infarction	0.507017
-243	ZNF667-AS1	Ischemic stroke	0.507015
-244	ZNF358	Total cholesterol measurement	0.507013
-245	LRPAP1	Cerebral cavernous malformation	0.507013
-246	ARHGAP33	Kawasaki disease	0.507013
-247	LINC00920	Cerebral cavernous malformation	0.507013
-248	MIRLET7G	Cerebral cavernous malformation	0.507012
-249	RNF146	Cerebral cavernous malformation	0.507011
-250	hsa-mir-19a	Cerebral cavernous malformation	0.507011
-251	ENSG00000285106	Cerebral cavernous malformation	0.507008
-252	AQP4	Kawasaki disease	0.507007
-253	ENSG00000260274	Cerebral cavernous malformation	0.507007
-254	LINC00702	Ischemic stroke	0.506995
-255	SORBS1	Cerebral cavernous malformation	0.506995
-256	GPR137B	Ataxia telangiectasia	0.506993
-257	PCDHGA8	Kawasaki disease	0.506987
-258	DNASE1L3	Triglyceride measurement	0.506986
-259	BLMH	Myocardial infarction	0.506981
-260	ZNF587	Myocardial infarction	0.506971
-261	PCDHA3	Myocardial infarction	0.506966
-262	CPNE7	Total cholesterol measurement	0.506964
-263	GLI4	Mitral valve prolapse	0.506963
-264	JTB	High density lipoprotein cholesterol measurement	0.506961
-265	TMEM233	Ischemic stroke	0.506960
-266	FRMD5	Kawasaki disease	0.506954
-267	MIR99AHG	Myocardial infarction	0.506943
-268	CSMD2	Ischemic stroke	0.506937
-269	GAL3ST3	Myocardial infarction	0.506931
-270	DTNB	Ischemic stroke	0.506929
-271	FUCA1	Ischemic stroke	0.506921
-272	GIGYF1	Cerebral cavernous malformation	0.506921
-273	CLIC3	Ischemic stroke	0.506915
-274	GPIHBP1	Ischemic stroke	0.506911
-275	ADIRF-AS1	Cerebral cavernous malformation	0.506911
-276	WBP1L	Ataxia telangiectasia	0.506910
-277	SNAI3	Cerebral cavernous malformation	0.506908
-278	CCDC154	Cerebral cavernous malformation	0.506905
-279	LINC02468	Ischemic stroke	0.506898
-280	SLC17A2	Cerebral cavernous malformation	0.506893
-281	PTPRO	High density lipoprotein cholesterol measurement	0.506892
-282	DNAH2	Ischemic stroke	0.506890
-283	PCSK4	Myocardial infarction	0.506882
-284	SIDT2	Dilated cardiomyopathy	0.506881
-285	ZBTB9	Myocardial infarction	0.506881
-286	FAM161B	Myocardial infarction	0.506877
-287	FLJ37453	Cerebral cavernous malformation	0.506875
-288	HOXC8	Cerebral cavernous malformation	0.506873
-289	PLEKHH2	Mitral valve prolapse	0.506871
-290	CDKL1	Ataxia telangiectasia	0.506871
-291	GALNT14	Cerebral cavernous malformation	0.506868
-292	SLC35E4	Cerebral cavernous malformation	0.506863
-293	WDFY4	Ischemic stroke	0.506860
-294	PPP2R3A	Cerebral cavernous malformation	0.506856
-295	MILR1	Mitral valve prolapse	0.506853
-296	CPM	Myocardial infarction	0.506853
-297	STARD9	Systolic blood pressure	0.506850
-298	CYB561D2	Dilated cardiomyopathy	0.506845
-299	CARF	Mitral valve prolapse	0.506839
-300	TMEM169	Ischemic stroke	0.506838
-301	KLHDC7B	Myocardial infarction	0.506837
-302	MMAB	Cerebral cavernous malformation	0.506834
-303	CFAP43	Cerebral cavernous malformation	0.506833
-304	KCNK7	Kawasaki disease	0.506833
-305	PHF23	Ischemic stroke	0.506820
-306	SLC25A27	Systolic blood pressure	0.506819
-307	IRAK1BP1	Ischemic stroke	0.506815
-308	EHD4	Kawasaki disease	0.506813
-309	NECAB3	Myocardial infarction	0.506813
-310	ZDHHC2	Myocardial infarction	0.506812
-311	PPP1R10	Cerebral cavernous malformation	0.506809
-312	LTBP2	Myocardial infarction	0.506804
-313	SLC16A9	Kawasaki disease	0.506790
-314	PAPLN	High density lipoprotein cholesterol measurement	0.506788
-315	TANC2	Total cholesterol measurement	0.506785
-316	SASH1	Cerebral cavernous malformation	0.506784
-317	PBX2	Ischemic stroke	0.506784
-318	SH3TC1	Kawasaki disease	0.506782
-319	CYP20A1	Dilated cardiomyopathy	0.506778
-320	PRR11	Myocardial infarction	0.506777
-321	ZBED9	Ischemic stroke	0.506777
-322	EPHB4	Myocardial infarction	0.506772
-323	ENSG00000230910	Ischemic stroke	0.506770
-324	KLHDC8B	Mitral valve prolapse	0.506766
-325	ZFYVE21	Kawasaki disease	0.506766
-326	P2RY6	Ischemic stroke	0.506762
-327	ZNF284	Cerebral cavernous malformation	0.506757
-328	NCKIPSD	Cerebral cavernous malformation	0.506756
-329	CA4	Ataxia telangiectasia	0.506754
-330	SMOC2	Kawasaki disease	0.506753
-331	SPOCK2	Cerebral cavernous malformation	0.506750
-332	PCM1	Cerebral cavernous malformation	0.506748
-333	LCN10	Myocardial infarction	0.506746
-334	ANGPTL4	Ischemic stroke	0.506745
-335	CDIN1	Cerebral cavernous malformation	0.506745
-336	LOC105369309	Cerebral cavernous malformation	0.506737
-337	ZNF793	Kawasaki disease	0.506737
-338	MBLAC1	Cerebral cavernous malformation	0.506735
-339	SEMA4A	Cerebral cavernous malformation	0.506734
-340	ADIRF-AS1	Myocardial infarction	0.506734
-341	OR8U8	Cerebral cavernous malformation	0.506731
-342	IGSF10	Cerebral cavernous malformation	0.506730
-343	CLDN9	Myocardial infarction	0.506728
-344	USP34-DT	Cerebral cavernous malformation	0.506727
-345	MEF2C-AS1	Myocardial infarction	0.506723
-346	FAM86B1	Kawasaki disease	0.506721
-347	ZNF646	Ataxia telangiectasia	0.506717
-348	LINC00565	Cerebral cavernous malformation	0.506710
-349	NME9	Kawasaki disease	0.506709
-350	MAST4	High density lipoprotein cholesterol measurement	0.506706
-351	LOC105378493	Cerebral cavernous malformation	0.506706
-352	ENSG00000258240	Ischemic stroke	0.506700
-353	ENSG00000272405	Cerebral cavernous malformation	0.506697
-354	ENSG00000286786	Myocardial infarction	0.506691
-355	KIAA1755	Cerebral cavernous malformation	0.506690
-356	CCDC200	Myocardial infarction	0.506689
-357	SLC16A10	Total cholesterol measurement	0.506688
-358	LRRC8C-DT	Myocardial infarction	0.506687
-359	ZNF793	Ataxia telangiectasia	0.506681
-360	GPR65	Total cholesterol measurement	0.506680
-361	CPT1C	Ischemic stroke	0.506674
-362	SCYL1	Myocardial infarction	0.506669
-363	DCLK2	Dilated cardiomyopathy	0.506663
-364	CGNL1	Cerebral cavernous malformation	0.506661
-365	ZFYVE21	Ataxia telangiectasia	0.506659
-366	MFSD1	Triglyceride measurement	0.506657
-367	PEPD	Myocardial infarction	0.506654
-368	TTLL6	Kawasaki disease	0.506651
-369	DENND2B	Cerebral cavernous malformation	0.506649
-370	FAM180B	Ataxia telangiectasia	0.506646
-371	MIR6891	Cerebral cavernous malformation	0.506643
-372	MIR9-1HG	Kawasaki disease	0.506636
-373	AMIGO2	Triglyceride measurement	0.506635
-374	FAM47E	Dilated cardiomyopathy	0.506634
-375	CRLS1	Cerebral cavernous malformation	0.506633
-376	AOAH	Myocardial infarction	0.506633
-377	ENSG00000259038	Ischemic stroke	0.506631
-378	ENPP5	Total cholesterol measurement	0.506627
-379	CCDC71L	Kawasaki disease	0.506626
-380	CYP11A1	Myocardial infarction	0.506624
-381	TMBIM1	Mitral valve prolapse	0.506622
-382	CCDC154	Ischemic stroke	0.506621
-383	SERPINB8	Triglyceride measurement	0.506621
-384	FHL5	Kawasaki disease	0.506620
-385	PLEKHB1	High density lipoprotein cholesterol measurement	0.506619
-386	UBE3B	Cerebral cavernous malformation	0.506619
-387	ABCB10	Myocardial infarction	0.506613
-388	IGHG1	High density lipoprotein cholesterol measurement	0.506610
-389	TP53INP2	Cerebral cavernous malformation	0.506610
-390	ENSG00000260285	Myocardial infarction	0.506607
-391	DNAJC9-AS1	Ischemic stroke	0.506606
-392	IGHV3-7	Ataxia telangiectasia	0.506605
-393	IGSF10	Myocardial infarction	0.506603
-394	PLEKHB1	Mitral valve prolapse	0.506600
-395	PRRT1	Ischemic stroke	0.506599
-396	RBM43	Myocardial infarction	0.506598
-397	B3GNT7	Kawasaki disease	0.506595
-398	ENSG00000254602	Ischemic stroke	0.506593
-399	NRM	Mitral valve prolapse	0.506589
-400	C8orf34	Myocardial infarction	0.506588
-401	EID2	Cerebral cavernous malformation	0.506588
-402	MAP1S	Cerebral cavernous malformation	0.506576
-403	HNRNPUL2	Cerebral cavernous malformation	0.506576
-404	MAU2	Cerebral cavernous malformation	0.506568
-405	AZIN2	Ischemic stroke	0.506567
-406	SLC35E4	Ischemic stroke	0.506567
-407	PRRT2	Myocardial infarction	0.506565
-408	PEG13	Myocardial infarction	0.506562
-409	RPRML	Kawasaki disease	0.506562
-410	HOXD9	Ischemic stroke	0.506558
-411	KCNK1	Kawasaki disease	0.506556
-412	SLC16A5	High density lipoprotein cholesterol measurement	0.506554
-413	VDR	Triglyceride measurement	0.506545
-414	TDRD15	Cerebral cavernous malformation	0.506539
-415	TMEM74	Ischemic stroke	0.506539
-416	PCDH20	Ischemic stroke	0.506535
-417	TPM1-AS	Myocardial infarction	0.506534
-418	ANKRD35	Ischemic stroke	0.506531
-419	PTPRD	Kawasaki disease	0.506528
-420	SPTBN1	Cerebral cavernous malformation	0.506526
-421	APOL3	Triglyceride measurement	0.506519
-422	ALG9	Myocardial infarction	0.506515
-423	VDR	Mitral valve prolapse	0.506514
-424	MXD3	Cerebral cavernous malformation	0.506514
-425	VLDLR-AS1	Myocardial infarction	0.506510
-426	TMEM89	Ischemic stroke	0.506508
-427	ENSG00000233818	Ischemic stroke	0.506507
-428	DENND4B	Mitral valve prolapse	0.506506
-429	MFSD12	Dilated cardiomyopathy	0.506503
-430	LRRN3	Total cholesterol measurement	0.506500
-431	FAM227A	Myocardial infarction	0.506498
-432	LRCH4	Cerebral cavernous malformation	0.506497
-433	CPT1C	Myocardial infarction	0.506495
-434	RADIL	High density lipoprotein cholesterol measurement	0.506494
-435	SCML4	Myocardial infarction	0.506490
-436	ENSG00000260996	Cerebral cavernous malformation	0.506490
-437	LINC00910	Cerebral cavernous malformation	0.506488
-438	ARMCX1	Cerebral cavernous malformation	0.506487
-439	ZNF706	Ataxia telangiectasia	0.506484
-440	TMEM240	Myocardial infarction	0.506482
-441	ZSCAN16-AS1	Cerebral cavernous malformation	0.506481
-442	RBM6	Dilated cardiomyopathy	0.506480
-443	ARHGEF18	Cerebral cavernous malformation	0.506473
-444	MAP4	Cerebral cavernous malformation	0.506473
-445	C1orf115	Kawasaki disease	0.506472
-446	TMEM184B	Ataxia telangiectasia	0.506471
-447	COMMD6	Cerebral cavernous malformation	0.506471
-448	OAF	Kawasaki disease	0.506469
-449	URGCP	Cerebral cavernous malformation	0.506467
-450	COL4A3	Ischemic stroke	0.506467
-451	ENSG00000262223	Myocardial infarction	0.506465
-452	LY6E-DT	Myocardial infarction	0.506461
-453	ZNF75A	Ataxia telangiectasia	0.506458
-454	APOA1-AS	Kawasaki disease	0.506455
-455	LY6D	Cerebral cavernous malformation	0.506453
-456	QSOX1	Ischemic stroke	0.506444
-457	VEPH1	Total cholesterol measurement	0.506443
-458	TM4SF4	Ischemic stroke	0.506441
-459	SUMF1	Myocardial infarction	0.506438
-460	SLC47A1	Myocardial infarction	0.506436
-461	TRIM8	Cerebral cavernous malformation	0.506435
-462	ENSG00000256546	Myocardial infarction	0.506434
-463	SLC39A1	Myocardial infarction	0.506434
-464	OR8H3	Myocardial infarction	0.506430
-465	PAFAH1B2	Ataxia telangiectasia	0.506421
-466	ENSG00000273486	Kawasaki disease	0.506419
-467	HCG11	Cerebral cavernous malformation	0.506416
-468	LOC105378493	Myocardial infarction	0.506409
-469	ZNF561-AS1	Cerebral cavernous malformation	0.506407
-470	TMEM107	Ataxia telangiectasia	0.506407
-471	ESYT1	Ischemic stroke	0.506404
-472	NREP	Dilated cardiomyopathy	0.506401
-473	RESF1	Myocardial infarction	0.506401
-474	ACSM3	Ischemic stroke	0.506401
-475	BACE1-AS	Cerebral cavernous malformation	0.506400
-476	ENSG00000272630	Myocardial infarction	0.506396
-477	DNAI4	Kawasaki disease	0.506394
-478	ADAMTS18	Cerebral cavernous malformation	0.506394
-479	RMRP	Kawasaki disease	0.506390
-480	USP54	Dilated cardiomyopathy	0.506388
-481	USO1	Cerebral cavernous malformation	0.506386
-482	SCAMP1	Cerebral cavernous malformation	0.506386
-483	TNRC18	Cerebral cavernous malformation	0.506383
-484	CBARP	Myocardial infarction	0.506379
-485	FAM124A	Ischemic stroke	0.506378
-486	FAM169A	Ischemic stroke	0.506375
-487	PRR33	Kawasaki disease	0.506373
-488	SLC2A12	Dilated cardiomyopathy	0.506372
-489	MINDY4	Myocardial infarction	0.506372
-490	TMEM150B	Systolic blood pressure	0.506369
-491	IGKV1-17	Kawasaki disease	0.506369
-492	ST8SIA1	Cerebral cavernous malformation	0.506363
-493	LINC02537	Myocardial infarction	0.506362
-494	ALKBH8	Myocardial infarction	0.506358
-495	TMEM151B	Ischemic stroke	0.506357
-496	OIT3	Mitral valve prolapse	0.506356
-497	KLHL26	Dilated cardiomyopathy	0.506352
-498	NT5DC4	Kawasaki disease	0.506349
-499	CCDC33	Ischemic stroke	0.506341
-500	LINC00881	Myocardial infarction	0.506339
+1	C16orf89	Behcet syndrome	0.533118
+2	LONRF3	Behcet syndrome	0.532941
+3	MID1IP1	Hypertrophic cardiomyopathy	0.532862
+4	RADIL	Hypertrophic cardiomyopathy	0.532814
+5	TBC1D8	Aortic valve calcification	0.532684
+6	ADAMTS16	Hypertrophic cardiomyopathy	0.532656
+7	CPNE4	Eosinophilic granulomatosis with polyangiitis	0.532628
+8	ITIH1	Eosinophilic granulomatosis with polyangiitis	0.532592
+9	IRAG1	Hypertrophic cardiomyopathy	0.532576
+10	TMCC3	Eosinophilic granulomatosis with polyangiitis	0.532540
+11	RADIL	Eosinophilic granulomatosis with polyangiitis	0.532431
+12	MLEC	Hypertrophic cardiomyopathy	0.532397
+13	SH3BGRL2	Aortic valve calcification	0.532365
+14	SEMA4B	Hypertension	0.532345
+15	SHISAL1	Hypertrophic cardiomyopathy	0.532318
+16	SCML4	Eosinophilic granulomatosis with polyangiitis	0.532253
+17	ADAMTSL2	Behcet syndrome	0.532248
+18	PODNL1	Diastolic blood pressure	0.532214
+19	PRAG1	Hypertrophic cardiomyopathy	0.532205
+20	PLPPR3	Intracranial aneurysm	0.532189
+21	MYCT1	Hypertension	0.532183
+22	STOX2	Triglyceride measurement	0.532129
+23	NPEPPS	Eosinophilic granulomatosis with polyangiitis	0.532128
+24	VWA2	Total cholesterol measurement	0.532115
+25	C18orf32	Intracranial aneurysm	0.532100
+26	SAMD12	Behcet syndrome	0.532087
+27	CCDC159	Triglyceride measurement	0.532062
+28	GPR174	Diastolic blood pressure	0.532028
+29	KIAA1755	Tetralogy of fallot	0.531999
+30	KIAA0408	Behcet syndrome	0.531986
+31	ADAM28	Hypertension	0.531966
+32	SUGP2	Atherosclerosis	0.531963
+33	MOB3B	Total cholesterol measurement	0.531945
+34	ZNF229	Eosinophilic granulomatosis with polyangiitis	0.531945
+35	MIR155HG	Atherosclerosis	0.531915
+36	EFCC1	Total cholesterol measurement	0.531909
+37	DSEL	High density lipoprotein cholesterol measurement	0.531906
+38	IGKV3-20	Total cholesterol measurement	0.531897
+39	OSGIN1	Diastolic blood pressure	0.531883
+40	LINC01091	Behcet syndrome	0.531876
+41	TRBC2	Total cholesterol measurement	0.531857
+42	NIBAN1	Tetralogy of fallot	0.531855
+43	ZBTB20	Behcet syndrome	0.531838
+44	TMEM50A	Atherosclerosis	0.531815
+45	ARHGEF26-AS1	Behcet syndrome	0.531809
+46	PCDH17	Behcet syndrome	0.531801
+47	PON2	Intracranial aneurysm	0.531793
+48	TMSB10	Diastolic blood pressure	0.531790
+49	SEC14L5	Diastolic blood pressure	0.531783
+50	OIP5-AS1	Hypertrophic cardiomyopathy	0.531720
+51	HOXA3	Total cholesterol measurement	0.531713
+52	TMEM130	Hypertension	0.531687
+53	IFFO2	Hypertension	0.531675
+54	SRARP	High density lipoprotein cholesterol measurement	0.531670
+55	NEMP2	High density lipoprotein cholesterol measurement	0.531662
+56	NALF2	High density lipoprotein cholesterol measurement	0.531639
+57	HAPLN1	Behcet syndrome	0.531605
+58	ST6GALNAC3	Intracranial aneurysm	0.531598
+59	INAFM2	Mitral valve prolapse	0.531590
+60	PON2	Triglyceride measurement	0.531589
+61	PCED1A	Intracranial aneurysm	0.531583
+62	QSOX1	Aortic valve calcification	0.531582
+63	MILR1	Hypertension	0.531568
+64	FAM163A	Diastolic blood pressure	0.531562
+65	TSC22D4	Intracranial aneurysm	0.531537
+66	ENSG00000232821	Aortic valve calcification	0.531490
+67	ARHGAP26	Hypertrophic cardiomyopathy	0.531487
+68	ALPK3	Tetralogy of fallot	0.531456
+69	ZNF318	Behcet syndrome	0.531451
+70	ZNF335	Total cholesterol measurement	0.531434
+71	TNFAIP2	High density lipoprotein cholesterol measurement	0.531415
+72	ENSG00000276790	Behcet syndrome	0.531413
+73	CYP4Z1	Mitral valve prolapse	0.531346
+74	SERINC1	Pulse pressure measurement	0.531335
+75	GPR162	Diastolic blood pressure	0.531273
+76	TYW1B	Eosinophilic granulomatosis with polyangiitis	0.531228
+77	EML2	Intracranial aneurysm	0.531201
+78	SLC16A7	Diastolic blood pressure	0.531197
+79	SH3BGRL3	Diastolic blood pressure	0.531184
+80	HMCN2	Mitral valve prolapse	0.531151
+81	CALN1	Tetralogy of fallot	0.531148
+82	FAM153B	Systolic blood pressure	0.531126
+83	ZNF117	Tetralogy of fallot	0.531116
+84	SLC12A7	Systolic blood pressure	0.531085
+85	PCDHAC2	Total cholesterol measurement	0.531077
+86	GANAB	Aortic valve calcification	0.531073
+87	ENSG00000267731	Hypertrophic cardiomyopathy	0.531059
+88	PCDHA2	Behcet syndrome	0.531029
+89	PCNX2	Systolic blood pressure	0.531028
+90	MROH7-TTC4	Hypertension	0.531007
+91	GALNT2	Mitral valve prolapse	0.530960
+92	FMC1	Dilated cardiomyopathy	0.530952
+93	TCAF2	Atherosclerosis	0.530950
+94	HHIPL2	Intracranial aneurysm	0.530936
+95	PITPNC1	Pulse pressure measurement	0.530926
+96	IGLV1-40	High density lipoprotein cholesterol measurement	0.530917
+97	IRAK1BP1	Intracranial aneurysm	0.530905
+98	SH3BGRL3	Systolic blood pressure	0.530889
+99	SLAMF8	Triglyceride measurement	0.530883
+100	MAMDC4	Kawasaki disease	0.530841
+101	AIF1L	Myocardial infarction	0.530831
+102	hsa-mir-345	Hypertrophic cardiomyopathy	0.530818
+103	TBC1D12	Myocardial infarction	0.530817
+104	NFKBIL1	Aortic valve calcification	0.530814
+105	CA14	Systolic blood pressure	0.530799
+106	ENSG00000284052	Intracranial aneurysm	0.530780
+107	ZNF558	Hypertrophic cardiomyopathy	0.530776
+108	ADAMDEC1	High density lipoprotein cholesterol measurement	0.530760
+109	IGF2-AS	Atherosclerosis	0.530760
+110	SEMA3D	Hypertension	0.530753
+111	CPAMD8	Atherosclerosis	0.530744
+112	C1orf21	Ataxia telangiectasia	0.530740
+113	RADIL	Myocardial infarction	0.530731
+114	PTPRN2	Ruptured aneurysm	0.530727
+115	CSRNP3	Myocardial infarction	0.530709
+116	ENSG00000246477	Total cholesterol measurement	0.530704
+117	ZNF85	Dilated cardiomyopathy	0.530698
+118	LOC105372112	Atherosclerosis	0.530696
+119	MAILR	Atherosclerosis	0.530672
+120	SLC19A3	Kawasaki disease	0.530670
+121	TTTY14	Behcet syndrome	0.530655
+122	GFRA2	Triglyceride measurement	0.530649
+123	SCARNA2	Hypertrophic cardiomyopathy	0.530626
+124	ENSG00000287158	Aortic valve calcification	0.530626
+125	hsa-mir-369	Eosinophilic granulomatosis with polyangiitis	0.530597
+126	HHIPL2	High density lipoprotein cholesterol measurement	0.530583
+127	hsa-mir-345	Eosinophilic granulomatosis with polyangiitis	0.530578
+128	TIMD4	Dilated cardiomyopathy	0.530549
+129	ANO2	Triglyceride measurement	0.530549
+130	IMPA2	Hypertrophic cardiomyopathy	0.530537
+131	ENSG00000272462	Mitral valve prolapse	0.530513
+132	ENSG00000260337	Diastolic blood pressure	0.530507
+133	SLC12A9	Aortic dissection	0.530505
+134	LRRC10	Ischemic stroke	0.530498
+135	ODAD2	Coronary artery disease	0.530486
+136	LINC02334	Total cholesterol measurement	0.530471
+137	FLJ12825	Total cholesterol measurement	0.530465
+138	GRAMD1C	Dilated cardiomyopathy	0.530454
+139	SLC41A1	Intracranial aneurysm	0.530450
+140	MAFF	Total cholesterol measurement	0.530440
+141	OLFML3	Atherosclerosis	0.530416
+142	CD93	Pulse pressure measurement	0.530413
+143	AGPAT1	Eosinophilic granulomatosis with polyangiitis	0.530402
+144	LARP6	Diastolic blood pressure	0.530376
+145	ANKRD33B	Total cholesterol measurement	0.530371
+146	HECTD4	Tetralogy of fallot	0.530370
+147	ENSG00000286288	High density lipoprotein cholesterol measurement	0.530361
+148	ENSG00000268093	Mitral valve prolapse	0.530352
+149	PCYOX1L	Behcet syndrome	0.530334
+150	HOXA-AS2	Dilated cardiomyopathy	0.530327
+151	ANGPTL7	Ruptured aneurysm	0.530320
+152	PSD4	High density lipoprotein cholesterol measurement	0.530311
+153	OVOL1-AS1	Atherosclerosis	0.530310
+154	RARB	Atherosclerosis	0.530307
+155	ZNF419	Eosinophilic granulomatosis with polyangiitis	0.530303
+156	MPV17	Pulse pressure measurement	0.530302
+157	LINC00964	Hypertension	0.530295
+158	ENSG00000282097	Diastolic blood pressure	0.530295
+159	NENF	Triglyceride measurement	0.530287
+160	ADHFE1	Eosinophilic granulomatosis with polyangiitis	0.530280
+161	PGA3	Myocardial infarction	0.530264
+162	TSHZ3	Aortic valve calcification	0.530258
+163	GPM6A	Atherosclerosis	0.530252
+164	PCSK7	Ataxia telangiectasia	0.530244
+165	hsa-mir-345	Triglyceride measurement	0.530243
+166	SLC25A18	Total cholesterol measurement	0.530232
+167	FAM167A-AS1	Dilated cardiomyopathy	0.530228
+168	UBALD2	Pulse pressure measurement	0.530226
+169	LINC02137	Intracranial aneurysm	0.530226
+170	CHADL	Ischemic stroke	0.530219
+171	hsa-mir-374b	Pulse pressure measurement	0.530215
+172	HAND2-AS1	Pulse pressure measurement	0.530214
+173	ENSG00000269954	Ataxia telangiectasia	0.530205
+174	TMEM38A	High density lipoprotein cholesterol measurement	0.530192
+175	LYRM4-AS1	Dilated cardiomyopathy	0.530186
+176	BTN3A3	Intracranial aneurysm	0.530185
+177	GPR153	Hypertension	0.530167
+178	ETNPPL	Aortic dissection	0.530164
+179	NIPAL1	High density lipoprotein cholesterol measurement	0.530160
+180	RALYL	Hypertrophic cardiomyopathy	0.530157
+181	hsa-mir-433	Intracranial aneurysm	0.530154
+182	HRC	Kawasaki disease	0.530137
+183	hsa-mir-501	Behcet syndrome	0.530124
+184	FNDC10	Cerebral cavernous malformation	0.530120
+185	WBP1L	Ischemic stroke	0.530119
+186	ENSG00000271714	Hypertension	0.530112
+187	INMT	Pulse pressure measurement	0.530112
+188	hsa-mir-129-1	Hypertension	0.530110
+189	CCDC81	Ischemic stroke	0.530106
+190	HHIPL2	Kawasaki disease	0.530099
+191	BLOC1S3	Aortic valve calcification	0.530094
+192	ANKRD44	Mitral valve prolapse	0.530093
+193	CD300LF	Hypertrophic cardiomyopathy	0.530083
+194	LINC02289	Kawasaki disease	0.530061
+195	ZNF419	Diastolic blood pressure	0.530056
+196	APLN	Intracranial aneurysm	0.530042
+197	hsa-mir-484	Kawasaki disease	0.530025
+198	ENSG00000287338	Triglyceride measurement	0.530023
+199	MMP25	Total cholesterol measurement	0.530020
+200	ADAMTS9	Triglyceride measurement	0.530019
+201	ZFAS1	Kawasaki disease	0.529994
+202	PLCL1	High density lipoprotein cholesterol measurement	0.529987
+203	RIPOR2	Behcet syndrome	0.529981
+204	FAM228A	High density lipoprotein cholesterol measurement	0.529966
+205	PAQR5	Ischemic stroke	0.529964
+206	SSTR5-AS1	Eosinophilic granulomatosis with polyangiitis	0.529954
+207	PLEKHH2	Coronary artery disease	0.529949
+208	hsa-mir-212	Ataxia telangiectasia	0.529936
+209	SCARNA2	Total cholesterol measurement	0.529928
+210	LINC01503	Eosinophilic granulomatosis with polyangiitis	0.529925
+211	ENSG00000258634	Hypertension	0.529916
+212	C2orf69	High density lipoprotein cholesterol measurement	0.529891
+213	ASB16-AS1	Mitral valve prolapse	0.529876
+214	ENSG00000256897	Myocardial infarction	0.529850
+215	ZBTB42	Dilated cardiomyopathy	0.529848
+216	SLC9B1	Mitral valve prolapse	0.529848
+217	hsa-mir-590	Eosinophilic granulomatosis with polyangiitis	0.529847
+218	CCDC9B	Eosinophilic granulomatosis with polyangiitis	0.529841
+219	MATN4	Triglyceride measurement	0.529839
+220	RASGEF1B	Dilated cardiomyopathy	0.529839
+221	TTTY14	Mitral valve prolapse	0.529835
+222	AMIGO3	Triglyceride measurement	0.529831
+223	CLMP	Myocardial infarction	0.529819
+224	LGI3	Aortic valve calcification	0.529806
+225	LINC02207	Aortic valve calcification	0.529803
+226	MIR6746	Eosinophilic granulomatosis with polyangiitis	0.529796
+227	ZSWIM3	Eosinophilic granulomatosis with polyangiitis	0.529793
+228	TM4SF1	Tetralogy of fallot	0.529788
+229	POGLUT3	Aortic valve calcification	0.529783
+230	BCO2	Kawasaki disease	0.529779
+231	ENSG00000277144	Mitral valve prolapse	0.529759
+232	CKM	Pulse pressure measurement	0.529755
+233	PLAC9	Aortic valve calcification	0.529752
+234	GPM6A	Triglyceride measurement	0.529721
+235	TMEM40	Ruptured aneurysm	0.529721
+236	COPG2IT1	Diastolic blood pressure	0.529702
+237	MIR640	Myocardial infarction	0.529678
+238	TSPAN2	High density lipoprotein cholesterol measurement	0.529678
+239	SUSD4	Ischemic stroke	0.529674
+240	TNNI3K	High density lipoprotein cholesterol measurement	0.529668
+241	SCIRT	Behcet syndrome	0.529658
+242	BLOC1S5-TXNDC5	Behcet syndrome	0.529657
+243	CEP112	Pulse pressure measurement	0.529645
+244	GPR153	Triglyceride measurement	0.529628
+245	DHRS9	Atherosclerosis	0.529619
+246	RAB3IL1	Pulse pressure measurement	0.529618
+247	CSPG4	Hypertrophic cardiomyopathy	0.529618
+248	CMA1	Triglyceride measurement	0.529608
+249	SLC37A2	Systolic blood pressure	0.529603
+250	SH3RF3	Myocardial infarction	0.529600
+251	SLC12A5-AS1	Eosinophilic granulomatosis with polyangiitis	0.529600
+252	SLC35G6	Diastolic blood pressure	0.529592
+253	CLASRP	Myocardial infarction	0.529588
+254	LMOD1	Kawasaki disease	0.529587
+255	MYL4	Atherosclerosis	0.529573
+256	EPDR1	Dilated cardiomyopathy	0.529563
+257	ZNF585B	Eosinophilic granulomatosis with polyangiitis	0.529561
+258	CD300LF	Diastolic blood pressure	0.529552
+259	TTC28	Coronary artery disease	0.529540
+260	hsa-mir-185	High density lipoprotein cholesterol measurement	0.529523
+261	FRMPD1	Aortic valve calcification	0.529515
+262	ENSG00000273733	Myocardial infarction	0.529515
+263	SLFNL1-AS1	Tetralogy of fallot	0.529488
+264	SPATA32	Atherosclerosis	0.529463
+265	SLFN5	Diastolic blood pressure	0.529460
+266	FOLH1	Behcet syndrome	0.529454
+267	DPYSL3	Aortic valve calcification	0.529433
+268	TMEM132C	High density lipoprotein cholesterol measurement	0.529429
+269	ENSG00000257194	Mitral valve prolapse	0.529428
+270	ENSG00000259353	Hypertension	0.529406
+271	LETR1	Hypertrophic cardiomyopathy	0.529400
+272	MT1E	Kawasaki disease	0.529360
+273	DNER	Coronary artery disease	0.529334
+274	C2CD4A	Aortic valve calcification	0.529331
+275	EFHD1	Ischemic stroke	0.529321
+276	DPT	High density lipoprotein cholesterol measurement	0.529308
+277	ELOVL7	Tetralogy of fallot	0.529300
+278	GPR153	High density lipoprotein cholesterol measurement	0.529284
+279	hsa-mir-216a	Mitral valve prolapse	0.529278
+280	SERPINB1	Total cholesterol measurement	0.529270
+281	DCDC1	Hypertrophic cardiomyopathy	0.529253
+282	ATP5MK	Ataxia telangiectasia	0.529212
+283	MANBAL	Ischemic stroke	0.529209
+284	EMILIN1	Intracranial aneurysm	0.529201
+285	MIR6761	Ischemic stroke	0.529187
+286	C3orf35	Behcet syndrome	0.529177
+287	IGHV4-39	Behcet syndrome	0.529148
+288	ARHGEF40	Triglyceride measurement	0.529140
+289	ELMOD3	Ataxia telangiectasia	0.529117
+290	SPC24	Aortic valve calcification	0.529105
+291	C2orf68	High density lipoprotein cholesterol measurement	0.529100
+292	HLA-DQA2	Tetralogy of fallot	0.529088
+293	CD52	Diastolic blood pressure	0.529083
+294	CTXND2	Mitral valve prolapse	0.529076
+295	ENSG00000236234	Mitral valve prolapse	0.529061
+296	TNFAIP6	Behcet syndrome	0.529056
+297	BTBD11	Ischemic stroke	0.529049
+298	PDLIM5	Intracranial aneurysm	0.529016
+299	EXTL1	Dilated cardiomyopathy	0.529005
+300	SULT1A2	Intracranial aneurysm	0.528992
+301	hsa-mir-3613	Atherosclerosis	0.528968
+302	MACO1	Myocardial infarction	0.528959
+303	ENSG00000237807	Myocardial infarction	0.528954
+304	PCP4L1	Triglyceride measurement	0.528950
+305	ENSG00000289258	Total cholesterol measurement	0.528945
+306	RIPOR2	Intracranial aneurysm	0.528943
+307	SNORD10	Tetralogy of fallot	0.528928
+308	PRKCH-AS1	Hypertension	0.528926
+309	MXD3	Atherosclerosis	0.528913
+310	TTC28-AS1	Atherosclerosis	0.528911
+311	NLRC5	Dilated cardiomyopathy	0.528895
+312	CXXC4	High density lipoprotein cholesterol measurement	0.528891
+313	SLC2A10	Systolic blood pressure	0.528886
+314	ANKRD6	Eosinophilic granulomatosis with polyangiitis	0.528869
+315	PLIN4	Low density lipoprotein cholesterol measurement	0.528865
+316	ABHD16B	Eosinophilic granulomatosis with polyangiitis	0.528856
+317	PLEKHF1	Eosinophilic granulomatosis with polyangiitis	0.528852
+318	SERAC1	Aortic valve calcification	0.528819
+319	HNRNPUL2	Hypertension	0.528818
+320	ENSG00000233251	Tetralogy of fallot	0.528803
+321	LYPLAL1-AS1	Intracranial aneurysm	0.528795
+322	SLCO2A1	Ischemic stroke	0.528788
+323	MFAP4	Triglyceride measurement	0.528778
+324	ENSG00000277144	Myocardial infarction	0.528777
+325	DGKG	Aortic valve calcification	0.528773
+326	LINC00377	Myocardial infarction	0.528763
+327	ENSG00000285188	Systolic blood pressure	0.528755
+328	B3GAT3	Stroke	0.528747
+329	BNC1	Ataxia telangiectasia	0.528734
+330	hsa-mir-125b-2	Pulse pressure measurement	0.528731
+331	PDGFD	Aortic valve calcification	0.528726
+332	CD163L1	Myocardial infarction	0.528724
+333	PCDHB4	Kawasaki disease	0.528704
+334	MIR100HG	Cerebral cavernous malformation	0.528704
+335	TPD52L1	Pulse pressure measurement	0.528694
+336	VIPR1	Total cholesterol measurement	0.528692
+337	hsa-mir-194-2	High density lipoprotein cholesterol measurement	0.528690
+338	SNHG7	Hypertension	0.528675
+339	KDM7A-DT	Dilated cardiomyopathy	0.528672
+340	PDLIM5	Total cholesterol measurement	0.528664
+341	ERVH48-1	Diastolic blood pressure	0.528663
+342	ENSG00000274758	Aortic dissection	0.528648
+343	hsa-mir-32	High density lipoprotein cholesterol measurement	0.528648
+344	NOP53-AS1	Ataxia telangiectasia	0.528647
+345	CNIH4	Atherosclerosis	0.528645
+346	UBTD1	Dilated cardiomyopathy	0.528637
+347	ZNF506	Dilated cardiomyopathy	0.528636
+348	ENSG00000269918	Aortic dissection	0.528634
+349	CEACAM16-AS1	Mitral valve prolapse	0.528631
+350	SLC39A10	Hypertension	0.528598
+351	PLEKHM2	Ataxia telangiectasia	0.528598
+352	CAPS2	Behcet syndrome	0.528585
+353	RGS1	Total cholesterol measurement	0.528551
+354	MMP11	Low density lipoprotein cholesterol measurement	0.528544
+355	PITPNC1	Ruptured aneurysm	0.528544
+356	ASB2	Eosinophilic granulomatosis with polyangiitis	0.528533
+357	CCNJL	Aortic dissection	0.528519
+358	SLC16A14	Ischemic stroke	0.528510
+359	MYOZ1	Total cholesterol measurement	0.528507
+360	RGMA	Cerebral cavernous malformation	0.528495
+361	CEROX1	Aortic dissection	0.528487
+362	hsa-mir-338	Coronary artery disease	0.528483
+363	ZBTB9	Tetralogy of fallot	0.528462
+364	MIR6861	Kawasaki disease	0.528461
+365	NPPA-AS1	Kawasaki disease	0.528450
+366	SLC16A9	Stroke	0.528444
+367	PLEKHF1	Triglyceride measurement	0.528439
+368	KCNMB1	Tetralogy of fallot	0.528434
+369	hsa-mir-197	Diastolic blood pressure	0.528430
+370	GJC1	Tetralogy of fallot	0.528423
+371	CCDC138	Intracranial aneurysm	0.528408
+372	ZDHHC11	Myocardial infarction	0.528407
+373	RIMBP2	Dilated cardiomyopathy	0.528406
+374	PPT2-EGFL8	Hypertrophic cardiomyopathy	0.528381
+375	PLEKHA4	Tetralogy of fallot	0.528381
+376	TRIM50	Coronary artery disease	0.528374
+377	DCHS2	Kawasaki disease	0.528371
+378	GZMM	Myocardial infarction	0.528369
+379	SLC6A17	Kawasaki disease	0.528355
+380	CDR2L	Hypertrophic cardiomyopathy	0.528344
+381	ETHE1	Aortic valve calcification	0.528337
+382	ENSG00000260196	Kawasaki disease	0.528337
+383	COTL1	Hypertension	0.528333
+384	TRIM51	Mitral valve prolapse	0.528325
+385	CYRIA	High density lipoprotein cholesterol measurement	0.528322
+386	TLR10	Diastolic blood pressure	0.528313
+387	RPS6KL1	Hypertrophic cardiomyopathy	0.528244
+388	OMD	Tetralogy of fallot	0.528242
+389	HOXB5	Ischemic stroke	0.528184
+390	ZFP91-CNTF	Atherosclerosis	0.528170
+391	SLC27A3	Mitral valve prolapse	0.528166
+392	PRELID1	Intracranial aneurysm	0.528163
+393	IGKV2-24	Mitral valve prolapse	0.528149
+394	NCK1-DT	Ischemic stroke	0.528131
+395	KLF3	Kawasaki disease	0.528126
+396	GIMAP8	Tetralogy of fallot	0.528109
+397	PEG3	Tetralogy of fallot	0.528105
+398	hsa-mir-421	Mitral valve prolapse	0.528087
+399	C2orf68	Cerebral cavernous malformation	0.528084
+400	DNAAF10	Dilated cardiomyopathy	0.528046
+401	COL10A1	Coronary artery disease	0.528043
+402	LOC105379168	Intracranial aneurysm	0.528033
+403	hsa-mir-378a	Kawasaki disease	0.528023
+404	hsa-mir-105-1	Dilated cardiomyopathy	0.528003
+405	ZNF785	Myocardial infarction	0.527999
+406	NTN1	Kawasaki disease	0.527979
+407	DTNB	Behcet syndrome	0.527971
+408	NEMP1	Eosinophilic granulomatosis with polyangiitis	0.527954
+409	UBAP1	Total cholesterol measurement	0.527946
+410	PEG10	Atherosclerosis	0.527930
+411	LGALS2	Aortic valve calcification	0.527928
+412	ENSG00000267288	Intracranial aneurysm	0.527895
+413	GRINA	Intracranial aneurysm	0.527892
+414	PTPRQ	Stroke	0.527883
+415	hsa-mir-363	Systolic blood pressure	0.527880
+416	PRR29	Hypertension	0.527877
+417	ITIH4-AS1	Eosinophilic granulomatosis with polyangiitis	0.527876
+418	ZNF101	Stroke	0.527868
+419	LOXL2	Diastolic blood pressure	0.527862
+420	CD14	Diastolic blood pressure	0.527857
+421	LOC105370913	Triglyceride measurement	0.527842
+422	C1orf53	Hypertrophic cardiomyopathy	0.527794
+423	ENSG00000255495	Low density lipoprotein cholesterol measurement	0.527789
+424	MILR1	Venous thromboembolism	0.527768
+425	SLC2A9	Aortic dissection	0.527764
+426	C10orf88	Behcet syndrome	0.527763
+427	FAM50B	Atherosclerosis	0.527759
+428	SLC52A2	Systolic blood pressure	0.527684
+429	VOPP1	Dilated cardiomyopathy	0.527677
+430	P2RY10	Systolic blood pressure	0.527670
+431	TMEM150A	Tetralogy of fallot	0.527653
+432	ASIP	Diastolic blood pressure	0.527640
+433	ENSG00000230149	Cerebral cavernous malformation	0.527640
+434	LOC100128988	Dilated cardiomyopathy	0.527606
+435	MTUS2	Kawasaki disease	0.527606
+436	hsa-mir-96	Cerebral cavernous malformation	0.527605
+437	ENSG00000278765	Myocardial infarction	0.527601
+438	TCF23	Atherosclerosis	0.527600
+439	CASS4	Pulse pressure measurement	0.527595
+440	KLHL14	Triglyceride measurement	0.527594
+441	MYRF	Kawasaki disease	0.527590
+442	HCFC1R1	Hypertrophic cardiomyopathy	0.527583
+443	SV2A	Intracranial aneurysm	0.527578
+444	C1GALT1	Myocardial infarction	0.527566
+445	SRGN	Coronary artery disease	0.527562
+446	DNAAF11	Ataxia telangiectasia	0.527560
+447	TRIL	Coronary artery disease	0.527540
+448	TRPM3	Ischemic stroke	0.527515
+449	MIR503HG	Diastolic blood pressure	0.527504
+450	EMSLR	Dilated cardiomyopathy	0.527501
+451	ENSG00000273156	Ataxia telangiectasia	0.527490
+452	C1QTNF5	Kawasaki disease	0.527481
+453	ILDR1	Intracranial aneurysm	0.527479
+454	NRAP	Hypertrophic cardiomyopathy	0.527476
+455	NRK	Stroke	0.527466
+456	LRRC4C	Aortic valve calcification	0.527459
+457	LINC00484	Behcet syndrome	0.527453
+458	DCHS2	Cerebral cavernous malformation	0.527452
+459	SNHG32	Intracranial aneurysm	0.527446
+460	SOX7	Kawasaki disease	0.527432
+461	TXLNB	Aortic valve calcification	0.527429
+462	LINC00689	Systolic blood pressure	0.527397
+463	MIR181A2HG	Systolic blood pressure	0.527394
+464	FAM177A1	Ataxia telangiectasia	0.527393
+465	HDX	Cerebral cavernous malformation	0.527384
+466	COMMD4	Total cholesterol measurement	0.527382
+467	THBS4	Low density lipoprotein cholesterol measurement	0.527376
+468	STARD4-AS1	Aortic dissection	0.527374
+469	MUC6	Intracranial aneurysm	0.527366
+470	LRRC4C	Intracranial aneurysm	0.527363
+471	ST8SIA2	Behcet syndrome	0.527355
+472	NSG1	Intracranial aneurysm	0.527350
+473	ENSG00000261054	Ataxia telangiectasia	0.527309
+474	NBL1	Ataxia telangiectasia	0.527291
+475	REPS2	Diastolic blood pressure	0.527282
+476	SETBP1	Coronary artery disease	0.527279
+477	GZMK	Systolic blood pressure	0.527279
+478	SH2B3	Dilated cardiomyopathy	0.527276
+479	ENSG00000267342	Aortic dissection	0.527274
+480	ENSG00000263050	Dilated cardiomyopathy	0.527270
+481	SPRED2	Eosinophilic granulomatosis with polyangiitis	0.527268
+482	C4orf46	Triglyceride measurement	0.527266
+483	LINC02398	Tetralogy of fallot	0.527246
+484	CEP295NL	Total cholesterol measurement	0.527246
+485	TMEM141	Systolic blood pressure	0.527224
+486	LINC02767	Intracranial aneurysm	0.527221
+487	ENSG00000286584	Low density lipoprotein cholesterol measurement	0.527217
+488	SLC12A8	Eosinophilic granulomatosis with polyangiitis	0.527205
+489	ENSG00000289327	Systolic blood pressure	0.527191
+490	ENSG00000288947	Hypertension	0.527191
+491	HOXC-AS1	High density lipoprotein cholesterol measurement	0.527191
+492	WFDC3	Tetralogy of fallot	0.527166
+493	BEGAIN	Aortic dissection	0.527164
+494	SCAP	Intracranial aneurysm	0.527159
+495	PTCRA	Hypertrophic cardiomyopathy	0.527145
+496	MAMLD1	Total cholesterol measurement	0.527127
+497	SMAGP	Systolic blood pressure	0.527116
+498	PCDHGB5	Total cholesterol measurement	0.527113
+499	GMEB2	Triglyceride measurement	0.527109
+500	CP	Eosinophilic granulomatosis with polyangiitis	0.527098
