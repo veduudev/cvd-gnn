@@ -5,7 +5,6 @@ import torch
 import numpy as np
 import random
 import logging
-from pathlib import Path
 
 
 def load_config(config_path: str = "configs/default.yaml", overrides: dict = None) -> dict:

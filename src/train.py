@@ -36,13 +36,11 @@ def prepare_input_features(data, node_types, embed_dim, hidden_dim, device):
     3. Concatenate and project to hidden_dim via linear layer
 
     Returns:
-        x_dict: {ntype: projected_features [N, hidden_dim]}
         learnable_embeds: nn.ParameterDict of learnable embeddings
         input_projections: nn.ModuleDict of projection layers
     """
     learnable_embeds = nn.ParameterDict()
     input_projections = nn.ModuleDict()
-    x_dict = {}
 
     for ntype in node_types:
         if not hasattr(data[ntype], "x"):
@@ -76,7 +74,6 @@ def train_supervised(
     config: dict,
     model_type: str = "rgcn",
     use_pretrain: bool = False,
-    debug: bool = False,
 ):
     """Full supervised training pipeline.
 
@@ -153,21 +150,22 @@ def train_supervised(
         original_features = {ntype: data[ntype].x.clone() for ntype in node_types if hasattr(data[ntype], "x")}
 
         # Temporarily set projected features on data for pretraining
-        with torch.no_grad():
-            for ntype in node_types:
-                if ntype in learnable_embeds:
-                    feat = data[ntype].x
-                    embed = learnable_embeds[ntype].detach()
-                    combined = torch.cat([feat, embed], dim=-1)
-                    data[ntype].x = input_projections[ntype](combined).detach()
+        try:
+            with torch.no_grad():
+                for ntype in node_types:
+                    if ntype in learnable_embeds:
+                        feat = data[ntype].x
+                        embed = learnable_embeds[ntype].detach()
+                        combined = torch.cat([feat, embed], dim=-1)
+                        data[ntype].x = input_projections[ntype](combined).detach()
 
-        encoder = pretrain_contrastive(
-            encoder, data, config, device, model_type=model_type
-        )
-
-        # Restore original features (no reload needed, preserves edge splits)
-        for ntype, feat in original_features.items():
-            data[ntype].x = feat
+            encoder = pretrain_contrastive(
+                encoder, data, config, device, model_type=model_type
+            )
+        finally:
+            # Restore original features (no reload needed, preserves edge splits)
+            for ntype, feat in original_features.items():
+                data[ntype].x = feat
 
     # Decoder
     # For gene-disease prediction, we use relation index 0
@@ -527,6 +525,5 @@ if __name__ == "__main__":
         config,
         model_type=args.model,
         use_pretrain=args.pretrain,
-        debug=args.debug,
     )
     print(f"\nFinal test metrics: {results['test_metrics']}")

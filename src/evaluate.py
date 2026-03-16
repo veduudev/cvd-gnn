@@ -4,10 +4,12 @@ Computes: ROC-AUC, Average Precision, Hits@K, Mean Reciprocal Rank.
 Also provides comparison across all trained configurations.
 """
 
-import numpy as np
+import csv
 import json
 import logging
 from pathlib import Path
+
+import numpy as np
 from sklearn.metrics import roc_auc_score, average_precision_score
 
 logger = logging.getLogger(__name__)
@@ -113,8 +115,6 @@ def compare_all_models(results_dir: str = "results"):
     print("=" * 80)
 
     # Save comparison CSV
-    import csv
-
     with open(results_dir / "comparison.csv", "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(["model", "pretrained"] + metric_names)

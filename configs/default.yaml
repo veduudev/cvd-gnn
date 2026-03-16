@@ -4,7 +4,6 @@
 data:
   cvd_atlas_file: "data/raw/Disease-gene_association.txt"
   string_score_threshold: 700
-  snp_min_diseases: 2
   debug_top_diseases: 20
 
 # Graph
@@ -14,7 +13,6 @@ graph:
     gene_interacts_with_gene: 0.15
     gene_has_function: 0.10
     gene_associated_with_disease: 0.05
-    snp_associated_with_disease: 0.05
   feature_mask_rate: 0.20
 
 # Contrastive pretraining
@@ -22,7 +20,6 @@ contrastive:
   epochs: 100
   lr: 0.001
   tau: 0.5
-  batch_size_per_type: 1024
   projection_dim: 64
 
 # Model
@@ -48,7 +45,6 @@ training:
   train_ratio: 0.70
   val_ratio: 0.15
   test_ratio: 0.15
-  neighbor_fanout: [15, 10]
 
 # Decoder
 decoder:

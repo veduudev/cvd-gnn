@@ -25,7 +25,6 @@ def load_hetero_data(config: dict) -> HeteroData:
     - Edge weights as edge_attr
     """
     processed_dir = Path("data/processed")
-    embed_dim = config["graph"]["embed_dim"]
 
     nodes_df = pd.read_csv(processed_dir / "nodes.csv")
     edges_df = pd.read_csv(processed_dir / "edges.csv")

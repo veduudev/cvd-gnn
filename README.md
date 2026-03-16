@@ -35,10 +35,17 @@ Key techniques:
 ## Setup
 
 ```bash
-# Install dependencies
+# Install PyTorch (CPU)
 pip install torch==2.6.0
 pip install torch-geometric
 pip install pyg_lib torch_scatter torch_sparse torch_cluster -f https://data.pyg.org/whl/torch-2.6.0+cpu.html
+
+# Or with CUDA (recommended for full-data training)
+pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu121
+pip install torch-geometric
+pip install torch_scatter torch_sparse -f https://data.pyg.org/whl/torch-2.6.0+cu121.html
+
+# Other dependencies
 pip install pandas numpy scikit-learn pyyaml requests tqdm matplotlib seaborn
 ```
 
@@ -93,6 +100,19 @@ Outputs:
 - `results/comparison.csv` — metric comparison table
 - `results/predictions_*.tsv` — ranked novel gene-disease predictions
 - `results/metrics_*.json` — per-model metric files
+
+## Results
+
+Full-data training on all 229 cardiovascular diseases:
+
+| Configuration | ROC-AUC | AP | Hits@10 | Hits@50 | MRR |
+|--------------|---------|------|---------|---------|-------|
+| **R-GCN + pretrain** | **0.893** | **0.873** | 0.003 | **0.024** | 0.003 |
+| R-GCN | 0.892 | 0.871 | **0.004** | 0.021 | **0.003** |
+| HGT + pretrain | 0.889 | 0.861 | 0.003 | 0.024 | 0.003 |
+| HGT | 0.886 | 0.860 | 0.004 | 0.016 | 0.003 |
+
+R-GCN with contrastive pretraining achieves the best ROC-AUC (0.893) and AP (0.873). Pretraining consistently improves Hits@50 for both architectures, suggesting it helps with ranking quality.
 
 ## Metrics
 

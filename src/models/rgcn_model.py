@@ -48,11 +48,8 @@ class RGCNEncoder(nn.Module):
         self.num_layers = num_layers
         self.dropout = dropout
 
-        # Per-type learnable embeddings
-        self.node_embeddings = nn.ModuleDict()
-        # Per-type input projections (handcrafted features + learnable -> hidden_dim)
+        # Per-type input projections (kept for checkpoint compatibility)
         self.input_projections = nn.ModuleDict()
-
         for ntype in node_types:
             feat_dim = node_feature_dims.get(ntype, 0)
             input_dim = feat_dim + embed_dim
@@ -70,20 +67,6 @@ class RGCNEncoder(nn.Module):
             self.convs.append(conv)
 
         self.dropout_layer = nn.Dropout(dropout)
-
-    def init_node_embeddings(self, num_nodes_dict: dict):
-        """Initialize learnable embeddings for each node type.
-
-        Must be called after loading data to know node counts.
-        """
-        embed_dim = list(self.input_projections.values())[0].in_features - \
-                     (list(self.input_projections.values())[0].in_features -
-                      self.hidden_dim)  # This is a shorthand; use stored embed_dim
-        # Actually, extract from the input projection
-        for ntype in self.node_types:
-            feat_dim_plus_embed = self.input_projections[ntype].in_features
-            # We need embed_dim, compute it from constructor args stored separately
-            pass
 
     def forward(self, x_dict: dict, edge_index: torch.Tensor,
                 edge_type: torch.Tensor, node_offsets: dict) -> dict:

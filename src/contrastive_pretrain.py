@@ -123,7 +123,9 @@ def type_aware_contrastive_loss(
         num_types += 1
 
     if num_types == 0:
-        return torch.tensor(0.0, requires_grad=True)
+        # Return zero loss connected to the computation graph
+        device = next(iter(z1_dict.values())).device
+        return torch.zeros(1, device=device, requires_grad=True).squeeze()
 
     return total_loss / num_types
 
