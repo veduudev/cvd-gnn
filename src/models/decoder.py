@@ -27,13 +27,14 @@ class DistMultDecoder(nn.Module):
         super().__init__()
         self.relation_embeddings = nn.Embedding(num_relations, hidden_dim)
         nn.init.xavier_uniform_(self.relation_embeddings.weight)
+        # Learnable temperature to control score spread
+        self.score_scale = nn.Parameter(torch.tensor(1.0))
 
     def forward(
         self,
         z_src: torch.Tensor,
         z_dst: torch.Tensor,
         rel_idx: int,
-        normalize: bool = True,
     ) -> torch.Tensor:
         """Compute link prediction scores.
 
@@ -41,18 +42,13 @@ class DistMultDecoder(nn.Module):
             z_src: source node embeddings [N, hidden_dim]
             z_dst: target node embeddings [N, hidden_dim]
             rel_idx: relation type index
-            normalize: whether to L2-normalize embeddings before scoring
 
         Returns:
             scores: [N] raw scores (apply sigmoid for probabilities)
         """
-        if normalize:
-            z_src = F.normalize(z_src, p=2, dim=-1)
-            z_dst = F.normalize(z_dst, p=2, dim=-1)
-
         r = self.relation_embeddings.weight[rel_idx]  # [hidden_dim]
-        # DistMult: element-wise product then sum
-        scores = (z_src * r.unsqueeze(0) * z_dst).sum(dim=-1)
+        # DistMult: element-wise product then sum, scaled by learnable temperature
+        scores = (z_src * r.unsqueeze(0) * z_dst).sum(dim=-1) * self.score_scale
         return scores
 
     def get_reg_loss(self, lambda_reg: float = 1e-5) -> torch.Tensor:

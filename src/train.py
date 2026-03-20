@@ -17,12 +17,12 @@ import logging
 from pathlib import Path
 
 from src.utils import load_config, set_seed, get_device, setup_logger, build_global_edge_index
-from src.dataset import load_hetero_data, split_gene_disease_edges, sample_negative_edges
+from src.dataset import load_hetero_data, split_gene_disease_edges, sample_negative_edges, mine_dynamic_hard_negatives
 from src.models.rgcn_model import RGCNEncoder
 from src.models.hgt_model import HGTEncoder
 from src.models.decoder import DistMultDecoder
 from src.contrastive_pretrain import pretrain_contrastive
-from src.evaluate import compute_metrics
+from src.evaluate import compute_metrics, compute_classification_metrics, compute_filtered_ranking_metrics
 
 logger = logging.getLogger(__name__)
 
@@ -213,9 +213,16 @@ def train_supervised(
     num_genes = data["gene"].num_nodes
     num_diseases = data["disease"].num_nodes
 
+    # Build set of ALL known edges for negative sampling rejection
+    all_known_edges = set()
+    for split_name in ["train", "val", "test"]:
+        ei = splits[split_name]["edge_index"]
+        all_known_edges.update(zip(ei[0].tolist(), ei[1].tolist()))
+
     logger.info(f"Starting supervised training: {tag}")
     logger.info(f"  Genes: {num_genes}, Diseases: {num_diseases}")
     logger.info(f"  Train edges: {splits['train']['edge_index'].shape[1]}")
+    logger.info(f"  All known edges (for neg rejection): {len(all_known_edges)}")
 
     for epoch in range(epochs):
         encoder.train()
@@ -254,7 +261,7 @@ def train_supervised(
         pos_dst = z_disease[pos_ei[1]]
         pos_scores = decoder(pos_src, pos_dst, rel_idx=0)
 
-        # Negative edges (re-sampled each epoch)
+        # Negative edges (re-sampled each epoch, rejects ALL known edges)
         neg_ei = sample_negative_edges(
             data,
             splits["train"]["edge_index"],
@@ -262,23 +269,54 @@ def train_supervised(
             num_diseases,
             ratio=config["training"]["negative_ratio"],
             hard_ratio=config["training"]["hard_negative_ratio"],
+            all_known_edges=all_known_edges,
         ).to(device)
+
+        # Dynamic hard negatives: mine high-scoring negatives every 10 epochs after warmup
+        dynamic_ratio = config["training"].get("dynamic_hard_neg_ratio", 0.3)
+        dynamic_warmup = config["training"].get("dynamic_hard_neg_warmup", 20)
+        if dynamic_ratio > 0 and epoch >= dynamic_warmup and (epoch % 10 == 0):
+            num_dynamic = int(pos_ei.shape[1] * dynamic_ratio)
+            dynamic_neg = mine_dynamic_hard_negatives(
+                decoder, z_gene, z_disease,
+                splits["train"]["edge_index"],
+                all_known_edges, num_dynamic,
+            ).to(device)
+            if dynamic_neg.shape[1] > 0:
+                neg_ei = torch.cat([neg_ei, dynamic_neg], dim=1)
+
         neg_src = z_gene[neg_ei[0]]
         neg_dst = z_disease[neg_ei[1]]
         neg_scores = decoder(neg_src, neg_dst, rel_idx=0)
 
-        # BCE loss
+        # Combined BPR + BCE loss
+        bpr_alpha = config["training"].get("bpr_alpha", 0.7)
+
+        # BPR: pairwise ranking loss (pair each positive with a negative)
+        n_pairs = min(pos_scores.shape[0], neg_scores.shape[0])
+        bpr_loss = -F.logsigmoid(pos_scores[:n_pairs] - neg_scores[:n_pairs]).mean()
+
+        # BCE: classification loss (preserves separation signal)
         pos_labels = torch.ones(pos_scores.shape[0], device=device)
         neg_labels = torch.zeros(neg_scores.shape[0], device=device)
-        scores = torch.cat([pos_scores, neg_scores])
-        labels = torch.cat([pos_labels, neg_labels])
-        loss = F.binary_cross_entropy_with_logits(scores, labels)
+        all_scores = torch.cat([pos_scores, neg_scores])
+        all_labels = torch.cat([pos_labels, neg_labels])
+        bce_loss = F.binary_cross_entropy_with_logits(all_scores, all_labels)
+
+        loss = bpr_alpha * bpr_loss + (1 - bpr_alpha) * bce_loss
 
         # Embedding regularization
         reg_loss = decoder.get_reg_loss(config["decoder"]["embedding_reg_lambda"])
+        # Embedding regularization on node embeddings (prevents magnitude explosion)
+        embed_reg = config["decoder"].get("embed_node_reg_lambda", 1e-4)
+        for ntype in node_types:
+            if ntype in z_dict:
+                reg_loss = reg_loss + embed_reg * z_dict[ntype].norm(p=2).pow(2) / z_dict[ntype].shape[0]
+
         loss = loss + reg_loss
 
         loss.backward()
+        torch.nn.utils.clip_grad_norm_(all_params, max_norm=1.0)
         optimizer.step()
 
         # Validation
@@ -291,11 +329,17 @@ def train_supervised(
             val_ap = val_metrics["average_precision"]
             scheduler.step(val_ap)
 
+            # Score diagnostics
+            with torch.no_grad():
+                pos_sig = pos_scores.sigmoid()
+                neg_sig = neg_scores.sigmoid()
             logger.info(
                 f"Epoch {epoch + 1}/{epochs} | "
-                f"Loss: {loss.item():.4f} | "
+                f"Loss: {loss.item():.4f} (BPR: {bpr_loss.item():.4f}, BCE: {bce_loss.item():.4f}) | "
                 f"Val AP: {val_ap:.4f} | "
-                f"Val AUC: {val_metrics['roc_auc']:.4f}"
+                f"Val AUC: {val_metrics['roc_auc']:.4f} | "
+                f"Pos scores: {pos_sig.mean():.3f}±{pos_sig.std():.3f} | "
+                f"Neg scores: {neg_sig.mean():.3f}±{neg_sig.std():.3f}"
             )
 
             if val_ap > best_val_ap:
@@ -330,6 +374,8 @@ def train_supervised(
         encoder, decoder, data, splits["test"],
         learnable_embeds, input_projections,
         node_types, model_type, device, config,
+        all_splits=splits,
+        use_full_ranking=True,
     )
 
     logger.info(f"=== Test Results ({tag}) ===")
@@ -361,8 +407,15 @@ def evaluate_split(
     encoder, decoder, data, split,
     learnable_embeds, input_projections,
     node_types, model_type, device, config,
+    all_splits=None,
+    use_full_ranking=False,
 ):
-    """Evaluate on a val/test split."""
+    """Evaluate on a val/test split.
+
+    Args:
+        all_splits: dict with train/val/test splits (needed for filtered ranking)
+        use_full_ranking: if True, use full filtered ranking for Hits@K/MRR
+    """
     encoder.eval()
     decoder.eval()
 
@@ -391,16 +444,15 @@ def evaluate_split(
     z_gene = z_dict["gene"]
     z_disease = z_dict["disease"]
 
-    # Score positive edges
+    # Classification metrics (AUC, AP) via sampled negatives
     pos_ei = split["edge_index"].to(device)
     pos_scores = decoder(z_gene[pos_ei[0]], z_disease[pos_ei[1]], rel_idx=0)
 
-    # Sample negatives for evaluation (same size as positives)
     num_genes = data["gene"].num_nodes
     num_diseases = data["disease"].num_nodes
     neg_ei = sample_negative_edges(
         data, split["edge_index"], num_genes, num_diseases,
-        ratio=1.0, hard_ratio=0.0,  # random negatives for fair eval
+        ratio=1.0, hard_ratio=0.0,
     ).to(device)
     neg_scores = decoder(z_gene[neg_ei[0]], z_disease[neg_ei[1]], rel_idx=0)
 
@@ -410,7 +462,36 @@ def evaluate_split(
         np.zeros(neg_scores.shape[0]),
     ])
 
-    metrics = compute_metrics(scores, labels, config)
+    metrics = compute_classification_metrics(scores, labels)
+
+    # Ranking metrics
+    if use_full_ranking and all_splits is not None:
+        # Build set of ALL known edges for filtering
+        all_known_edges = set()
+        for split_name in ["train", "val", "test"]:
+            ei = all_splits[split_name]["edge_index"]
+            for j in range(ei.shape[1]):
+                all_known_edges.add((ei[0, j].item(), ei[1, j].item()))
+
+        ranking_metrics = compute_filtered_ranking_metrics(
+            decoder, z_gene, z_disease,
+            split["edge_index"].to(device),
+            all_known_edges, config,
+        )
+        metrics.update(ranking_metrics)
+    else:
+        # Fallback: sampled ranking (fast, used during training validation)
+        pos_mask = labels == 1
+        neg_mask = labels == 0
+        if pos_mask.sum() > 0 and neg_mask.sum() > 0:
+            p_scores = scores[pos_mask]
+            n_scores = scores[neg_mask]
+            ranks = np.array([(n_scores > ps).sum() + 1 for ps in p_scores])
+            hits_k_values = config.get("evaluation", {}).get("hits_k", [10, 50])
+            for k in hits_k_values:
+                metrics[f"hits@{k}"] = float((ranks <= k).mean())
+            metrics["mrr"] = float((1.0 / ranks).mean())
+
     return metrics
 
 
