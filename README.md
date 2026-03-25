@@ -107,12 +107,12 @@ Full-data training on all 229 cardiovascular diseases:
 
 | Configuration | ROC-AUC | AP | Hits@10 | Hits@50 | MRR |
 |--------------|---------|------|---------|---------|-------|
-| **R-GCN + pretrain** | **0.893** | **0.873** | 0.003 | **0.024** | 0.003 |
-| R-GCN | 0.892 | 0.871 | **0.004** | 0.021 | **0.003** |
-| HGT + pretrain | 0.889 | 0.861 | 0.003 | 0.024 | 0.003 |
-| HGT | 0.886 | 0.860 | 0.004 | 0.016 | 0.003 |
+| **HGT** | **0.912** | **0.881** | **0.503** | **0.909** | **0.222** |
+| HGT + pretrain | 0.902 | 0.877 | 0.503 | 0.869 | 0.215 |
+| R-GCN + pretrain | 0.911 | 0.879 | 0.494 | 0.897 | 0.209 |
+| R-GCN | 0.911 | 0.880 | 0.491 | 0.908 | 0.211 |
 
-R-GCN with contrastive pretraining achieves the best ROC-AUC (0.893) and AP (0.873). Pretraining consistently improves Hits@50 for both architectures, suggesting it helps with ranking quality.
+HGT without pretraining achieves the best overall performance (0.912 ROC-AUC, 0.222 MRR). All configurations achieve Hits@50 above 0.87, meaning 87%+ of true gene-disease associations rank in the top 50 out of 229 diseases. Contrastive pretraining slightly improves R-GCN's Hits@10 but reduces HGT's Hits@50.
 
 ## Metrics
 
@@ -159,5 +159,5 @@ All hyperparameters in `configs/default.yaml`. Key settings:
 | supervised epochs | 200 | Training epochs |
 | early_stopping_patience | 20 | Validation AP patience |
 | tau | 0.5 | Contrastive temperature |
-| negative_ratio | 1.0 | Neg:pos sampling ratio |
+| negative_ratio | 5.0 | Neg:pos sampling ratio |
 | hard_negative_ratio | 0.5 | Fraction of hard negatives |
