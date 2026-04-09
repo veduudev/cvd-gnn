@@ -8,6 +8,9 @@ Usage:
     python src/train.py --model rgcn --pretrain --debug   # Fast debug run
 """
 
+import heapq
+from collections import defaultdict
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -95,7 +98,7 @@ def train_supervised(
     logger.info("Loading heterogeneous graph data...")
     data = load_hetero_data(config)
 
-    node_types = list(set(nt for nt in ["gene", "disease", "go_term"] if nt in data.node_types))
+    node_types = [nt for nt in ["gene", "disease", "go_term"] if nt in data.node_types]
     edge_types = list(data.edge_types)
 
     logger.info(f"Node types: {node_types}")
@@ -291,17 +294,35 @@ def train_supervised(
 
         # Combined BPR + BCE loss
         bpr_alpha = config["training"].get("bpr_alpha", 0.7)
+        use_edge_weights = config["training"].get("use_edge_weights_in_loss", False)
+
+        # Edge confidence weights for positive edges
+        if use_edge_weights:
+            pos_weights = splits["train"]["edge_attr"].to(device)
+            assert pos_weights.shape[0] == pos_scores.shape[0], (
+                f"edge_attr length {pos_weights.shape[0]} != pos_scores {pos_scores.shape[0]}"
+            )
+        else:
+            pos_weights = None
 
         # BPR: pairwise ranking loss (pair each positive with a negative)
         n_pairs = min(pos_scores.shape[0], neg_scores.shape[0])
-        bpr_loss = -F.logsigmoid(pos_scores[:n_pairs] - neg_scores[:n_pairs]).mean()
+        bpr_diff = F.logsigmoid(pos_scores[:n_pairs] - neg_scores[:n_pairs])
+        if pos_weights is not None:
+            bpr_loss = -(pos_weights[:n_pairs] * bpr_diff).mean()
+        else:
+            bpr_loss = -bpr_diff.mean()
 
         # BCE: classification loss (preserves separation signal)
         pos_labels = torch.ones(pos_scores.shape[0], device=device)
         neg_labels = torch.zeros(neg_scores.shape[0], device=device)
         all_scores = torch.cat([pos_scores, neg_scores])
         all_labels = torch.cat([pos_labels, neg_labels])
-        bce_loss = F.binary_cross_entropy_with_logits(all_scores, all_labels)
+        if pos_weights is not None:
+            all_weights = torch.cat([pos_weights, torch.ones(neg_scores.shape[0], device=device)])
+            bce_loss = F.binary_cross_entropy_with_logits(all_scores, all_labels, weight=all_weights)
+        else:
+            bce_loss = F.binary_cross_entropy_with_logits(all_scores, all_labels)
 
         loss = bpr_alpha * bpr_loss + (1 - bpr_alpha) * bce_loss
 
@@ -325,6 +346,7 @@ def train_supervised(
                 encoder, decoder, data, splits["val"],
                 learnable_embeds, input_projections,
                 node_types, model_type, device, config,
+                all_known_edges=all_known_edges,
             )
             val_ap = val_metrics["average_precision"]
             scheduler.step(val_ap)
@@ -354,6 +376,7 @@ def train_supervised(
                         "input_projections": input_projections.state_dict(),
                         "epoch": epoch,
                         "val_ap": val_ap,
+                        "node_types": node_types,
                     },
                     results_dir / f"best_{tag}.pt",
                 )
@@ -365,6 +388,11 @@ def train_supervised(
 
     # Load best checkpoint and evaluate on test
     ckpt = torch.load(results_dir / f"best_{tag}.pt", map_location=device, weights_only=False)
+    if "node_types" in ckpt and ckpt["node_types"] != node_types:
+        logger.warning(
+            f"Checkpoint node_types {ckpt['node_types']} != current {node_types}. "
+            "Results may be incorrect due to ordering mismatch."
+        )
     encoder.load_state_dict(ckpt["encoder"])
     decoder.load_state_dict(ckpt["decoder"])
     for k, v in ckpt["learnable_embeds"].items():
@@ -376,6 +404,7 @@ def train_supervised(
         node_types, model_type, device, config,
         all_splits=splits,
         use_full_ranking=True,
+        all_known_edges=all_known_edges,
     )
 
     logger.info(f"=== Test Results ({tag}) ===")
@@ -409,6 +438,7 @@ def evaluate_split(
     node_types, model_type, device, config,
     all_splits=None,
     use_full_ranking=False,
+    all_known_edges: set = None,
 ):
     """Evaluate on a val/test split.
 
@@ -453,6 +483,7 @@ def evaluate_split(
     neg_ei = sample_negative_edges(
         data, split["edge_index"], num_genes, num_diseases,
         ratio=1.0, hard_ratio=0.0,
+        all_known_edges=all_known_edges,
     ).to(device)
     neg_scores = decoder(z_gene[neg_ei[0]], z_disease[neg_ei[1]], rel_idx=0)
 
@@ -466,17 +497,16 @@ def evaluate_split(
 
     # Ranking metrics
     if use_full_ranking and all_splits is not None:
-        # Build set of ALL known edges for filtering
-        all_known_edges = set()
+        # Build set of ALL known edges for filtered ranking
+        ranking_known_edges = set()
         for split_name in ["train", "val", "test"]:
             ei = all_splits[split_name]["edge_index"]
-            for j in range(ei.shape[1]):
-                all_known_edges.add((ei[0, j].item(), ei[1, j].item()))
+            ranking_known_edges.update(zip(ei[0].tolist(), ei[1].tolist()))
 
         ranking_metrics = compute_filtered_ranking_metrics(
             decoder, z_gene, z_disease,
             split["edge_index"].to(device),
-            all_known_edges, config,
+            ranking_known_edges, config,
         )
         metrics.update(ranking_metrics)
     else:
@@ -537,46 +567,57 @@ def generate_predictions(
     known_edges = set()
     for split_name in ["train", "val", "test"]:
         ei = splits[split_name]["edge_index"]
-        for i in range(ei.shape[1]):
-            known_edges.add((ei[0, i].item(), ei[1, i].item()))
+        known_edges.update(zip(ei[0].tolist(), ei[1].tolist()))
 
-    # Score candidate pairs (sample to avoid O(N*M) for large graphs)
-    max_candidates = min(50000, num_genes * num_diseases)
-    candidates = []
-    attempts = 0
-    while len(candidates) < max_candidates and attempts < max_candidates * 5:
-        g = np.random.randint(num_genes)
-        d = np.random.randint(num_diseases)
-        if (g, d) not in known_edges:
-            candidates.append((g, d))
-            known_edges.add((g, d))  # avoid duplicates
-        attempts += 1
+    # Exhaustive scoring: iterate over all diseases, score all genes per disease
+    top_k = config.get("evaluation", {}).get("top_k_predictions", 500)
 
-    if not candidates:
+    # Pre-build lookup: disease -> set of known gene indices
+    known_per_disease = defaultdict(set)
+    for g, d in known_edges:
+        known_per_disease[d].add(g)
+
+    heap = []  # min-heap of (score, gene_idx, disease_idx)
+
+    for d_idx in range(num_diseases):
+        disease_emb = z_disease[d_idx].unsqueeze(0).expand(num_genes, -1)
+        scores_d = decoder(z_gene, disease_emb, rel_idx=0).cpu()
+
+        # Mask known edges for this disease
+        known_genes = list(known_per_disease.get(d_idx, []))
+        if known_genes:
+            scores_d[known_genes] = float("-inf")
+
+        # Get top candidates from this disease
+        k_local = min(top_k, num_genes)
+        vals, idxs = scores_d.topk(k_local)
+        for v, g in zip(vals.tolist(), idxs.tolist()):
+            if v == float("-inf"):
+                continue
+            if len(heap) < top_k:
+                heapq.heappush(heap, (v, g, d_idx))
+            elif v > heap[0][0]:
+                heapq.heapreplace(heap, (v, g, d_idx))
+
+    if not heap:
         logger.warning("No novel candidates found.")
         return
 
-    cand_genes = torch.tensor([c[0] for c in candidates], device=device)
-    cand_diseases = torch.tensor([c[1] for c in candidates], device=device)
-
-    scores = decoder(z_gene[cand_genes], z_disease[cand_diseases], rel_idx=0)
-    scores = scores.sigmoid().cpu().numpy()
+    # Sort by score descending
+    results = sorted(heap, key=lambda x: -x[0])
 
     # Get node names
     gene_names = data["gene"].node_names
     disease_names = data["disease"].node_names
 
-    # Sort by score descending
-    ranked_idx = np.argsort(scores)[::-1]
-
     results_dir = Path("results")
     with open(results_dir / f"predictions_{tag}.tsv", "w") as f:
         f.write("rank\tgene\tdisease\tscore\n")
-        for rank, idx in enumerate(ranked_idx[:500]):  # top 500
-            g, d = candidates[idx]
-            f.write(f"{rank + 1}\t{gene_names[g]}\t{disease_names[d]}\t{scores[idx]:.6f}\n")
+        for rank, (score, g, d) in enumerate(results):
+            sig_score = torch.sigmoid(torch.tensor(score)).item()
+            f.write(f"{rank + 1}\t{gene_names[g]}\t{disease_names[d]}\t{sig_score:.6f}\n")
 
-    logger.info(f"Saved top 500 predictions to results/predictions_{tag}.tsv")
+    logger.info(f"Saved top {len(results)} predictions to results/predictions_{tag}.tsv")
 
 
 if __name__ == "__main__":

@@ -8,6 +8,7 @@ Also provides comparison across all trained configurations.
 import csv
 import json
 import logging
+from collections import Counter
 from pathlib import Path
 
 import torch
@@ -73,6 +74,7 @@ def compute_filtered_ranking_metrics(
         ranks.append(rank)
 
     ranks = np.array(ranks)
+    test_diseases = test_edge_index[1].cpu().numpy()
 
     metrics = {}
     for k in hits_k_values:
@@ -82,7 +84,58 @@ def compute_filtered_ranking_metrics(
     logger.info(f"Filtered ranking: median rank={np.median(ranks):.0f}, "
                 f"mean rank={ranks.mean():.1f}/{num_diseases}")
 
+    # Stratified metrics by disease frequency
+    stratified = compute_stratified_metrics(
+        ranks, test_diseases, all_known_edges, hits_k_values
+    )
+    if stratified:
+        for band, band_metrics in stratified.items():
+            logger.info(f"  {band}: n={band_metrics['count']}, "
+                        f"MRR={band_metrics['mrr']:.4f}, "
+                        + ", ".join(f"H@{k}={band_metrics[f'hits@{k}']:.4f}"
+                                    for k in hits_k_values))
+
     return metrics
+
+
+def compute_stratified_metrics(
+    ranks: np.ndarray,
+    test_diseases: np.ndarray,
+    all_known_edges: set,
+    hits_k_values: list,
+) -> dict:
+    """Compute metrics stratified by disease frequency band.
+
+    Bands: rare (1-3 total edges), medium (4-10), frequent (11+).
+    Returns dict mapping band name to metrics dict.
+    """
+    # Count total edges per disease across all splits
+    disease_edge_counts = Counter()
+    for _g, d in all_known_edges:
+        disease_edge_counts[d] += 1
+
+    bands = {
+        "rare(1-3)": lambda c: 1 <= c <= 3,
+        "medium(4-10)": lambda c: 4 <= c <= 10,
+        "frequent(11+)": lambda c: c >= 11,
+    }
+
+    result = {}
+    for band_name, condition in bands.items():
+        mask = np.array([
+            condition(disease_edge_counts.get(d, 0))
+            for d in test_diseases
+        ])
+        if mask.sum() == 0:
+            continue
+        band_ranks = ranks[mask]
+        band_metrics = {"count": int(mask.sum())}
+        for k in hits_k_values:
+            band_metrics[f"hits@{k}"] = float((band_ranks <= k).mean())
+        band_metrics["mrr"] = float((1.0 / band_ranks).mean())
+        result[band_name] = band_metrics
+
+    return result
 
 
 def compute_metrics(scores: np.ndarray, labels: np.ndarray, config: dict) -> dict:

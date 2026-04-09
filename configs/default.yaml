@@ -45,6 +45,7 @@ training:
   bpr_alpha: 0.7
   dynamic_hard_neg_ratio: 0.3
   dynamic_hard_neg_warmup: 20
+  use_edge_weights_in_loss: false
   train_ratio: 0.70
   val_ratio: 0.15
   test_ratio: 0.15
@@ -57,3 +58,4 @@ decoder:
 # Evaluation
 evaluation:
   hits_k: [10, 50]
+  top_k_predictions: 500
