@@ -1,0 +1,501 @@
+rank	gene	disease	score
+1	hsa-mir-146a	Cerebral cavernous malformation	0.999848
+2	hsa-mir-146a	Kawasaki disease	0.999838
+3	hsa-mir-21	Cerebral cavernous malformation	0.999789
+4	hsa-mir-146a	Ataxia telangiectasia	0.999671
+5	hsa-mir-126	Cerebral cavernous malformation	0.999656
+6	hsa-mir-21	Ataxia telangiectasia	0.999568
+7	hsa-mir-145	Cerebral cavernous malformation	0.999508
+8	DRAM1	Ischemic stroke	0.999429
+9	hsa-mir-133a-1	Ischemic stroke	0.999370
+10	H19	Kawasaki disease	0.999342
+11	hsa-mir-126	Ataxia telangiectasia	0.999305
+12	MIR21	Cerebral cavernous malformation	0.999302
+13	hsa-mir-146a	High density lipoprotein cholesterol measurement	0.999281
+14	ISLR	Ischemic stroke	0.999176
+15	hsa-mir-133a-1	Cerebral cavernous malformation	0.999134
+16	hsa-mir-21	High density lipoprotein cholesterol measurement	0.999081
+17	hsa-mir-146a	Systolic blood pressure	0.999072
+18	hsa-mir-150	Ischemic stroke	0.999052
+19	hsa-mir-145	Ataxia telangiectasia	0.999022
+20	hsa-mir-146a	Total cholesterol measurement	0.999021
+21	hsa-mir-146a	Triglyceride measurement	0.999018
+22	hsa-mir-155	Cerebral cavernous malformation	0.998912
+23	hsa-mir-21	Systolic blood pressure	0.998825
+24	hsa-mir-21	Mitral valve prolapse	0.998766
+25	hsa-mir-21	Total cholesterol measurement	0.998763
+26	hsa-mir-195	Cerebral cavernous malformation	0.998763
+27	hsa-mir-21	Triglyceride measurement	0.998761
+28	hsa-mir-150	Cerebral cavernous malformation	0.998736
+29	ISLR	Kawasaki disease	0.998728
+30	hsa-mir-27a	Ischemic stroke	0.998715
+31	hsa-mir-24-1	Cerebral cavernous malformation	0.998664
+32	MIR21	Ataxia telangiectasia	0.998604
+33	hsa-mir-106b	Cerebral cavernous malformation	0.998595
+34	hsa-mir-126	High density lipoprotein cholesterol measurement	0.998586
+35	hsa-mir-106b	Kawasaki disease	0.998490
+36	hsa-mir-223	Cerebral cavernous malformation	0.998429
+37	hsa-mir-133a-1	Ataxia telangiectasia	0.998388
+38	hsa-mir-27a	Cerebral cavernous malformation	0.998310
+39	hsa-mir-126	Systolic blood pressure	0.998215
+40	FNDC1	Ischemic stroke	0.998192
+41	hsa-mir-27a	Kawasaki disease	0.998161
+42	CDKN2B-AS1	Cerebral cavernous malformation	0.998154
+43	hsa-mir-126	Total cholesterol measurement	0.998129
+44	hsa-mir-126	Triglyceride measurement	0.998123
+45	hsa-mir-126	Mitral valve prolapse	0.998108
+46	hsa-mir-145	High density lipoprotein cholesterol measurement	0.998063
+47	hsa-mir-155	Ataxia telangiectasia	0.997908
+48	hsa-mir-210	Cerebral cavernous malformation	0.997761
+49	hsa-mir-150	Ataxia telangiectasia	0.997636
+50	H19	High density lipoprotein cholesterol measurement	0.997615
+51	hsa-mir-145	Systolic blood pressure	0.997576
+52	hsa-mir-125b-1	Cerebral cavernous malformation	0.997528
+53	hsa-mir-24-1	Ataxia telangiectasia	0.997518
+54	hsa-mir-146a	Diastolic blood pressure	0.997502
+55	hsa-mir-145	Total cholesterol measurement	0.997468
+56	hsa-mir-221	Ischemic stroke	0.997456
+57	hsa-mir-145	Triglyceride measurement	0.997454
+58	hsa-mir-106b	Ataxia telangiectasia	0.997422
+59	ZMAT3	Cerebral cavernous malformation	0.997349
+60	SETD9	Kawasaki disease	0.997328
+61	hsa-mir-143	Cerebral cavernous malformation	0.997322
+62	hsa-mir-125b-1	Kawasaki disease	0.997299
+63	hsa-mir-142	Cerebral cavernous malformation	0.997240
+64	hsa-mir-15b	Ischemic stroke	0.997149
+65	hsa-mir-143	Kawasaki disease	0.997149
+66	hsa-mir-223	Ataxia telangiectasia	0.997140
+67	hsa-mir-29a	Ischemic stroke	0.997090
+68	hsa-mir-30b	Ischemic stroke	0.997059
+69	hsa-mir-142	Kawasaki disease	0.997002
+70	hsa-mir-21	Diastolic blood pressure	0.996974
+71	hsa-mir-133a-1	High density lipoprotein cholesterol measurement	0.996971
+72	hsa-mir-27a	Ataxia telangiectasia	0.996905
+73	hsa-mir-122	Cerebral cavernous malformation	0.996855
+74	H19	Triglyceride measurement	0.996854
+75	FAM180B	Cerebral cavernous malformation	0.996783
+76	hsa-mir-221	Cerebral cavernous malformation	0.996783
+77	ZMAT3	Myocardial infarction	0.996740
+78	hsa-mir-30a	Cerebral cavernous malformation	0.996707
+79	MIR21	Systolic blood pressure	0.996657
+80	MIR21	Total cholesterol measurement	0.996523
+81	hsa-mir-1-2	Cerebral cavernous malformation	0.996510
+82	CDKN2B-AS1	Ataxia telangiectasia	0.996485
+83	MALAT1	Cerebral cavernous malformation	0.996465
+84	MIR21	Mitral valve prolapse	0.996464
+85	hsa-mir-221	Kawasaki disease	0.996391
+86	hsa-mir-15b	Cerebral cavernous malformation	0.996371
+87	hsa-mir-29a	Cerebral cavernous malformation	0.996317
+88	hsa-mir-30b	Cerebral cavernous malformation	0.996281
+89	hsa-mir-133a-1	Systolic blood pressure	0.996276
+90	hsa-mir-30a	Kawasaki disease	0.996247
+91	FAM180B	Kawasaki disease	0.996241
+92	hsa-mir-1-2	Kawasaki disease	0.996175
+93	hsa-mir-133a-1	Total cholesterol measurement	0.996123
+94	hsa-mir-155	High density lipoprotein cholesterol measurement	0.996121
+95	hsa-mir-133a-1	Mitral valve prolapse	0.996113
+96	hsa-mir-133a-1	Triglyceride measurement	0.996109
+97	USP42	Ischemic stroke	0.996103
+98	hsa-mir-15b	Kawasaki disease	0.996098
+99	SETD9	Cerebral cavernous malformation	0.996086
+100	hsa-mir-29a	Kawasaki disease	0.995961
+101	MALAT1	Kawasaki disease	0.995945
+102	hsa-mir-210	Ataxia telangiectasia	0.995942
+103	FAM83F	Ischemic stroke	0.995916
+104	hsa-mir-26a-1	Cerebral cavernous malformation	0.995909
+105	hsa-mir-34a	Cerebral cavernous malformation	0.995883
+106	hsa-mir-214	Cerebral cavernous malformation	0.995717
+107	hsa-mir-150	High density lipoprotein cholesterol measurement	0.995679
+108	hsa-mir-195	High density lipoprotein cholesterol measurement	0.995609
+109	hsa-mir-126	Diastolic blood pressure	0.995597
+110	hsa-mir-199a-1	Cerebral cavernous malformation	0.995593
+111	hsa-mir-26a-1	Kawasaki disease	0.995515
+112	FAM180B	Myocardial infarction	0.995506
+113	hsa-mir-34a	Kawasaki disease	0.995502
+114	CCDC106	Cerebral cavernous malformation	0.995499
+115	hsa-mir-24-1	High density lipoprotein cholesterol measurement	0.995485
+116	FNDC1	Ataxia telangiectasia	0.995485
+117	NEAT1	Kawasaki disease	0.995426
+118	hsa-mir-17	Ischemic stroke	0.995405
+119	hsa-mir-143	Ataxia telangiectasia	0.995384
+120	HCP5	Ischemic stroke	0.995376
+121	TSPAN13	Ischemic stroke	0.995342
+122	hsa-mir-106b	High density lipoprotein cholesterol measurement	0.995341
+123	CSMD1	Kawasaki disease	0.995275
+124	hsa-mir-199a-1	Kawasaki disease	0.995251
+125	hsa-mir-155	Systolic blood pressure	0.995246
+126	RBM47	Ischemic stroke	0.995210
+127	FNBP4	Cerebral cavernous malformation	0.995198
+128	SETD9	Myocardial infarction	0.995197
+129	hsa-mir-142	Ataxia telangiectasia	0.995142
+130	hsa-mir-214	Kawasaki disease	0.995136
+131	hsa-mir-30b	Myocardial infarction	0.995074
+132	hsa-mir-155	Total cholesterol measurement	0.995072
+133	hsa-mir-155	Triglyceride measurement	0.995028
+134	hsa-mir-146a	Low density lipoprotein cholesterol measurement	0.994999
+135	hsa-mir-155	Mitral valve prolapse	0.994985
+136	C1QTNF4	Ischemic stroke	0.994921
+137	hsa-mir-29b-1	Cerebral cavernous malformation	0.994914
+138	hsa-mir-223	High density lipoprotein cholesterol measurement	0.994884
+139	hsa-mir-21	Aortic dissection	0.994827
+140	PRSS36	Kawasaki disease	0.994784
+141	RPRML	Ischemic stroke	0.994770
+142	hsa-mir-150	Systolic blood pressure	0.994734
+143	hsa-mir-195	Systolic blood pressure	0.994635
+144	CCDC106	Myocardial infarction	0.994578
+145	TSBP1-AS1	Ischemic stroke	0.994572
+146	hsa-mir-222	Cerebral cavernous malformation	0.994560
+147	NBEAL1	Cerebral cavernous malformation	0.994553
+148	hsa-mir-150	Total cholesterol measurement	0.994541
+149	hsa-mir-16-1	Cerebral cavernous malformation	0.994518
+150	hsa-mir-24-1	Systolic blood pressure	0.994506
+151	hsa-mir-150	Triglyceride measurement	0.994500
+152	hsa-mir-27a	High density lipoprotein cholesterol measurement	0.994486
+153	hsa-mir-29b-1	Kawasaki disease	0.994463
+154	QPCT	Ischemic stroke	0.994461
+155	hsa-mir-195	Total cholesterol measurement	0.994449
+156	OLFML2B	Ischemic stroke	0.994415
+157	MCTP2	Ischemic stroke	0.994398
+158	hsa-mir-195	Triglyceride measurement	0.994392
+159	hsa-mir-122	Ataxia telangiectasia	0.994379
+160	hsa-mir-195	Mitral valve prolapse	0.994356
+161	hsa-mir-106b	Systolic blood pressure	0.994343
+162	hsa-mir-17	Cerebral cavernous malformation	0.994317
+163	hsa-mir-24-1	Total cholesterol measurement	0.994307
+164	hsa-mir-24-1	Triglyceride measurement	0.994266
+165	hsa-mir-24-1	Mitral valve prolapse	0.994257
+166	hsa-mir-145	Diastolic blood pressure	0.994251
+167	hsa-mir-221	Ataxia telangiectasia	0.994242
+168	hsa-mir-21	Behcet syndrome	0.994240
+169	HES4	Cerebral cavernous malformation	0.994232
+170	TRIM47	Myocardial infarction	0.994209
+171	HLA-DQB1-AS1	Ischemic stroke	0.994205
+172	hsa-mir-146a	Eosinophilic granulomatosis with polyangiitis	0.994203
+173	PRSS36	Myocardial infarction	0.994178
+174	hsa-mir-21	Low density lipoprotein cholesterol measurement	0.994171
+175	MEGF9	Cerebral cavernous malformation	0.994158
+176	hsa-mir-106b	Total cholesterol measurement	0.994139
+177	hsa-mir-106b	Triglyceride measurement	0.994100
+178	hsa-mir-106b	Mitral valve prolapse	0.994079
+179	TSHZ2	Cerebral cavernous malformation	0.994027
+180	hsa-mir-30a	Ataxia telangiectasia	0.994025
+181	LSAMP	Ischemic stroke	0.993953
+182	hsa-mir-1-2	Ataxia telangiectasia	0.993934
+183	IRF1-AS1	Cerebral cavernous malformation	0.993899
+184	hsa-mir-222	Kawasaki disease	0.993857
+185	hsa-mir-195	Hypertension	0.993841
+186	hsa-mir-15b	Ataxia telangiectasia	0.993840
+187	DNAJC5G	Ischemic stroke	0.993833
+188	FAM180B	Ataxia telangiectasia	0.993829
+189	CPAMD8	Cerebral cavernous malformation	0.993823
+190	hsa-mir-223	Systolic blood pressure	0.993809
+191	hsa-mir-223	Dilated cardiomyopathy	0.993792
+192	hsa-mir-16-1	Kawasaki disease	0.993768
+193	PSD3	Ischemic stroke	0.993757
+194	hsa-mir-17	Kawasaki disease	0.993743
+195	CDKN2B-AS1	High density lipoprotein cholesterol measurement	0.993731
+196	USP54	Ischemic stroke	0.993725
+197	MINDY2	Ischemic stroke	0.993672
+198	hsa-mir-29a	Ataxia telangiectasia	0.993626
+199	hsa-mir-106b	Hypertension	0.993617
+200	hsa-mir-27b	Ischemic stroke	0.993615
+201	hsa-mir-22	Cerebral cavernous malformation	0.993607
+202	hsa-mir-223	Total cholesterol measurement	0.993590
+203	TSPAN11	Ischemic stroke	0.993558
+204	hsa-mir-223	Triglyceride measurement	0.993546
+205	hsa-mir-30b	Ataxia telangiectasia	0.993531
+206	hsa-mir-146a	Tetralogy of fallot	0.993490
+207	IQCN	Cerebral cavernous malformation	0.993466
+208	DNAJC27-AS1	Ischemic stroke	0.993425
+209	hsa-mir-30d	Cerebral cavernous malformation	0.993411
+210	hsa-mir-27a	Systolic blood pressure	0.993338
+211	NBEAL1	Kawasaki disease	0.993324
+212	XIST	Cerebral cavernous malformation	0.993314
+213	FNBP4	Myocardial infarction	0.993291
+214	TMEM200A	Ischemic stroke	0.993271
+215	HES4	Kawasaki disease	0.993241
+216	C12orf75	Cerebral cavernous malformation	0.993239
+217	LRRC17	Kawasaki disease	0.993200
+218	hsa-mir-21	Eosinophilic granulomatosis with polyangiitis	0.993198
+219	TMEM178B	Ischemic stroke	0.993172
+220	ZMAT3	Ataxia telangiectasia	0.993136
+221	HLA-DQB1-AS1	Cerebral cavernous malformation	0.993110
+222	hsa-mir-27a	Total cholesterol measurement	0.993109
+223	LINC00243	Kawasaki disease	0.993068
+224	hsa-mir-27a	Triglyceride measurement	0.993058
+225	hsa-mir-27a	Mitral valve prolapse	0.993056
+226	hsa-mir-92a-1	Cerebral cavernous malformation	0.993049
+227	PLEKHH2	Ischemic stroke	0.993018
+228	hsa-mir-23a	Ischemic stroke	0.993010
+229	hsa-mir-26a-1	Ataxia telangiectasia	0.992965
+230	hsa-mir-34a	Ataxia telangiectasia	0.992959
+231	hsa-mir-210	High density lipoprotein cholesterol measurement	0.992946
+232	TMEM91	Cerebral cavernous malformation	0.992934
+233	FNDC4	Ischemic stroke	0.992913
+234	LINC-PINT	Ischemic stroke	0.992833
+235	hsa-mir-22	Kawasaki disease	0.992812
+236	ZNF823	Cerebral cavernous malformation	0.992805
+237	FAM78A	Ischemic stroke	0.992800
+238	C1QTNF4	Kawasaki disease	0.992761
+239	NYAP1	Ischemic stroke	0.992713
+240	SNHG32	Cerebral cavernous malformation	0.992711
+241	DRAM1	High density lipoprotein cholesterol measurement	0.992679
+242	CPAMD8	Kawasaki disease	0.992676
+243	IGSF10	Ischemic stroke	0.992596
+244	TMEM140	Ischemic stroke	0.992593
+245	FNDC3B	Ischemic stroke	0.992552
+246	hsa-mir-30d	Kawasaki disease	0.992535
+247	hsa-mir-21	Tetralogy of fallot	0.992505
+248	CD163L1	Ischemic stroke	0.992463
+249	JAKMIP2	Ischemic stroke	0.992453
+250	hsa-mir-126	Aortic dissection	0.992408
+251	RPRML	Kawasaki disease	0.992403
+252	hsa-mir-125b-1	High density lipoprotein cholesterol measurement	0.992399
+253	CA11	Ischemic stroke	0.992398
+254	hsa-mir-214	Ataxia telangiectasia	0.992396
+255	ARHGAP25	Ischemic stroke	0.992349
+256	SLC2A6	Cerebral cavernous malformation	0.992333
+257	hsa-mir-486-1	Ischemic stroke	0.992324
+258	MIR21	Diastolic blood pressure	0.992286
+259	MEG3	Kawasaki disease	0.992280
+260	SLC25A34	Cerebral cavernous malformation	0.992276
+261	hsa-mir-143	High density lipoprotein cholesterol measurement	0.992152
+262	hsa-mir-27b	Cerebral cavernous malformation	0.992152
+263	LRRC17	Myocardial infarction	0.992118
+264	CDKN2B-AS1	Triglyceride measurement	0.992081
+265	TSPAN13	Myocardial infarction	0.992075
+266	TSBP1-AS1	Kawasaki disease	0.992041
+267	hsa-mir-204	Cerebral cavernous malformation	0.992028
+268	CDKN2B-AS1	Mitral valve prolapse	0.992024
+269	hsa-mir-126	Aortic valve calcification	0.992011
+270	INKA2	Cerebral cavernous malformation	0.991999
+271	hsa-mir-126	Behcet syndrome	0.991963
+272	TMEM200A	Cerebral cavernous malformation	0.991947
+273	TENT5B	Ischemic stroke	0.991931
+274	FNDC1	High density lipoprotein cholesterol measurement	0.991862
+275	LRRN4CL	Ischemic stroke	0.991832
+276	TSBP1	Ischemic stroke	0.991778
+277	hsa-mir-133a-1	Diastolic blood pressure	0.991774
+278	hsa-mir-15a	Ischemic stroke	0.991763
+279	LSAMP	Kawasaki disease	0.991760
+280	PLEKHN1	Ischemic stroke	0.991730
+281	hsa-mir-142	High density lipoprotein cholesterol measurement	0.991707
+282	GLI4	Cerebral cavernous malformation	0.991702
+283	ANKRD13A	Cerebral cavernous malformation	0.991697
+284	hsa-mir-126	Low density lipoprotein cholesterol measurement	0.991687
+285	CEMIP	Ischemic stroke	0.991679
+286	TSHZ2	Myocardial infarction	0.991602
+287	ZSCAN31	Cerebral cavernous malformation	0.991594
+288	hsa-mir-23a	Cerebral cavernous malformation	0.991581
+289	C1QTNF4	Myocardial infarction	0.991564
+290	hsa-mir-210	Systolic blood pressure	0.991537
+291	FNDC4	Cerebral cavernous malformation	0.991501
+292	hsa-mir-29b-1	Ataxia telangiectasia	0.991489
+293	LINC-PINT	Cerebral cavernous malformation	0.991475
+294	USP42	Cerebral cavernous malformation	0.991451
+295	MEG3	Myocardial infarction	0.991436
+296	ZNF285	Ischemic stroke	0.991410
+297	PSD3	Kawasaki disease	0.991363
+298	EMILIN3	Ischemic stroke	0.991348
+299	RPRML	Myocardial infarction	0.991331
+300	ANKDD1B	Ischemic stroke	0.991304
+301	hsa-mir-210	Total cholesterol measurement	0.991273
+302	TMEM163	Cerebral cavernous malformation	0.991266
+303	hsa-mir-483	Ischemic stroke	0.991266
+304	TMEM233	Ischemic stroke	0.991259
+305	ENSG00000272622	Ischemic stroke	0.991233
+306	THEMIS2	Myocardial infarction	0.991207
+307	DNAJC22	Ischemic stroke	0.991206
+308	hsa-mir-210	Triglyceride measurement	0.991195
+309	ENSG00000255491	Cerebral cavernous malformation	0.991189
+310	AKNA	Ischemic stroke	0.991179
+311	TCTA	Ischemic stroke	0.991179
+312	DNAJC5G	Kawasaki disease	0.991163
+313	EFCAB13	Cerebral cavernous malformation	0.991139
+314	IGSF10	Cerebral cavernous malformation	0.991134
+315	MT1A	Ischemic stroke	0.991092
+316	SHISAL1	Ischemic stroke	0.991089
+317	IRF1-AS1	Myocardial infarction	0.991087
+318	PAPLN	Cerebral cavernous malformation	0.991083
+319	DRAM1	Systolic blood pressure	0.991081
+320	LIMD2	Cerebral cavernous malformation	0.991058
+321	KANK3	Ischemic stroke	0.991052
+322	NT5DC2	Kawasaki disease	0.991008
+323	SMOC2	Ischemic stroke	0.991004
+324	FIBIN	Ischemic stroke	0.990959
+325	RARRES1	Ischemic stroke	0.990932
+326	hsa-mir-125b-1	Systolic blood pressure	0.990906
+327	ZNF831	Ischemic stroke	0.990899
+328	hsa-mir-486-1	Cerebral cavernous malformation	0.990885
+329	TMEM200B	Ischemic stroke	0.990874
+330	SLC35F1	Ischemic stroke	0.990873
+331	USP40	Ischemic stroke	0.990867
+332	MAPK10	Kawasaki disease	0.990863
+333	IQCN	Myocardial infarction	0.990849
+334	SNHG32	Kawasaki disease	0.990838
+335	DRAM1	Triglyceride measurement	0.990835
+336	ZKSCAN8P1	Ischemic stroke	0.990826
+337	SLC16A6	Ischemic stroke	0.990797
+338	CYP4B1	Ischemic stroke	0.990789
+339	PIK3IP1	Ischemic stroke	0.990789
+340	FIGN	Ischemic stroke	0.990747
+341	TSPAN11	Kawasaki disease	0.990745
+342	hsa-mir-204	Kawasaki disease	0.990701
+343	hsa-mir-143	Systolic blood pressure	0.990662
+344	C11orf96	Ischemic stroke	0.990659
+345	hsa-mir-143	Dilated cardiomyopathy	0.990641
+346	hsa-mir-126	Eosinophilic granulomatosis with polyangiitis	0.990639
+347	C12orf75	Myocardial infarction	0.990639
+348	hsa-mir-125b-1	Total cholesterol measurement	0.990623
+349	hsa-mir-222	Ataxia telangiectasia	0.990602
+350	RGCC	Kawasaki disease	0.990601
+351	GPR146	Cerebral cavernous malformation	0.990568
+352	RCN3	Myocardial infarction	0.990555
+353	hsa-mir-125b-1	Triglyceride measurement	0.990543
+354	MXRA5	Ischemic stroke	0.990542
+355	ACP2	Ischemic stroke	0.990534
+356	ZNF142	Cerebral cavernous malformation	0.990522
+357	RN7SK	Cerebral cavernous malformation	0.990515
+358	hsa-mir-125b-1	Mitral valve prolapse	0.990508
+359	PLEKHH2	Kawasaki disease	0.990494
+360	hsa-mir-23a	Kawasaki disease	0.990489
+361	KIAA0040	Myocardial infarction	0.990482
+362	APCDD1L	Ischemic stroke	0.990481
+363	hsa-mir-122	High density lipoprotein cholesterol measurement	0.990479
+364	hsa-mir-17	Ataxia telangiectasia	0.990457
+365	DYNLT5	Ischemic stroke	0.990443
+366	USP42	Myocardial infarction	0.990414
+367	hsa-mir-210	Hypertension	0.990411
+368	DRAM1	Total cholesterol measurement	0.990400
+369	GPR137	Cerebral cavernous malformation	0.990376
+370	TANC2	Cerebral cavernous malformation	0.990369
+371	LHFPL2	Ischemic stroke	0.990368
+372	hsa-mir-143	Total cholesterol measurement	0.990360
+373	hsa-mir-140	Cerebral cavernous malformation	0.990330
+374	NREP	Ischemic stroke	0.990324
+375	hsa-mir-143	Triglyceride measurement	0.990310
+376	SMCO4	Ischemic stroke	0.990294
+377	LSAMP	Myocardial infarction	0.990285
+378	hsa-mir-221	High density lipoprotein cholesterol measurement	0.990270
+379	hsa-mir-15a	Cerebral cavernous malformation	0.990113
+380	hsa-mir-142	Systolic blood pressure	0.990113
+381	hsa-mir-27b	Myocardial infarction	0.990111
+382	HOXB-AS3	Ischemic stroke	0.990074
+383	KRTCAP3	Ischemic stroke	0.990070
+384	FNDC4	Kawasaki disease	0.990058
+385	C1orf162	Ischemic stroke	0.990028
+386	hsa-mir-130a	Cerebral cavernous malformation	0.989977
+387	SLC38A11	Ischemic stroke	0.989970
+388	PSD3	Myocardial infarction	0.989939
+389	SAMD10	Ischemic stroke	0.989937
+390	DNAJC5G	Myocardial infarction	0.989936
+391	TC2N	Ataxia telangiectasia	0.989936
+392	AMIGO2	Ischemic stroke	0.989935
+393	NT5DC2	Myocardial infarction	0.989934
+394	C15orf39	Kawasaki disease	0.989934
+395	PSMB8-AS1	Ischemic stroke	0.989913
+396	OCIAD2	Cerebral cavernous malformation	0.989910
+397	hsa-mir-30a	High density lipoprotein cholesterol measurement	0.989894
+398	MINDY2	Cerebral cavernous malformation	0.989888
+399	hsa-mir-1-2	High density lipoprotein cholesterol measurement	0.989868
+400	FNDC1	Mitral valve prolapse	0.989861
+401	ZFYVE21	Ischemic stroke	0.989847
+402	WBP1L	Ischemic stroke	0.989826
+403	hsa-mir-145	Aortic valve calcification	0.989825
+404	hsa-mir-142	Total cholesterol measurement	0.989816
+405	DBNDD2	Ischemic stroke	0.989797
+406	hsa-mir-15b	High density lipoprotein cholesterol measurement	0.989796
+407	hsa-mir-145	Behcet syndrome	0.989791
+408	TMEM178B	Kawasaki disease	0.989775
+409	ANXA3	Ischemic stroke	0.989750
+410	hsa-mir-142	Triglyceride measurement	0.989731
+411	hsa-mir-142	Mitral valve prolapse	0.989729
+412	hsa-mir-125b-1	Hypertension	0.989728
+413	SLC43A3	Ischemic stroke	0.989724
+414	ZNF112	Ischemic stroke	0.989724
+415	INKA2	Kawasaki disease	0.989723
+416	SETD9	Ataxia telangiectasia	0.989716
+417	hsa-mir-23b	Ischemic stroke	0.989714
+418	hsa-mir-424	Cerebral cavernous malformation	0.989710
+419	hsa-mir-186	Cerebral cavernous malformation	0.989702
+420	C19orf38	Kawasaki disease	0.989686
+421	SLC2A6	Myocardial infarction	0.989681
+422	TMEM163	Kawasaki disease	0.989680
+423	ZNF184	Ischemic stroke	0.989678
+424	EMILIN3	Cerebral cavernous malformation	0.989672
+425	APOLD1	Kawasaki disease	0.989671
+426	MFSD13A	Cerebral cavernous malformation	0.989665
+427	FNDC1	Triglyceride measurement	0.989664
+428	hsa-mir-483	Cerebral cavernous malformation	0.989655
+429	C3orf70	Ischemic stroke	0.989644
+430	TCTA	Cerebral cavernous malformation	0.989643
+431	ANKDD1B	Cerebral cavernous malformation	0.989643
+432	ISLR2	Ischemic stroke	0.989641
+433	LINC-PINT	Kawasaki disease	0.989586
+434	DNAJC22	Cerebral cavernous malformation	0.989578
+435	hsa-mir-155	Diastolic blood pressure	0.989553
+436	hsa-mir-29c	Cerebral cavernous malformation	0.989551
+437	ZNF572	Ischemic stroke	0.989541
+438	IGSF10	Kawasaki disease	0.989523
+439	HCG20	Ischemic stroke	0.989498
+440	C14orf132	Kawasaki disease	0.989492
+441	ANKRD10	Cerebral cavernous malformation	0.989468
+442	NYAP1	Kawasaki disease	0.989459
+443	HES4	Ataxia telangiectasia	0.989429
+444	hsa-mir-9-1	Cerebral cavernous malformation	0.989425
+445	hsa-mir-126	Tetralogy of fallot	0.989423
+446	DNAJC27-AS1	Kawasaki disease	0.989416
+447	SBK1	Ischemic stroke	0.989410
+448	MTARC1	Ischemic stroke	0.989409
+449	ATP5MK	Cerebral cavernous malformation	0.989408
+450	hsa-mir-29a	High density lipoprotein cholesterol measurement	0.989407
+451	DM1-AS	Ischemic stroke	0.989368
+452	RBM6	Cerebral cavernous malformation	0.989361
+453	hsa-mir-145	Low density lipoprotein cholesterol measurement	0.989346
+454	CFAP251	Cerebral cavernous malformation	0.989328
+455	ZNF831	Cerebral cavernous malformation	0.989316
+456	hsa-mir-146a	Ruptured aneurysm	0.989315
+457	CDHR4	Ischemic stroke	0.989308
+458	hsa-mir-486-1	Kawasaki disease	0.989296
+459	FSD2	Ischemic stroke	0.989276
+460	FIBIN	Cerebral cavernous malformation	0.989253
+461	BORCS8-MEF2B	Cerebral cavernous malformation	0.989244
+462	hsa-mir-30b	High density lipoprotein cholesterol measurement	0.989241
+463	ENSG00000267801	Cerebral cavernous malformation	0.989228
+464	METTL7A	Ischemic stroke	0.989201
+465	CLPTM1	Ischemic stroke	0.989178
+466	SLC12A9	Cerebral cavernous malformation	0.989170
+467	ZSCAN26	Cerebral cavernous malformation	0.989167
+468	hsa-mir-423	Ischemic stroke	0.989151
+469	hsa-mir-22	Ataxia telangiectasia	0.989135
+470	hsa-mir-100	Cerebral cavernous malformation	0.989124
+471	FIGN	Cerebral cavernous malformation	0.989118
+472	DNAJC27-AS1	Myocardial infarction	0.989112
+473	TMEM200A	Myocardial infarction	0.989099
+474	LINC00243	Ataxia telangiectasia	0.989092
+475	CD163L1	Kawasaki disease	0.989092
+476	SLC35F1	Cerebral cavernous malformation	0.989092
+477	ZSCAN31	Kawasaki disease	0.989078
+478	CDK2AP2	Ischemic stroke	0.989078
+479	TMEM59L	Ischemic stroke	0.989047
+480	SIDT2	Cerebral cavernous malformation	0.989047
+481	SNX29	Ischemic stroke	0.989037
+482	CYP4B1	Cerebral cavernous malformation	0.989032
+483	MS4A14	Ischemic stroke	0.989029
+484	C1QTNF7	Cerebral cavernous malformation	0.989023
+485	HCG27	Ataxia telangiectasia	0.989023
+486	hsa-mir-15a	Kawasaki disease	0.988979
+487	HCG18	Ischemic stroke	0.988953
+488	EFCAB13	Kawasaki disease	0.988930
+489	SHISA4	Kawasaki disease	0.988927
+490	FAM66D	Ischemic stroke	0.988922
+491	hsa-mir-140	Kawasaki disease	0.988910
+492	TMEM40	Cerebral cavernous malformation	0.988907
+493	ABCA10	Ischemic stroke	0.988905
+494	hsa-mir-130a	Kawasaki disease	0.988899
+495	ENSG00000255491	Kawasaki disease	0.988888
+496	hsa-mir-142	Hypertension	0.988883
+497	GPR146	Kawasaki disease	0.988882
+498	TMEM156	Cerebral cavernous malformation	0.988823
+499	C6orf136	Cerebral cavernous malformation	0.988796
+500	PAPLN	Kawasaki disease	0.988775

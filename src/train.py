@@ -1,0 +1,653 @@
+"""Unified training script for gene-disease link prediction.
+
+Usage:
+    python src/train.py --model rgcn --pretrain          # R-GCN with contrastive pretraining
+    python src/train.py --model hgt --pretrain            # HGT with contrastive pretraining
+    python src/train.py --model rgcn                      # R-GCN without pretraining
+    python src/train.py --model hgt                       # HGT without pretraining
+    python src/train.py --model rgcn --pretrain --debug   # Fast debug run
+"""
+
+import heapq
+from collections import defaultdict
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import numpy as np
+import json
+import logging
+from pathlib import Path
+
+from src.utils import load_config, set_seed, get_device, setup_logger, build_global_edge_index
+from src.dataset import load_hetero_data, split_gene_disease_edges, sample_negative_edges, mine_dynamic_hard_negatives
+from src.models.rgcn_model import RGCNEncoder
+from src.models.hgt_model import HGTEncoder
+from src.models.decoder import DistMultDecoder
+from src.contrastive_pretrain import pretrain_contrastive
+from src.evaluate import compute_metrics, compute_classification_metrics, compute_filtered_ranking_metrics
+
+logger = logging.getLogger(__name__)
+
+
+def prepare_input_features(data, node_types, embed_dim, hidden_dim, device):
+    """Prepare input features: concat handcrafted features with learnable embeddings.
+
+    For each node type:
+    1. Get handcrafted features from data[ntype].x
+    2. Create learnable embedding of size embed_dim
+    3. Concatenate and project to hidden_dim via linear layer
+
+    Returns:
+        learnable_embeds: nn.ParameterDict of learnable embeddings
+        input_projections: nn.ModuleDict of projection layers
+    """
+    learnable_embeds = nn.ParameterDict()
+    input_projections = nn.ModuleDict()
+
+    for ntype in node_types:
+        if not hasattr(data[ntype], "x"):
+            continue
+        n_nodes = data[ntype].num_nodes
+        feat_dim = data[ntype].x.shape[1]
+        input_dim = feat_dim + embed_dim
+
+        learnable_embeds[ntype] = nn.Parameter(
+            torch.randn(n_nodes, embed_dim) * 0.01
+        )
+        input_projections[ntype] = nn.Linear(input_dim, hidden_dim)
+
+    return learnable_embeds, input_projections
+
+
+def get_projected_features(data, node_types, learnable_embeds, input_projections, device):
+    """Compute projected features for all node types."""
+    x_dict = {}
+    for ntype in node_types:
+        if not hasattr(data[ntype], "x"):
+            continue
+        feat = data[ntype].x.to(device)
+        embed = learnable_embeds[ntype].to(device)
+        combined = torch.cat([feat, embed], dim=-1)
+        x_dict[ntype] = input_projections[ntype](combined)
+    return x_dict
+
+
+def train_supervised(
+    config: dict,
+    model_type: str = "rgcn",
+    use_pretrain: bool = False,
+):
+    """Full supervised training pipeline.
+
+    1. Load data and split edges
+    2. Optionally pretrain with contrastive learning
+    3. Train encoder + DistMult decoder with BCE loss
+    4. Evaluate on val/test sets
+    5. Save results
+    """
+    device = get_device()
+    set_seed(42)
+
+    hidden_dim = config["model"]["hidden_dim"]
+    embed_dim = config["graph"]["embed_dim"]
+    num_layers = config["model"]["num_layers"]
+    dropout = config["model"]["dropout"]
+
+    # Load data
+    logger.info("Loading heterogeneous graph data...")
+    data = load_hetero_data(config)
+
+    node_types = [nt for nt in ["gene", "disease", "go_term"] if nt in data.node_types]
+    edge_types = list(data.edge_types)
+
+    logger.info(f"Node types: {node_types}")
+    logger.info(f"Edge types: {edge_types}")
+
+    # Split gene-disease edges
+    splits = split_gene_disease_edges(data, config)
+
+    # Feature dimensions per type
+    node_feature_dims = {}
+    for ntype in node_types:
+        if hasattr(data[ntype], "x"):
+            node_feature_dims[ntype] = data[ntype].x.shape[1]
+        else:
+            node_feature_dims[ntype] = 0
+
+    # Create encoder
+    if model_type == "rgcn":
+        num_relations = len(edge_types)
+        encoder = RGCNEncoder(
+            node_types=node_types,
+            node_feature_dims=node_feature_dims,
+            hidden_dim=hidden_dim,
+            num_relations=num_relations,
+            num_layers=num_layers,
+            num_bases=config["model"]["rgcn_num_bases"],
+            dropout=dropout,
+            embed_dim=embed_dim,
+        )
+    else:
+        encoder = HGTEncoder(
+            node_types=node_types,
+            edge_types=edge_types,
+            node_feature_dims=node_feature_dims,
+            hidden_dim=hidden_dim,
+            num_layers=num_layers,
+            num_heads=config["model"]["hgt_num_heads"],
+            dropout=dropout,
+            embed_dim=embed_dim,
+        )
+
+    # Create learnable embeddings and input projections
+    learnable_embeds, input_projections = prepare_input_features(
+        data, node_types, embed_dim, hidden_dim, device
+    )
+
+    # Contrastive pretraining
+    if use_pretrain:
+        logger.info(f"Starting contrastive pretraining ({model_type})...")
+
+        # Save original features before modifying for pretraining
+        original_features = {ntype: data[ntype].x.clone() for ntype in node_types if hasattr(data[ntype], "x")}
+
+        # Temporarily set projected features on data for pretraining
+        try:
+            with torch.no_grad():
+                for ntype in node_types:
+                    if ntype in learnable_embeds:
+                        feat = data[ntype].x
+                        embed = learnable_embeds[ntype].detach()
+                        combined = torch.cat([feat, embed], dim=-1)
+                        data[ntype].x = input_projections[ntype](combined).detach()
+
+            encoder = pretrain_contrastive(
+                encoder, data, config, device, model_type=model_type
+            )
+        finally:
+            # Restore original features (no reload needed, preserves edge splits)
+            for ntype, feat in original_features.items():
+                data[ntype].x = feat
+
+    # Decoder
+    # For gene-disease prediction, we use relation index 0
+    decoder = DistMultDecoder(hidden_dim, num_relations=1)
+
+    # Move everything to device
+    encoder = encoder.to(device)
+    decoder = decoder.to(device)
+    learnable_embeds = nn.ParameterDict(
+        {k: v.to(device) for k, v in learnable_embeds.items()}
+    )
+    input_projections = nn.ModuleDict(
+        {k: v.to(device) for k, v in input_projections.items()}
+    )
+
+    # Optimizer
+    all_params = (
+        list(encoder.parameters())
+        + list(decoder.parameters())
+        + list(learnable_embeds.parameters())
+        + list(input_projections.parameters())
+    )
+    optimizer = torch.optim.Adam(
+        all_params,
+        lr=config["training"]["lr"],
+        weight_decay=config["training"]["weight_decay"],
+    )
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer,
+        mode="max",
+        factor=config["training"]["lr_scheduler_factor"],
+        patience=config["training"]["lr_scheduler_patience"],
+    )
+
+    # Training loop
+    epochs = config["training"]["epochs"]
+    patience = config["training"]["early_stopping_patience"]
+    best_val_ap = 0.0
+    patience_counter = 0
+    results_dir = Path("results")
+    results_dir.mkdir(exist_ok=True)
+
+    tag = f"{model_type}_{'pretrain' if use_pretrain else 'nopretrain'}"
+    if config["training"].get("use_edge_weights_in_loss", False):
+        tag += "_weighted"
+
+    num_genes = data["gene"].num_nodes
+    num_diseases = data["disease"].num_nodes
+
+    # Build set of ALL known edges for negative sampling rejection
+    all_known_edges = set()
+    for split_name in ["train", "val", "test"]:
+        ei = splits[split_name]["edge_index"]
+        all_known_edges.update(zip(ei[0].tolist(), ei[1].tolist()))
+
+    logger.info(f"Starting supervised training: {tag}")
+    logger.info(f"  Genes: {num_genes}, Diseases: {num_diseases}")
+    logger.info(f"  Train edges: {splits['train']['edge_index'].shape[1]}")
+    logger.info(f"  All known edges (for neg rejection): {len(all_known_edges)}")
+
+    for epoch in range(epochs):
+        encoder.train()
+        decoder.train()
+        optimizer.zero_grad()
+
+        # Get projected features
+        x_dict = get_projected_features(
+            data, node_types, learnable_embeds, input_projections, device
+        )
+
+        # Forward through encoder
+        if model_type == "hgt":
+            edge_index_dict = {
+                et: data[et].edge_index.to(device)
+                for et in data.edge_types
+                if data[et].edge_index.shape[1] > 0
+            }
+            z_dict = encoder(x_dict, edge_index_dict)
+        else:
+            node_offsets = {}
+            offset = 0
+            for ntype in node_types:
+                node_offsets[ntype] = offset
+                offset += data[ntype].num_nodes
+            ei, et, _ = build_global_edge_index(data, node_types, device)
+            z_dict = encoder(x_dict, ei, et, node_offsets)
+
+        # Get gene and disease embeddings
+        z_gene = z_dict["gene"]
+        z_disease = z_dict["disease"]
+
+        # Positive edges (training set)
+        pos_ei = splits["train"]["edge_index"].to(device)
+        pos_src = z_gene[pos_ei[0]]
+        pos_dst = z_disease[pos_ei[1]]
+        pos_scores = decoder(pos_src, pos_dst, rel_idx=0)
+
+        # Negative edges (re-sampled each epoch, rejects ALL known edges)
+        neg_ei = sample_negative_edges(
+            data,
+            splits["train"]["edge_index"],
+            num_genes,
+            num_diseases,
+            ratio=config["training"]["negative_ratio"],
+            hard_ratio=config["training"]["hard_negative_ratio"],
+            all_known_edges=all_known_edges,
+        ).to(device)
+
+        # Dynamic hard negatives: mine high-scoring negatives every 10 epochs after warmup
+        dynamic_ratio = config["training"].get("dynamic_hard_neg_ratio", 0.3)
+        dynamic_warmup = config["training"].get("dynamic_hard_neg_warmup", 20)
+        if dynamic_ratio > 0 and epoch >= dynamic_warmup and (epoch % 10 == 0):
+            num_dynamic = int(pos_ei.shape[1] * dynamic_ratio)
+            dynamic_neg = mine_dynamic_hard_negatives(
+                decoder, z_gene, z_disease,
+                splits["train"]["edge_index"],
+                all_known_edges, num_dynamic,
+            ).to(device)
+            if dynamic_neg.shape[1] > 0:
+                neg_ei = torch.cat([neg_ei, dynamic_neg], dim=1)
+
+        neg_src = z_gene[neg_ei[0]]
+        neg_dst = z_disease[neg_ei[1]]
+        neg_scores = decoder(neg_src, neg_dst, rel_idx=0)
+
+        # Combined BPR + BCE loss
+        bpr_alpha = config["training"].get("bpr_alpha", 0.7)
+        use_edge_weights = config["training"].get("use_edge_weights_in_loss", False)
+
+        # Edge confidence weights for positive edges
+        if use_edge_weights:
+            pos_weights = splits["train"]["edge_attr"].to(device)
+            assert pos_weights.shape[0] == pos_scores.shape[0], (
+                f"edge_attr length {pos_weights.shape[0]} != pos_scores {pos_scores.shape[0]}"
+            )
+        else:
+            pos_weights = None
+
+        # BPR: pairwise ranking loss (pair each positive with a negative)
+        n_pairs = min(pos_scores.shape[0], neg_scores.shape[0])
+        bpr_diff = F.logsigmoid(pos_scores[:n_pairs] - neg_scores[:n_pairs])
+        if pos_weights is not None:
+            bpr_loss = -(pos_weights[:n_pairs] * bpr_diff).mean()
+        else:
+            bpr_loss = -bpr_diff.mean()
+
+        # BCE: classification loss (preserves separation signal)
+        pos_labels = torch.ones(pos_scores.shape[0], device=device)
+        neg_labels = torch.zeros(neg_scores.shape[0], device=device)
+        all_scores = torch.cat([pos_scores, neg_scores])
+        all_labels = torch.cat([pos_labels, neg_labels])
+        if pos_weights is not None:
+            all_weights = torch.cat([pos_weights, torch.ones(neg_scores.shape[0], device=device)])
+            bce_loss = F.binary_cross_entropy_with_logits(all_scores, all_labels, weight=all_weights)
+        else:
+            bce_loss = F.binary_cross_entropy_with_logits(all_scores, all_labels)
+
+        loss = bpr_alpha * bpr_loss + (1 - bpr_alpha) * bce_loss
+
+        # Embedding regularization
+        reg_loss = decoder.get_reg_loss(config["decoder"]["embedding_reg_lambda"])
+        # Embedding regularization on node embeddings (prevents magnitude explosion)
+        embed_reg = config["decoder"].get("embed_node_reg_lambda", 1e-4)
+        for ntype in node_types:
+            if ntype in z_dict:
+                reg_loss = reg_loss + embed_reg * z_dict[ntype].norm(p=2).pow(2) / z_dict[ntype].shape[0]
+
+        loss = loss + reg_loss
+
+        loss.backward()
+        torch.nn.utils.clip_grad_norm_(all_params, max_norm=1.0)
+        optimizer.step()
+
+        # Validation
+        if (epoch + 1) % 5 == 0:
+            val_metrics = evaluate_split(
+                encoder, decoder, data, splits["val"],
+                learnable_embeds, input_projections,
+                node_types, model_type, device, config,
+                all_known_edges=all_known_edges,
+            )
+            val_ap = val_metrics["average_precision"]
+            scheduler.step(val_ap)
+
+            # Score diagnostics
+            with torch.no_grad():
+                pos_sig = pos_scores.sigmoid()
+                neg_sig = neg_scores.sigmoid()
+            logger.info(
+                f"Epoch {epoch + 1}/{epochs} | "
+                f"Loss: {loss.item():.4f} (BPR: {bpr_loss.item():.4f}, BCE: {bce_loss.item():.4f}) | "
+                f"Val AP: {val_ap:.4f} | "
+                f"Val AUC: {val_metrics['roc_auc']:.4f} | "
+                f"Pos scores: {pos_sig.mean():.3f}±{pos_sig.std():.3f} | "
+                f"Neg scores: {neg_sig.mean():.3f}±{neg_sig.std():.3f}"
+            )
+
+            if val_ap > best_val_ap:
+                best_val_ap = val_ap
+                patience_counter = 0
+                # Save best checkpoint
+                torch.save(
+                    {
+                        "encoder": encoder.state_dict(),
+                        "decoder": decoder.state_dict(),
+                        "learnable_embeds": {k: v.data for k, v in learnable_embeds.items()},
+                        "input_projections": input_projections.state_dict(),
+                        "epoch": epoch,
+                        "val_ap": val_ap,
+                        "node_types": node_types,
+                    },
+                    results_dir / f"best_{tag}.pt",
+                )
+            else:
+                patience_counter += 5
+                if patience_counter >= patience:
+                    logger.info(f"Early stopping at epoch {epoch + 1}")
+                    break
+
+    # Load best checkpoint and evaluate on test
+    ckpt = torch.load(results_dir / f"best_{tag}.pt", map_location=device, weights_only=False)
+    if "node_types" in ckpt and ckpt["node_types"] != node_types:
+        logger.warning(
+            f"Checkpoint node_types {ckpt['node_types']} != current {node_types}. "
+            "Results may be incorrect due to ordering mismatch."
+        )
+    encoder.load_state_dict(ckpt["encoder"])
+    decoder.load_state_dict(ckpt["decoder"])
+    for k, v in ckpt["learnable_embeds"].items():
+        learnable_embeds[k].data = v
+
+    test_metrics = evaluate_split(
+        encoder, decoder, data, splits["test"],
+        learnable_embeds, input_projections,
+        node_types, model_type, device, config,
+        all_splits=splits,
+        use_full_ranking=True,
+        all_known_edges=all_known_edges,
+    )
+
+    logger.info(f"=== Test Results ({tag}) ===")
+    for k, v in test_metrics.items():
+        logger.info(f"  {k}: {v:.4f}")
+
+    # Save metrics
+    results = {
+        "model": model_type,
+        "pretrained": use_pretrain,
+        "best_val_ap": best_val_ap,
+        "test_metrics": test_metrics,
+    }
+    with open(results_dir / f"metrics_{tag}.json", "w") as f:
+        json.dump(results, f, indent=2)
+
+    # Generate novel predictions
+    generate_predictions(
+        encoder, decoder, data, splits,
+        learnable_embeds, input_projections,
+        node_types, model_type, device, config, tag,
+    )
+
+    return results
+
+
+@torch.no_grad()
+def evaluate_split(
+    encoder, decoder, data, split,
+    learnable_embeds, input_projections,
+    node_types, model_type, device, config,
+    all_splits=None,
+    use_full_ranking=False,
+    all_known_edges: set = None,
+):
+    """Evaluate on a val/test split.
+
+    Args:
+        all_splits: dict with train/val/test splits (needed for filtered ranking)
+        use_full_ranking: if True, use full filtered ranking for Hits@K/MRR
+    """
+    encoder.eval()
+    decoder.eval()
+
+    # Get projected features
+    x_dict = get_projected_features(
+        data, node_types, learnable_embeds, input_projections, device
+    )
+
+    # Encode
+    if model_type == "hgt":
+        edge_index_dict = {
+            et: data[et].edge_index.to(device)
+            for et in data.edge_types
+            if data[et].edge_index.shape[1] > 0
+        }
+        z_dict = encoder(x_dict, edge_index_dict)
+    else:
+        node_offsets = {}
+        offset = 0
+        for ntype in node_types:
+            node_offsets[ntype] = offset
+            offset += data[ntype].num_nodes
+        ei, et, _ = build_global_edge_index(data, node_types, device)
+        z_dict = encoder(x_dict, ei, et, node_offsets)
+
+    z_gene = z_dict["gene"]
+    z_disease = z_dict["disease"]
+
+    # Classification metrics (AUC, AP) via sampled negatives
+    pos_ei = split["edge_index"].to(device)
+    pos_scores = decoder(z_gene[pos_ei[0]], z_disease[pos_ei[1]], rel_idx=0)
+
+    num_genes = data["gene"].num_nodes
+    num_diseases = data["disease"].num_nodes
+    neg_ei = sample_negative_edges(
+        data, split["edge_index"], num_genes, num_diseases,
+        ratio=1.0, hard_ratio=0.0,
+        all_known_edges=all_known_edges,
+    ).to(device)
+    neg_scores = decoder(z_gene[neg_ei[0]], z_disease[neg_ei[1]], rel_idx=0)
+
+    scores = torch.cat([pos_scores, neg_scores]).sigmoid().cpu().numpy()
+    labels = np.concatenate([
+        np.ones(pos_scores.shape[0]),
+        np.zeros(neg_scores.shape[0]),
+    ])
+
+    metrics = compute_classification_metrics(scores, labels)
+
+    # Ranking metrics
+    if use_full_ranking and all_splits is not None:
+        # Build set of ALL known edges for filtered ranking
+        ranking_known_edges = set()
+        for split_name in ["train", "val", "test"]:
+            ei = all_splits[split_name]["edge_index"]
+            ranking_known_edges.update(zip(ei[0].tolist(), ei[1].tolist()))
+
+        ranking_metrics = compute_filtered_ranking_metrics(
+            decoder, z_gene, z_disease,
+            split["edge_index"].to(device),
+            ranking_known_edges, config,
+        )
+        metrics.update(ranking_metrics)
+    else:
+        # Fallback: sampled ranking (fast, used during training validation)
+        pos_mask = labels == 1
+        neg_mask = labels == 0
+        if pos_mask.sum() > 0 and neg_mask.sum() > 0:
+            p_scores = scores[pos_mask]
+            n_scores = scores[neg_mask]
+            ranks = np.array([(n_scores > ps).sum() + 1 for ps in p_scores])
+            hits_k_values = config.get("evaluation", {}).get("hits_k", [10, 50])
+            for k in hits_k_values:
+                metrics[f"hits@{k}"] = float((ranks <= k).mean())
+            metrics["mrr"] = float((1.0 / ranks).mean())
+
+    return metrics
+
+
+@torch.no_grad()
+def generate_predictions(
+    encoder, decoder, data, splits,
+    learnable_embeds, input_projections,
+    node_types, model_type, device, config, tag,
+):
+    """Generate ranked novel gene-disease predictions.
+
+    Scores all gene-disease pairs NOT in the training data and ranks them.
+    """
+    encoder.eval()
+    decoder.eval()
+
+    x_dict = get_projected_features(
+        data, node_types, learnable_embeds, input_projections, device
+    )
+
+    if model_type == "hgt":
+        edge_index_dict = {
+            et: data[et].edge_index.to(device)
+            for et in data.edge_types
+            if data[et].edge_index.shape[1] > 0
+        }
+        z_dict = encoder(x_dict, edge_index_dict)
+    else:
+        node_offsets = {}
+        offset = 0
+        for ntype in node_types:
+            node_offsets[ntype] = offset
+            offset += data[ntype].num_nodes
+        ei, et, _ = build_global_edge_index(data, node_types, device)
+        z_dict = encoder(x_dict, ei, et, node_offsets)
+
+    z_gene = z_dict["gene"]
+    z_disease = z_dict["disease"]
+    num_genes = z_gene.shape[0]
+    num_diseases = z_disease.shape[0]
+
+    # Build set of known edges
+    known_edges = set()
+    for split_name in ["train", "val", "test"]:
+        ei = splits[split_name]["edge_index"]
+        known_edges.update(zip(ei[0].tolist(), ei[1].tolist()))
+
+    # Exhaustive scoring: iterate over all diseases, score all genes per disease
+    top_k = config.get("evaluation", {}).get("top_k_predictions", 500)
+
+    # Pre-build lookup: disease -> set of known gene indices
+    known_per_disease = defaultdict(set)
+    for g, d in known_edges:
+        known_per_disease[d].add(g)
+
+    heap = []  # min-heap of (score, gene_idx, disease_idx)
+
+    for d_idx in range(num_diseases):
+        disease_emb = z_disease[d_idx].unsqueeze(0).expand(num_genes, -1)
+        scores_d = decoder(z_gene, disease_emb, rel_idx=0).cpu()
+
+        # Mask known edges for this disease
+        known_genes = list(known_per_disease.get(d_idx, []))
+        if known_genes:
+            scores_d[known_genes] = float("-inf")
+
+        # Get top candidates from this disease
+        k_local = min(top_k, num_genes)
+        vals, idxs = scores_d.topk(k_local)
+        for v, g in zip(vals.tolist(), idxs.tolist()):
+            if v == float("-inf"):
+                continue
+            if len(heap) < top_k:
+                heapq.heappush(heap, (v, g, d_idx))
+            elif v > heap[0][0]:
+                heapq.heapreplace(heap, (v, g, d_idx))
+
+    if not heap:
+        logger.warning("No novel candidates found.")
+        return
+
+    # Sort by score descending
+    results = sorted(heap, key=lambda x: -x[0])
+
+    # Get node names
+    gene_names = data["gene"].node_names
+    disease_names = data["disease"].node_names
+
+    results_dir = Path("results")
+    with open(results_dir / f"predictions_{tag}.tsv", "w") as f:
+        f.write("rank\tgene\tdisease\traw_score\tsigmoid_score\n")
+        for rank, (score, g, d) in enumerate(results):
+            sig_score = torch.sigmoid(torch.tensor(score)).item()
+            f.write(f"{rank + 1}\t{gene_names[g]}\t{disease_names[d]}\t{score:.6f}\t{sig_score:.6f}\n")
+
+    logger.info(f"Saved top {len(results)} predictions to results/predictions_{tag}.tsv")
+
+
+if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Train gene-disease link prediction")
+    parser.add_argument("--model", choices=["rgcn", "hgt"], required=True)
+    parser.add_argument("--pretrain", action="store_true", help="Use contrastive pretraining")
+    parser.add_argument("--config", default="configs/default.yaml")
+    parser.add_argument("--debug", action="store_true", help="Use debug graph (fast)")
+    args = parser.parse_args()
+
+    setup_logger("src")
+    setup_logger(__name__)
+    for mod in ["src.dataset", "src.models", "src.contrastive_pretrain", "src.evaluate"]:
+        setup_logger(mod)
+
+    config = load_config(args.config)
+
+    if args.debug:
+        # Reduce epochs for fast testing
+        config["contrastive"]["epochs"] = 5
+        config["training"]["epochs"] = 20
+        config["training"]["early_stopping_patience"] = 10
+
+    results = train_supervised(
+        config,
+        model_type=args.model,
+        use_pretrain=args.pretrain,
+    )
+    print(f"\nFinal test metrics: {results['test_metrics']}")

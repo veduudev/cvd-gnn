@@ -1,0 +1,501 @@
+rank	gene	disease	score
+1	hsa-mir-146a	Low density lipoprotein cholesterol measurement	0.999295
+2	hsa-mir-21	Low density lipoprotein cholesterol measurement	0.999218
+3	hsa-mir-146a	Triglyceride measurement	0.998743
+4	hsa-mir-21	Intracranial arterial disease	0.998734
+5	hsa-mir-146a	Systolic blood pressure	0.998684
+6	hsa-mir-126	Low density lipoprotein cholesterol measurement	0.998653
+7	hsa-mir-21	Triglyceride measurement	0.998473
+8	hsa-mir-21	Systolic blood pressure	0.998391
+9	hsa-mir-146a	High density lipoprotein cholesterol measurement	0.998357
+10	hsa-mir-146a	Peripheral arterial occlusive disease	0.998160
+11	hsa-mir-21	High density lipoprotein cholesterol measurement	0.997971
+12	hsa-mir-126	Triglyceride measurement	0.997929
+13	hsa-mir-145	Low density lipoprotein cholesterol measurement	0.997922
+14	hsa-mir-126	Systolic blood pressure	0.997844
+15	hsa-mir-126	High density lipoprotein cholesterol measurement	0.997380
+16	hsa-mir-146a	Total cholesterol measurement	0.997315
+17	hsa-mir-146a	Diastolic blood pressure	0.997116
+18	H19	Triglyceride measurement	0.997111
+19	H19	Low density lipoprotein cholesterol measurement	0.997098
+20	hsa-mir-145	Triglyceride measurement	0.996989
+21	hsa-mir-146a	Critical limb ischemia	0.996957
+22	MIR21	Low density lipoprotein cholesterol measurement	0.996912
+23	hsa-mir-21	Critical limb ischemia	0.996909
+24	hsa-mir-145	Systolic blood pressure	0.996885
+25	hsa-mir-21	Diastolic blood pressure	0.996762
+26	hsa-mir-146a	Intracranial arterial disease	0.996761
+27	hsa-mir-21	Total cholesterol measurement	0.996743
+28	hsa-mir-21	Biventricular heart failure	0.996634
+29	H19	High density lipoprotein cholesterol measurement	0.996633
+30	hsa-mir-146a	Biventricular heart failure	0.996508
+31	hsa-mir-133a-1	Low density lipoprotein cholesterol measurement	0.996459
+32	hsa-mir-146a	Kawasaki disease	0.996292
+33	hsa-mir-145	High density lipoprotein cholesterol measurement	0.996286
+34	hsa-mir-146a	Ataxia telangiectasia	0.996029
+35	hsa-mir-21	Very low density lipoprotein cholesterol measurement	0.995963
+36	MIR21	Systolic blood pressure	0.995958
+37	hsa-mir-126	Total cholesterol measurement	0.995898
+38	hsa-mir-21	Aortic dissection	0.995876
+39	hsa-mir-21	Very low density lipoprotein particle size measurement	0.995871
+40	hsa-mir-146a	Very low density lipoprotein cholesterol measurement	0.995820
+41	hsa-mir-146a	Very low density lipoprotein particle size measurement	0.995589
+42	hsa-mir-126	Aortic valve calcification	0.995448
+43	hsa-mir-155	Low density lipoprotein cholesterol measurement	0.995372
+44	hsa-mir-126	Diastolic blood pressure	0.995320
+45	hsa-mir-21	Free cholesterol measurement	0.995194
+46	hsa-mir-24-1	Low density lipoprotein cholesterol measurement	0.995172
+47	hsa-mir-21	Right ventricular hypertension	0.995161
+48	hsa-mir-21	Traumatic cerebral hemorrhage	0.995120
+49	hsa-mir-21	Ataxia telangiectasia	0.995106
+50	hsa-mir-21	Left ventricle heart failure	0.995080
+51	hsa-mir-155	Triglyceride measurement	0.995015
+52	hsa-mir-21	Intermediate density lipoprotein measurement	0.994976
+53	hsa-mir-155	Systolic blood pressure	0.994914
+54	hsa-mir-146a	Left ventricle heart failure	0.994780
+55	hsa-mir-21	Hypercholesterolemia	0.994771
+56	hsa-mir-195	Low density lipoprotein cholesterol measurement	0.994735
+57	hsa-mir-133a-1	Triglyceride measurement	0.994729
+58	hsa-mir-150	Low density lipoprotein cholesterol measurement	0.994703
+59	hsa-mir-126	Critical limb ischemia	0.994589
+60	hsa-mir-146a	Free cholesterol measurement	0.994579
+61	hsa-mir-133a-1	Systolic blood pressure	0.994549
+62	hsa-mir-106b	Low density lipoprotein cholesterol measurement	0.994547
+63	hsa-mir-146a	Stanford type A aortic dissection	0.994536
+64	hsa-mir-21	Spontaneous coronary artery dissection	0.994512
+65	DRAM1	Ischemic stroke	0.994500
+66	hsa-mir-146a	Hypercholesterolemia	0.994437
+67	hsa-mir-145	Total cholesterol measurement	0.994429
+68	hsa-mir-146a	Intermediate density lipoprotein measurement	0.994376
+69	hsa-mir-21	Thoracic aortic dissection	0.994375
+70	hsa-mir-21	Lipoprotein measurement	0.994359
+71	hsa-mir-146a	Thoracic aortic dissection	0.994228
+72	hsa-mir-24-1	Triglyceride measurement	0.994214
+73	hsa-mir-155	High density lipoprotein cholesterol measurement	0.994213
+74	hsa-mir-195	Triglyceride measurement	0.994206
+75	hsa-mir-126	Ataxia telangiectasia	0.994138
+76	hsa-mir-21	Behcet syndrome	0.994122
+77	H19	Kawasaki disease	0.994113
+78	hsa-mir-195	Systolic blood pressure	0.994078
+79	hsa-mir-24-1	Systolic blood pressure	0.994073
+80	hsa-mir-223	Low density lipoprotein cholesterol measurement	0.994010
+81	hsa-mir-21	High density lipoprotein particle size measurement	0.993902
+82	hsa-mir-21	Low density lipoprotein particle size measurement	0.993886
+83	hsa-mir-21	Aortic valve insufficiency	0.993662
+84	hsa-mir-146a	Lipoprotein measurement	0.993624
+85	hsa-mir-133a-1	High density lipoprotein cholesterol measurement	0.993558
+86	RNF165	Triglyceride measurement	0.993555
+87	hsa-mir-126	Biventricular heart failure	0.993554
+88	hsa-mir-106b	Triglyceride measurement	0.993542
+89	hsa-mir-145	Aortic valve calcification	0.993519
+90	hsa-mir-150	Triglyceride measurement	0.993493
+91	hsa-mir-195	Hypertension	0.993456
+92	RNF165	Systolic blood pressure	0.993450
+93	hsa-mir-146a	High density lipoprotein particle size measurement	0.993442
+94	hsa-mir-126	Aortic dissection	0.993437
+95	hsa-mir-106b	Systolic blood pressure	0.993383
+96	hsa-mir-145	Diastolic blood pressure	0.993378
+97	hsa-mir-150	Systolic blood pressure	0.993332
+98	ISLR	Ischemic stroke	0.993307
+99	hsa-mir-195	High density lipoprotein cholesterol measurement	0.993256
+100	hsa-mir-24-1	High density lipoprotein cholesterol measurement	0.993179
+101	RNF165	High density lipoprotein cholesterol measurement	0.993140
+102	hsa-mir-146a	Tetralogy of fallot	0.993036
+103	MIR21	Total cholesterol measurement	0.992991
+104	ISLR	Kawasaki disease	0.992925
+105	hsa-mir-27a	Low density lipoprotein cholesterol measurement	0.992882
+106	hsa-mir-223	Triglyceride measurement	0.992818
+107	hsa-mir-106b	Hypertension	0.992803
+108	LMO3	Ischemic stroke	0.992798
+109	hsa-mir-21	Tetralogy of fallot	0.992789
+110	hsa-mir-223	Systolic blood pressure	0.992639
+111	hsa-mir-21	Angina pectoris	0.992562
+112	hsa-mir-146a	Low density lipoprotein particle size measurement	0.992536
+113	LMO3	Kawasaki disease	0.992439
+114	hsa-mir-126	Very low density lipoprotein cholesterol measurement	0.992422
+115	hsa-mir-106b	High density lipoprotein cholesterol measurement	0.992417
+116	hsa-mir-150	High density lipoprotein cholesterol measurement	0.992338
+117	hsa-mir-145	Critical limb ischemia	0.992193
+118	hsa-mir-146a	Ischemic cardiomyopathy	0.992131
+119	hsa-mir-126	Behcet syndrome	0.992122
+120	hsa-mir-126	Peripheral arterial occlusive disease	0.992109
+121	hsa-mir-145	Ataxia telangiectasia	0.992097
+122	hsa-mir-21	Ischemic cardiomyopathy	0.991982
+123	hsa-mir-21	Aortic valve disease	0.991918
+124	hsa-mir-126	Very low density lipoprotein particle size measurement	0.991813
+125	hsa-mir-21	Arrhythmogenic cardiomyopathy	0.991796
+126	hsa-mir-146a	Arrhythmogenic cardiomyopathy	0.991731
+127	hsa-mir-146a	Pulse pressure measurement	0.991691
+128	hsa-mir-155	Total cholesterol measurement	0.991688
+129	hsa-mir-223	High density lipoprotein cholesterol measurement	0.991574
+130	hsa-mir-146a	Right ventricular hypertension	0.991553
+131	hsa-mir-210	Low density lipoprotein cholesterol measurement	0.991427
+132	hsa-mir-21	Peripartum cardiomyopathy	0.991370
+133	hsa-mir-21	Pulse pressure measurement	0.991343
+134	hsa-mir-146a	Angina pectoris	0.991299
+135	hsa-mir-27a	Triglyceride measurement	0.991286
+136	hsa-mir-146a	Aortic valve disease	0.991273
+137	MIR21	Diastolic blood pressure	0.991261
+138	hsa-mir-21	Coronary artery calcification	0.991166
+139	hsa-mir-145	Biventricular heart failure	0.991156
+140	MIR21	Aortic valve calcification	0.991156
+141	hsa-mir-27a	Systolic blood pressure	0.991080
+142	hsa-mir-143	Low density lipoprotein cholesterol measurement	0.991018
+143	hsa-mir-21	Diabetic vascular calcification	0.991011
+144	hsa-mir-210	Triglyceride measurement	0.991007
+145	hsa-mir-146a	Cerebral cavernous malformation	0.990995
+146	hsa-mir-133a-1	Total cholesterol measurement	0.990959
+147	hsa-mir-210	Systolic blood pressure	0.990848
+148	FNDC1	Triglyceride measurement	0.990750
+149	hsa-mir-15b	Low density lipoprotein cholesterol measurement	0.990739
+150	H19	Cardiomyopathy	0.990586
+151	hsa-mir-126	Left ventricle heart failure	0.990581
+152	CDKN2B-AS1	Triglyceride measurement	0.990580
+153	hsa-mir-195	Total cholesterol measurement	0.990440
+154	MIR21	Ataxia telangiectasia	0.990424
+155	hsa-mir-125b-1	Low density lipoprotein cholesterol measurement	0.990341
+156	hsa-mir-24-1	Total cholesterol measurement	0.990333
+157	MALAT1	Triglyceride measurement	0.990330
+158	MALAT1	Low density lipoprotein cholesterol measurement	0.990259
+159	hsa-mir-133a-1	Peripheral arterial occlusive disease	0.990229
+160	MALAT1	Systolic blood pressure	0.990151
+161	FNDC1	High density lipoprotein cholesterol measurement	0.990122
+162	PRIMA1	Ischemic stroke	0.990109
+163	LMO3	Systolic blood pressure	0.990080
+164	hsa-mir-221	Triglyceride measurement	0.990074
+165	hsa-mir-126	Thoracic aortic dissection	0.990004
+166	hsa-mir-221	Low density lipoprotein cholesterol measurement	0.989990
+167	hsa-mir-126	Hypercholesterolemia	0.989944
+168	hsa-mir-221	Systolic blood pressure	0.989924
+169	hsa-mir-210	Hypertension	0.989855
+170	DRAM1	Triglyceride measurement	0.989854
+171	hsa-mir-27a	High density lipoprotein cholesterol measurement	0.989826
+172	PRIMA1	Kawasaki disease	0.989805
+173	hsa-mir-210	High density lipoprotein cholesterol measurement	0.989742
+174	hsa-mir-21	Cavernous angioma with symptomatic hemorrhage	0.989732
+175	DRAM1	Systolic blood pressure	0.989726
+176	hsa-mir-145	Very low density lipoprotein cholesterol measurement	0.989716
+177	DRAM1	High density lipoprotein cholesterol measurement	0.989688
+178	hsa-mir-146a	Traumatic cerebral hemorrhage	0.989684
+179	hsa-mir-126	Free cholesterol measurement	0.989673
+180	DNAJC27-AS1	Ischemic stroke	0.989633
+181	LMO3	High density lipoprotein cholesterol measurement	0.989604
+182	CDKN2B-AS1	High density lipoprotein cholesterol measurement	0.989575
+183	hsa-mir-145	Behcet syndrome	0.989567
+184	hsa-mir-133a-1	Diastolic blood pressure	0.989530
+185	hsa-mir-125b-1	Triglyceride measurement	0.989430
+186	hsa-mir-21	Mitral valve prolapse	0.989412
+187	hsa-mir-150	Total cholesterol measurement	0.989410
+188	hsa-mir-126	Intermediate density lipoprotein measurement	0.989393
+189	hsa-mir-106b	Total cholesterol measurement	0.989342
+190	TMEM178B	Ischemic stroke	0.989281
+191	hsa-mir-125b-1	Systolic blood pressure	0.989225
+192	hsa-mir-142	Low density lipoprotein cholesterol measurement	0.989184
+193	hsa-mir-126	Myocardial ischemia	0.989147
+194	hsa-mir-15b	Triglyceride measurement	0.989007
+195	FNDC1	Hypertension	0.988957
+196	hsa-mir-126	Tetralogy of fallot	0.988947
+197	PVT1	Systolic blood pressure	0.988942
+198	hsa-mir-155	Ataxia telangiectasia	0.988905
+199	hsa-mir-21	Chagas cardiomyopathy	0.988902
+200	hsa-mir-146a	Cavernous angioma with symptomatic hemorrhage	0.988867
+201	PVT1	Triglyceride measurement	0.988866
+202	hsa-mir-145	Very low density lipoprotein particle size measurement	0.988834
+203	hsa-mir-221	High density lipoprotein cholesterol measurement	0.988772
+204	RNF165	Total cholesterol measurement	0.988766
+205	hsa-mir-15b	Systolic blood pressure	0.988730
+206	hsa-mir-21	Cerebral cavernous malformation	0.988716
+207	hsa-mir-30a	Triglyceride measurement	0.988673
+208	hsa-mir-122	Low density lipoprotein cholesterol measurement	0.988663
+209	hsa-mir-142	Triglyceride measurement	0.988663
+210	hsa-mir-126	Aortic valve insufficiency	0.988651
+211	MIR21	Critical limb ischemia	0.988623
+212	H19	Behcet syndrome	0.988616
+213	MIAT	Triglyceride measurement	0.988556
+214	hsa-mir-30a	Systolic blood pressure	0.988510
+215	PVT1	High density lipoprotein cholesterol measurement	0.988510
+216	hsa-mir-142	Systolic blood pressure	0.988481
+217	hsa-mir-30b	Low density lipoprotein cholesterol measurement	0.988477
+218	hsa-mir-155	Diastolic blood pressure	0.988459
+219	hsa-mir-133a-1	Critical limb ischemia	0.988443
+220	hsa-mir-146a	Chagas cardiomyopathy	0.988442
+221	MIAT	Systolic blood pressure	0.988431
+222	hsa-mir-29a	Low density lipoprotein cholesterol measurement	0.988353
+223	hsa-mir-223	Total cholesterol measurement	0.988350
+224	HCP5	Ischemic stroke	0.988343
+225	hsa-mir-126	High density lipoprotein particle size measurement	0.988329
+226	hsa-mir-122	Triglyceride measurement	0.988309
+227	hsa-mir-126	Cerebral cavernous malformation	0.988304
+228	hsa-mir-21	Ventricular premature complexes	0.988262
+229	hsa-mir-133a-1	Biventricular heart failure	0.988223
+230	SLC25A34	Cerebral cavernous malformation	0.988172
+231	PRIMA1	Triglyceride measurement	0.988166
+232	hsa-mir-125b-1	Hypertension	0.988163
+233	hsa-mir-30a	Low density lipoprotein cholesterol measurement	0.988139
+234	TMEM140	Ischemic stroke	0.988116
+235	hsa-mir-122	Systolic blood pressure	0.988105
+236	hsa-mir-126	Lipoprotein measurement	0.988004
+237	FAM219B	Ischemic stroke	0.987982
+238	ZKSCAN8P1	Ischemic stroke	0.987912
+239	hsa-mir-125b-1	High density lipoprotein cholesterol measurement	0.987904
+240	TMEM200B	Ischemic stroke	0.987895
+241	TC2N	High density lipoprotein cholesterol measurement	0.987882
+242	hsa-mir-143	Triglyceride measurement	0.987871
+243	PRIMA1	Hypertension	0.987836
+244	hsa-mir-1-2	Low density lipoprotein cholesterol measurement	0.987750
+245	SAMD10	Ischemic stroke	0.987713
+246	hsa-mir-21	Granulomatosis with polyangiitis	0.987702
+247	PRSS36	Kawasaki disease	0.987676
+248	PRIMA1	Systolic blood pressure	0.987665
+249	CCDC86	Ischemic stroke	0.987590
+250	hsa-mir-24-1	Diastolic blood pressure	0.987580
+251	H19	Critical limb ischemia	0.987579
+252	CSMD1	Systolic blood pressure	0.987541
+253	TC2N	Systolic blood pressure	0.987514
+254	hsa-mir-143	Systolic blood pressure	0.987511
+255	SUSD6	Ischemic stroke	0.987438
+256	hsa-mir-29a	Triglyceride measurement	0.987418
+257	hsa-mir-24-1	Aortic valve calcification	0.987403
+258	hsa-mir-126	Ischemic cardiomyopathy	0.987379
+259	FNDC1	Ischemic stroke	0.987359
+260	hsa-mir-145	Left ventricle heart failure	0.987357
+261	MIAT	High density lipoprotein cholesterol measurement	0.987337
+262	TSPAN13	Ischemic stroke	0.987311
+263	NEAT1	Systolic blood pressure	0.987299
+264	hsa-mir-30a	High density lipoprotein cholesterol measurement	0.987289
+265	NEAT1	Triglyceride measurement	0.987283
+266	MIR21	Aortic dissection	0.987282
+267	CA11	Ischemic stroke	0.987271
+268	hsa-mir-142	Hypertension	0.987269
+269	TMEM59L	Ischemic stroke	0.987224
+270	hsa-mir-126	Aortic valve stenosis	0.987208
+271	hsa-mir-133a-1	Aortic dissection	0.987188
+272	hsa-mir-29a	Systolic blood pressure	0.987183
+273	hsa-mir-15b	High density lipoprotein cholesterol measurement	0.987181
+274	hsa-mir-142	High density lipoprotein cholesterol measurement	0.987173
+275	IQCN	Systolic blood pressure	0.987169
+276	hsa-mir-21	Varicose ulcer	0.987157
+277	TC2N	Triglyceride measurement	0.987129
+278	hsa-mir-126	Pulse pressure measurement	0.987093
+279	VIT	Systolic blood pressure	0.987084
+280	hsa-mir-146a	Cardiogenic shock	0.987070
+281	hsa-mir-195	Diastolic blood pressure	0.987039
+282	hsa-mir-133a-1	Ataxia telangiectasia	0.987008
+283	hsa-mir-145	Stanford type A aortic dissection	0.986997
+284	hsa-mir-146a	Granulomatosis with polyangiitis	0.986989
+285	SLC25A34	High density lipoprotein cholesterol measurement	0.986988
+286	FAM83F	Ischemic stroke	0.986909
+287	hsa-mir-24-1	Ataxia telangiectasia	0.986873
+288	hsa-mir-1-2	Triglyceride measurement	0.986861
+289	hsa-mir-30b	Triglyceride measurement	0.986843
+290	HOXB-AS3	Ischemic stroke	0.986796
+291	MIAT	Hypertension	0.986788
+292	hsa-mir-106b	Kawasaki disease	0.986756
+293	VIT	High density lipoprotein cholesterol measurement	0.986752
+294	hsa-mir-122	High density lipoprotein cholesterol measurement	0.986737
+295	MIR21	Behcet syndrome	0.986693
+296	PRIMA1	High density lipoprotein cholesterol measurement	0.986636
+297	hsa-mir-1-2	Systolic blood pressure	0.986623
+298	MIAT	Low density lipoprotein cholesterol measurement	0.986602
+299	NEAT1	High density lipoprotein cholesterol measurement	0.986597
+300	hsa-mir-126	Arrhythmogenic cardiomyopathy	0.986563
+301	hsa-mir-145	Thoracic aortic dissection	0.986553
+302	hsa-mir-30b	Systolic blood pressure	0.986547
+303	FNDC1	Low density lipoprotein cholesterol measurement	0.986481
+304	hsa-mir-126	Mitral valve prolapse	0.986463
+305	hsa-mir-145	Hypercholesterolemia	0.986424
+306	hsa-mir-150	Diastolic blood pressure	0.986398
+307	hsa-mir-133a-1	Very low density lipoprotein cholesterol measurement	0.986360
+308	hsa-mir-27a	Total cholesterol measurement	0.986359
+309	hsa-mir-106b	Diastolic blood pressure	0.986350
+310	TMEM233	Ischemic stroke	0.986348
+311	hsa-mir-150	Aortic valve calcification	0.986336
+312	hsa-mir-223	Dilated cardiomyopathy	0.986313
+313	GMIP	Systolic blood pressure	0.986301
+314	PVT1	Hypertension	0.986299
+315	TMEM52	Ischemic stroke	0.986278
+316	JAKMIP2	Ischemic stroke	0.986250
+317	FAM171A2	Ischemic stroke	0.986193
+318	hsa-mir-210	Total cholesterol measurement	0.986140
+319	hsa-mir-106b	Aortic valve calcification	0.986099
+320	LINC00240	Ischemic stroke	0.986071
+321	C3orf70	Ischemic stroke	0.986057
+322	SKAP1-AS2	Ischemic stroke	0.986037
+323	hsa-mir-106b	Cardiomyopathy	0.986001
+324	hsa-mir-145	Free cholesterol measurement	0.985965
+325	MIR21	Biventricular heart failure	0.985959
+326	ENSG00000269938	Ischemic stroke	0.985940
+327	hsa-mir-145	Peripheral arterial occlusive disease	0.985902
+328	TMEM178B	High density lipoprotein cholesterol measurement	0.985879
+329	ARHGAP25	Ischemic stroke	0.985866
+330	hsa-mir-145	Myocardial ischemia	0.985846
+331	MINDY2	Ischemic stroke	0.985812
+332	SOCS2-AS1	Ischemic stroke	0.985768
+333	hsa-mir-145	Intermediate density lipoprotein measurement	0.985686
+334	TMEM200A	Ischemic stroke	0.985681
+335	XIST	Systolic blood pressure	0.985676
+336	TMEM178B	Systolic blood pressure	0.985674
+337	hsa-mir-29a	High density lipoprotein cholesterol measurement	0.985663
+338	hsa-mir-214	Low density lipoprotein cholesterol measurement	0.985649
+339	hsa-mir-106b	Ataxia telangiectasia	0.985648
+340	hsa-mir-143	High density lipoprotein cholesterol measurement	0.985639
+341	METTL7A	Ischemic stroke	0.985637
+342	PRSS36	Systolic blood pressure	0.985634
+343	hsa-mir-214	Triglyceride measurement	0.985622
+344	XIST	Triglyceride measurement	0.985590
+345	FAM83F	Systolic blood pressure	0.985587
+346	ZSWIM8-AS1	Ischemic stroke	0.985584
+347	SLC25A34	Triglyceride measurement	0.985553
+348	IGF2-AS	Ischemic stroke	0.985548
+349	ENSG00000272791	Ischemic stroke	0.985533
+350	hsa-mir-133a-1	Very low density lipoprotein particle size measurement	0.985528
+351	TMEM169	Ischemic stroke	0.985528
+352	HLA-DQB1-AS1	Ischemic stroke	0.985508
+353	CPAMD8	Triglyceride measurement	0.985499
+354	hsa-mir-214	Systolic blood pressure	0.985405
+355	FAM83F	High density lipoprotein cholesterol measurement	0.985382
+356	hsa-mir-150	Ataxia telangiectasia	0.985375
+357	MIR22HG	Ischemic stroke	0.985370
+358	THEMIS2	High density lipoprotein cholesterol measurement	0.985346
+359	hsa-mir-133a-1	Intracranial arterial disease	0.985334
+360	TMEM178B	Triglyceride measurement	0.985331
+361	GIPC3	Ischemic stroke	0.985325
+362	GPRIN3	Triglyceride measurement	0.985250
+363	FLJ31356	Ischemic stroke	0.985242
+364	hsa-mir-126	Low density lipoprotein particle size measurement	0.985211
+365	VIT	Hypertension	0.985210
+366	CPAMD8	High density lipoprotein cholesterol measurement	0.985198
+367	CD163L1	Ischemic stroke	0.985194
+368	THEMIS2	Triglyceride measurement	0.985164
+369	TMEM178B	Kawasaki disease	0.985154
+370	DNAJC5G	Ischemic stroke	0.985153
+371	hsa-mir-145	Aortic valve insufficiency	0.985138
+372	XIST	High density lipoprotein cholesterol measurement	0.985134
+373	hsa-mir-145	Tetralogy of fallot	0.985125
+374	hsa-mir-145	Cerebral cavernous malformation	0.985114
+375	hsa-mir-223	Diastolic blood pressure	0.985109
+376	SLC16A6	Ischemic stroke	0.985091
+377	hsa-mir-1-2	High density lipoprotein cholesterol measurement	0.985084
+378	TSPAN11	Ischemic stroke	0.985074
+379	TSPAN11	Systolic blood pressure	0.985053
+380	RBM47	Ischemic stroke	0.985047
+381	GPRIN3	High density lipoprotein cholesterol measurement	0.985044
+382	DNAH10OS	Systolic blood pressure	0.985002
+383	GMIP	Hypertension	0.984953
+384	hsa-mir-223	Cardiomyopathy	0.984946
+385	hsa-mir-126	Aortic valve disease	0.984944
+386	USP54	Ischemic stroke	0.984902
+387	hsa-mir-223	Aortic valve calcification	0.984891
+388	TSPAN11	Triglyceride measurement	0.984890
+389	ANKRD10	Kawasaki disease	0.984885
+390	C19orf38	Systolic blood pressure	0.984858
+391	hsa-mir-34a	Low density lipoprotein cholesterol measurement	0.984856
+392	NEAT1	Hypertension	0.984839
+393	hsa-mir-30b	High density lipoprotein cholesterol measurement	0.984814
+394	PI16	Systolic blood pressure	0.984813
+395	PLEKHN1	Ischemic stroke	0.984805
+396	ZSCAN31	Kawasaki disease	0.984799
+397	IKBIP	Kawasaki disease	0.984796
+398	ENSG00000261578	Ischemic stroke	0.984795
+399	ALLC	Ischemic stroke	0.984795
+400	hsa-mir-221	Total cholesterol measurement	0.984775
+401	RNF165	Low density lipoprotein cholesterol measurement	0.984759
+402	ENSG00000227544	Ischemic stroke	0.984710
+403	PSMB8-AS1	Ischemic stroke	0.984700
+404	C15orf39	Kawasaki disease	0.984694
+405	NREP	Ischemic stroke	0.984664
+406	TSPAN11	High density lipoprotein cholesterol measurement	0.984652
+407	HCG18	Ischemic stroke	0.984652
+408	WDR27	Ischemic stroke	0.984637
+409	hsa-mir-133a-1	Behcet syndrome	0.984629
+410	PRSS36	Myocardial infarction	0.984619
+411	hsa-mir-21	Right ventricular stroke volume measurement	0.984615
+412	LSAMP	Triglyceride measurement	0.984600
+413	IQCN	Cerebral cavernous malformation	0.984598
+414	PI16	Triglyceride measurement	0.984598
+415	C19orf38	Triglyceride measurement	0.984569
+416	PLAU	Low density lipoprotein cholesterol measurement	0.984567
+417	LSAMP	Systolic blood pressure	0.984562
+418	OLFML2B	Ischemic stroke	0.984481
+419	hsa-mir-21	Vascular dementia	0.984452
+420	hsa-mir-133a-1	Ischemic stroke	0.984449
+421	LRRC73	Ischemic stroke	0.984444
+422	hsa-mir-145	High density lipoprotein particle size measurement	0.984427
+423	LINC02398	Ischemic stroke	0.984404
+424	LINC00324	Ischemic stroke	0.984382
+425	TMEM9B	Ischemic stroke	0.984372
+426	ZNF831	Ischemic stroke	0.984359
+427	ISLR	Coronary artery disease	0.984344
+428	TMEM132B	Ischemic stroke	0.984342
+429	CSMD1	Kawasaki disease	0.984324
+430	MIR6861	Ischemic stroke	0.984317
+431	IQCN	Myocardial infarction	0.984295
+432	ISLR	Aortic valve calcification	0.984275
+433	hsa-mir-223	Ataxia telangiectasia	0.984251
+434	NT5DC2	Kawasaki disease	0.984247
+435	hsa-mir-150	Ischemic stroke	0.984224
+436	OIT3	Ischemic stroke	0.984211
+437	INKA2	Systolic blood pressure	0.984193
+438	MEG3	Systolic blood pressure	0.984188
+439	TMEM200A	Triglyceride measurement	0.984183
+440	NAP1L3	Systolic blood pressure	0.984155
+441	SNHG32	Kawasaki disease	0.984141
+442	PAPLN	Kawasaki disease	0.984125
+443	LHFPL2	Ischemic stroke	0.984118
+444	PLEKHG1	Kawasaki disease	0.984109
+445	C1QTNF7	Systolic blood pressure	0.984090
+446	LOC105374986	Ischemic stroke	0.984084
+447	MEG3	Triglyceride measurement	0.984077
+448	INKA2	Kawasaki disease	0.984076
+449	hsa-mir-29b-1	Low density lipoprotein cholesterol measurement	0.984062
+450	C12orf75	High density lipoprotein cholesterol measurement	0.984057
+451	DNAJC27-AS1	Kawasaki disease	0.984026
+452	hsa-mir-26a-1	Triglyceride measurement	0.983996
+453	hsa-mir-125b-1	Total cholesterol measurement	0.983972
+454	TMEM156	Cerebral cavernous malformation	0.983941
+455	hsa-mir-133a-1	Left ventricle heart failure	0.983931
+456	NAP1L3	High density lipoprotein cholesterol measurement	0.983928
+457	PVT1	Total cholesterol measurement	0.983927
+458	hsa-mir-29b-1	Triglyceride measurement	0.983909
+459	MINDY2	Systolic blood pressure	0.983902
+460	NAP1L3	Triglyceride measurement	0.983895
+461	MIR21	Very low density lipoprotein cholesterol measurement	0.983893
+462	C1QTNF7	High density lipoprotein cholesterol measurement	0.983876
+463	hsa-mir-199a-1	Low density lipoprotein cholesterol measurement	0.983863
+464	hsa-mir-222	Triglyceride measurement	0.983859
+465	ENSG00000272622	Ischemic stroke	0.983856
+466	hsa-mir-145	Ischemic cardiomyopathy	0.983855
+467	C1QTNF7	Triglyceride measurement	0.983853
+468	hsa-mir-214	High density lipoprotein cholesterol measurement	0.983849
+469	hsa-mir-145	Lipoprotein measurement	0.983836
+470	ANKRD10	Cerebral cavernous malformation	0.983835
+471	C12orf75	Systolic blood pressure	0.983815
+472	hsa-mir-21	Univentricular heart	0.983806
+473	hsa-mir-26a-1	Systolic blood pressure	0.983788
+474	CRIP3	Ischemic stroke	0.983786
+475	C14orf180	Ischemic stroke	0.983747
+476	PLEKHH3	Ischemic stroke	0.983743
+477	hsa-mir-126	Angina pectoris	0.983737
+478	hsa-mir-26a-1	Low density lipoprotein cholesterol measurement	0.983736
+479	UHRF1BP1	Systolic blood pressure	0.983720
+480	hsa-mir-21	Cerebral intraventricular hemorrhage	0.983687
+481	TSBP1-AS1	Ischemic stroke	0.983687
+482	ENSG00000256894	Ischemic stroke	0.983684
+483	LRP4-AS1	Ischemic stroke	0.983674
+484	hsa-mir-17	Low density lipoprotein cholesterol measurement	0.983666
+485	hsa-mir-29b-1	Systolic blood pressure	0.983653
+486	ZNF667-AS1	Ischemic stroke	0.983652
+487	SERTM1	Ischemic stroke	0.983639
+488	hsa-mir-222	Systolic blood pressure	0.983622
+489	DNAJC27-AS1	Myocardial infarction	0.983621
+490	FNDC1	Ataxia telangiectasia	0.983620
+491	ZNF184	Ischemic stroke	0.983610
+492	IQCN	Hypertension	0.983609
+493	hsa-mir-126	Peripartum cardiomyopathy	0.983601
+494	ARHGAP25	High density lipoprotein cholesterol measurement	0.983598
+495	hsa-mir-15b	Total cholesterol measurement	0.983596
+496	C1orf162	Ischemic stroke	0.983580
+497	CCDC158	Ischemic stroke	0.983580
+498	hsa-mir-186	Triglyceride measurement	0.983572
+499	C14orf132	Systolic blood pressure	0.983569
+500	ARHGAP25	Triglyceride measurement	0.983564
